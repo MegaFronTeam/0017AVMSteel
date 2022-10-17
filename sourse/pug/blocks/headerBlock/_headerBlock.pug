@@ -1,0 +1,34 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Шпунт Ларсена h1
+				h2 Шпунт Ларсена h2
+				h3 Шпунт Ларсена h3
+				h4 Шпунт Ларсена h4
+				h5 Шпунт Ларсена h5
+				h6 Шпунт Ларсена h6
+
+	
+			+form-wrap
+				+input('Ваше имя',  t='text', 'label', name= t)
+				+input('123456',  t='number', 'label', name= t)
+				+input('',  t='date', 'label', name= t)
+			
+			ul
+				li Lorem ipsum dolor sit amet.
+				li Lorem ipsum dolor sit amet.
+				li Lorem ipsum dolor sit amet.
+				li Lorem ipsum dolor sit amet.
+			.row
+				.col-auto
+					a(href="#") ССЫЛКА Lorem ipsum dolor sit.
+				.col-auto
+					+btn('Отправить заявку', typ= "submit").btn.btn-primary
+				.col-auto
+					+btn('Подробнее о компании', typ= "a").btn.btn-outline-primary
+				
+
+						
+	// end headerBlock
