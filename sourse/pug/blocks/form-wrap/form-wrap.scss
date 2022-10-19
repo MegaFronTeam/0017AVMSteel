@@ -16,6 +16,7 @@
 			height: 2rem;
 			background-color: $white;
 			border-radius: $input-border-radius $input-border-radius 0 0;
+			pointer-events: none;
 		}
 		// + span {
 		// 	display: block;
