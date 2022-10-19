@@ -71,24 +71,35 @@
 						<div class="form-wrap">
 							<form>
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">label</span><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+									<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваше имя"/><span class="form-wrap__input-title">Электронная почта</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">label</span><input class="form-wrap__input form-control" name="number" type="number" placeholder="123456" step="any"/>
+									<label><input class="form-wrap__input form-control parsley-error" name="tel" type="tel" placeholder="123456"/><span class="form-wrap__input-title">Телефон</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group">
-									<label><span class="form-wrap__input-title">label</span><input class="form-wrap__input form-control" name="date" type="date"/>
+									<label><input class="form-wrap__input form-control" name="date" type="date" placeholder=""/><span class="form-wrap__input-title">Дата рождения</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваша электронная почта"/><span class="form-wrap__input-title">Ваша электронная почта</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Beatae, ipsum.</span>
+								</label>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Я ознакомился с условиями обработки персональных данных</span>
+								</label>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Beatae, ipsum.</span>
+								</label>
 							</form>
 						</div>
 						<ul>
-							<li>Lorem ipsum dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem provident vero autem aliquid incidunt ex quaerat expedita accusantium vitae!</li>
 							<li>Lorem ipsum dolor sit amet.</li>
 							<li>Lorem ipsum dolor sit amet.</li>
 							<li>Lorem ipsum dolor sit amet.</li>
@@ -281,13 +292,13 @@
 						</div>
 						<div class="form-wrap">
 							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/><span class="form-wrap__input-title"></span>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/><span class="form-wrap__input-title"></span>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/><span class="form-wrap__input-title"></span>
 								</div>
 								<!-- +e.input-wrap-->
 							</form>
@@ -328,7 +339,9 @@
 							</div>
 							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/><span class="form-wrap__input-title">Ваше Имя</span>
+							</label> 
 						</div>
 						<!-- +e.input-wrap-->
 						<button class="form-wrap__btn btn" type="submit"> 

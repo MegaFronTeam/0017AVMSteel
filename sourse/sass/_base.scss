@@ -545,6 +545,12 @@ iframe {
 	--bs-btn-hover-color: #{$white};
 	--bs-btn-active-color: #{$body-color};
 	--bs-btn-disabled-color: #{$white};
+
+	--bs-btn-hover-bg: #09DAD3;
+	--bs-btn-hover-border-color: #09DAD3;
+	--bs-btn-active-bg: #09DAD3;
+	--bs-btn-active-border-color: #09DAD3;
+
 }
 
 .btn-outline-primary {

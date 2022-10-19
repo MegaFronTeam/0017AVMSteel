@@ -12,12 +12,16 @@ mixin headerBlock()
 
 	
 			+form-wrap
-				+input('Ваше имя',  t='text', 'label', name= t)
-				+input('123456',  t='number', 'label', name= t)
-				+input('',  t='date', 'label', name= t)
+				+input('Ваше имя', 'email', 'Электронная почта')
+				+input('123456', 'tel', 'Телефон').parsley-error
+				+input('', 'date', 'Дата рождения')
+				+input('Ваша электронная почта', 'email')
+				+in-c('checkbox', 'Beatae, ipsum.')
+				+in-c("checkbox", 'Я ознакомился с условиями обработки персональных данных')
+				+in-c("checkbox", 'Beatae, ipsum.')
 			
 			ul
-				li Lorem ipsum dolor sit amet.
+				li Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem provident vero autem aliquid incidunt ex quaerat expedita accusantium vitae!
 				li Lorem ipsum dolor sit amet.
 				li Lorem ipsum dolor sit amet.
 				li Lorem ipsum dolor sit amet.
