@@ -531,10 +531,16 @@ iframe {
 }
 
 .breadcrumb {
+	flex-wrap: nowrap;
+	padding: rem(20) 0;
+	@include media-breakpoint-up(sm) {
+		padding: rem(30) 0;
+	}
 	li {
 		display: flex;
 		align-items: center;
 		position: relative;
+		line-height: 1.25;
 		&::before {
 			line-height: 0;
 			// content: "";
@@ -547,6 +553,18 @@ iframe {
 			// background-color: $primary;
 			// border-radius: 50%;
 			// padding-right: 0;
+		}
+	}
+}
+
+.page-head {
+	background-color: #f8f8f8;
+	h1 {
+		text-align: center;
+		padding: rem(19) 0 rem(20);
+		border-top: 1px solid #e4e4e4;
+		@include media-breakpoint-up(sm) {
+			padding: rem(29) 0 rem(30);
 		}
 	}
 }
