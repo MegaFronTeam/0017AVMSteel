@@ -29,7 +29,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #686974 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #1F1F21 !default;
@@ -872,7 +872,7 @@ $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               #686974 !default;
+$input-placeholder-color:               $secondary !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;
@@ -1558,7 +1558,7 @@ $breadcrumb-item-padding-x:         rem(10) !default;
 $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          $gray-600 !default;
-$breadcrumb-active-color:           #686974 !default;
+$breadcrumb-active-color:           $secondary !default;
 $breadcrumb-divider:                url("data:image/svg+xml,%3Csvg width='5' height='5' viewBox='0 0 5 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='%2300BCB6'/%3E%3C/svg%3E%0A") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;

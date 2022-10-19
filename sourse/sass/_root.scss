@@ -10,9 +10,9 @@
 		--sTPB: #{rem(75)};
 	}
 
-	--sPT: #{rem(90 * 0.5)};
-	--sPB: #{rem(90 * 0.5)};
-	--sTPB: #{rem(75 * 0.5)};
+	--sPT: #{rem(90 * 0.444)};
+	--sPB: #{rem(90 * 0.444)};
+	--sTPB: #{rem(75 * 0.444)};
 
 	--fancybox-content-color: var(--bs-body-color);
 	--swiperArrowSize: #{rem(68)};

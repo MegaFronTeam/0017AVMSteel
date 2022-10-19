@@ -2,8 +2,53 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				.col-md-6
+					+e.req-item
+						+e.A.tel(href="") 8 (495) 885-60-53
+						+e.A.tel(href="") 8 (495) 885-50-11
+						+e.A.email(href="") info@avmsteel.ru
+					+soc()
+					+e.req-item
+						.strong Полное наименование: <br> Общество с ограниченной ответственностью «АВМ инжиниринг» <br> Сокращенное наименование: ООО «АВМ инижиниринг»
+					+e.req-item
+						ul
+							li ИНН 9718158914
+							li КПП 771801001
+							li ОКПО 44850998
+							li ОКАТО 45263581000
+							li ОГРН 1207700240197
+							li ТКВЭД 28.15
+					+e.req-item
+						ul
+							li Филиал Точка Публичного акционерного общества Банка &laquo;Финансовая Корпорация Открытие&raquo;
+							li БИК 044525999
+							li К/С 30101810845250000999&nbsp;в ГУ&nbsp;банка России по&nbsp;ЦФО
+							li Р/С 40702810002500106469
+					+e.req-item
+						p.text-secondary Юридический, фактический и&nbsp;почтовый адрес: 107150, Россия, г. Москва, Улица Пермская, дом&nbsp;11, строение&nbsp;5, этаж&nbsp;6, помещение 601В
+					+e.A.d-load(href="#")
+						span Скачать реквизиты
+
+				.col-md-6
+					+b.section-title
+						h2 Связаться с нами
+						p Если у&nbsp;вас есть вопросы или предложения свяжитесь с&nbsp;нами через контактную форму ниже
+					+form-wrap
+						.row
+							.col-xl-6
+								+input('Ваше имя', 'text', 'Ваше имя')
+							.col-xl-6
+								+input('Ваш телефон', 'tel', 'Ваш телефон')
+							.col-xl-6
+								+input('Ваша должность', 'text', 'Ваша должность')
+							.col-xl-6
+								+input('Ваш email', 'email', 'Ваш email')
+							.col-xl-6
+								+input('Название компании', 'text', 'Название компании')
+							.col-xl-6
+								+input('Адрес компании', 'text', 'Адрес компании')
+							.col
+								+input('Ваше сообщение', 'textarea', 'Ваше сообщение')
+
 	// end sContact

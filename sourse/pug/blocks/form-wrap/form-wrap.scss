@@ -6,6 +6,22 @@
 		margin: 0;
 		--sp-y: #{$input-padding-y};
 		--fz: #{$input-font-size};
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 1px;
+			top: 1px;
+			width: calc(100% - 2px);
+			height: 2rem;
+			background-color: $white;
+			border-radius: $input-border-radius $input-border-radius 0 0;
+		}
+		// + span {
+		// 	display: block;
+		// 	background-color: #fff;
+		// 	width: 100%;
+		// }
 	}
 	&__btn {
 	}
@@ -65,12 +81,13 @@
 			}
 		}
 		&:focus {
-			border-width: 2px;
+			// border-width: 2px;
 			border-color: $primary;
-			padding-top: calc(var(--sp-y) * 1.375 - 1px);
-			padding-bottom: calc(var(--sp-y) * 0.625 - 1px);
-			padding-left: calc(#{$input-padding-x} - 1px);
-			padding-right: calc(#{$input-padding-x} - 1px);
+			box-shadow: 0 0 0 1px $primary !important;
+			// padding-top: calc(var(--sp-y) * 1.375 - 1px);
+			// padding-bottom: calc(var(--sp-y) * 0.625 - 1px);
+			// padding-left: calc(#{$input-padding-x} - 1px);
+			// padding-right: calc(#{$input-padding-x} - 1px);
 		}
 	}
 	&__btn {
@@ -84,13 +101,14 @@
 
 .parsley-error {
 	border-image: none;
-	border: 2px solid $red !important;
+	border: 1px solid $red !important;
 	color: $red;
 	outline: 0 !important;
-	padding-top: calc(var(--sp-y) * 1.375 - 1px);
-	padding-bottom: calc(var(--sp-y) * 0.625 - 1px);
-	padding-left: calc(#{$input-padding-x} - 1px);
-	padding-right: calc(#{$input-padding-x} - 1px);
+	box-shadow: 0 0 0 1px $red !important;
+	// padding-top: calc(var(--sp-y) * 1.375 - 1px);
+	// padding-bottom: calc(var(--sp-y) * 0.625 - 1px);
+	// padding-left: calc(#{$input-padding-x} - 1px);
+	// padding-right: calc(#{$input-padding-x} - 1px);
 	// box-shadow: 0 0 0 1px $red !important;
 	// &:focus {
 	// 	box-shadow: 0 0 0 1px $red !important;
@@ -246,6 +264,11 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 	/* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+	transition: background-color 600000s 0s, color 600000s 0s; // убирает цвет фона при автозаполнении (просто работает))
 }
 
 // .jq-selectbox{
