@@ -497,7 +497,7 @@ $grid-row-columns:            6 !default;
 
 // Container padding
 
-$container-padding-x: $grid-gutter-width !default;
+$container-padding-x: rem(40) !default;
 
 
 // Components
@@ -1558,7 +1558,7 @@ $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          $gray-600 !default;
 $breadcrumb-active-color:           #686974 !default;
-$breadcrumb-divider:                quote("/") !default;
+$breadcrumb-divider:                url("data:image/svg+xml,%3Csvg width='5' height='5' viewBox='0 0 5 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2.5' cy='2.5' r='2.5' fill='%2300BCB6'/%3E%3C/svg%3E%0A") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
 // scss-docs-end breadcrumb-variables
