@@ -33,6 +33,7 @@
 		// border-left: none;
 		// border-right: none;
 		resize: none;
+		font-weight: bold;
 		// &:focus {
 		// 	border-color: $primary;
 		// 	box-shadow: 0 0 0 1px $primary !important;
@@ -97,6 +98,11 @@
 	label {
 		width: 100%;
 		display: block;
+	}
+	&__policy {
+		a {
+			@extend .primary-link;
+		}
 	}
 }
 

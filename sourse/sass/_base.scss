@@ -568,3 +568,10 @@ iframe {
 		}
 	}
 }
+.primary-link {
+	color: $primary;
+	&:hover,
+	&:focus {
+		color: #09dad3;
+	}
+}

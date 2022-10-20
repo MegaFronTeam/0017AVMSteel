@@ -405,3 +405,46 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+if (document.querySelector("#map")) {
+
+
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map', {
+			center: [55.751300430341765,37.624486136718716],
+			zoom: 9,
+			controls: ['zoomControl']
+		}, {
+			//searchControlProvider: 'yandex#search'
+		}),
+			// Создаём макет содержимого.
+			// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+			// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			// ),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				// hintContent: 'Поволжская Металлоломная Компания',
+				// balloonContent: 'г. Самара, ул. Земеца, д. 32'
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: 'img/svg/map-mark.svg',
+				// Размеры метки.
+				iconImageSize: [38, 48],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [-21, -49]
+			});
+		myMap.behaviors.disable('scrollZoom');
+		//на мобильных устройствах... (проверяем по userAgent браузера)
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
+			myMap.behaviors.disable('drag');
+		}
+		myMap.geoObjects
+			.add(myPlacemark);
+	});
+
+}

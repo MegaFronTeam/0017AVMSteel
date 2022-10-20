@@ -3,12 +3,15 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+e.row.row
-				.col-md-6
+				.col-lg-6
 					+e.req-item
-						+e.A.tel(href="") 8 (495) 885-60-53
-						+e.A.tel(href="") 8 (495) 885-50-11
-						+e.A.email(href="") info@avmsteel.ru
+						+e.A.tel(href="tel:+84958856053") 8 (495) 885-60-53
+						+e.A.tel(href="tel:+84958855011") 8 (495) 885-50-11
+						+e.A.email(href="mailto:info@avmsteel.ru") info@avmsteel.ru
 					+soc()
+						+item-sos('telegram').--telegram
+						+item-sos('whatsapp').--whatsapp
+						+item-sos('viber').--viber
 					+e.req-item
 						.strong Полное наименование: <br> Общество с ограниченной ответственностью «АВМ инжиниринг» <br> Сокращенное наименование: ООО «АВМ инижиниринг»
 					+e.req-item
@@ -27,10 +30,9 @@ mixin sContact()
 							li Р/С 40702810002500106469
 					+e.req-item
 						p.text-secondary Юридический, фактический и&nbsp;почтовый адрес: 107150, Россия, г. Москва, Улица Пермская, дом&nbsp;11, строение&nbsp;5, этаж&nbsp;6, помещение 601В
-					+e.A.d-load(href="#")
-						span Скачать реквизиты
+					+dowload-link('Скачать реквизиты')
 
-				.col-md-6
+				.col-lg-6
 					+b.section-title
 						h2 Связаться с нами
 						p Если у&nbsp;вас есть вопросы или предложения свяжитесь с&nbsp;нами через контактную форму ниже
@@ -48,7 +50,35 @@ mixin sContact()
 								+input('Название компании', 'text', 'Название компании')
 							.col-xl-6
 								+input('Адрес компании', 'text', 'Адрес компании')
-							.col
+							.col-12
 								+input('Ваше сообщение', 'textarea', 'Ваше сообщение')
+							.col-12
+								+policy()
+							.col-auto
+								+btn('Отправить', typ= "submit").btn.btn-primary
 
+		+e.map-wrap
+			+e.map
+				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c' type='text/javascript')
+				+e.map-widget#map
+			.container
+				p Склады по&nbsp;всей территории РФ. Для уточнения наличия метала в&nbsp;вашем городе&nbsp;&mdash; звоните по&nbsp;телефону.
+		+e.cards
+			.container 
+				.row
+					.col-md-6.col-xl-4
+						+e.A.card-item(href="tel:+84958856053")
+							span Дмитрий
+							span 8 (495) 885-60-53
+							span Расчет строительно-монтажных работ
+					.col-md-6.col-xl-4
+						+e.A.card-item(href="tel:+84958856053")
+							span Алексей
+							span 8 (495) 885-60-53
+							span Продажа и&nbsp;аренда шпунта, работа под ключ
+					.col-md-6.col-xl-4
+						+e.A.card-item(href="tel:+84958856053")
+							span Николай
+							span 8 (495) 885-60-53
+							span Выкуп шпунта по&nbsp;максимальной рыночной цене
 	// end sContact

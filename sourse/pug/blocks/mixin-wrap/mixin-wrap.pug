@@ -44,3 +44,9 @@ mixin page-head(t,...items)
 		+breadcrumb('Главная',...items)
 
 		h1= t
+
+mixin dowload-link(t)
+	+b.A.dowload-link(href='#' download='')
+		+icon('download')
+		span= t
+		+icon('PDF')
