@@ -1,9 +1,62 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-md-6
+					+e.A.logo(href="/")
+						img(src="../img/svg/logo.svg" alt="")
+						span ABM ИНЖИНИРИНГ
+					+e.menu
+						ul
+							li
+								a(href="#") Купить шпунт Ларсена
+							li
+								a(href="#") Услуги 
+							li
+								a(href="#") Подбор шпунта
+					+e.submenu
+						ul
+							li
+								a(href="#") Аренда
+							li
+								a(href="#") Выкуп
+							li
+								a(href="#") Спецтехника
+							li
+								a(href="#") Наши работы
+							li
+								a(href="#") О компании
+							li
+								a(href="#") FAQ
+							li
+								a(href="#") Глоссарий
+							li
+								a(href="#") Контакты
+
+				.col-md-6
+					.row
+						.col
+							+e.requisites
+								+e.A.tel(href="tel:+84958856053") 8 (495) 885-60-53
+								+e.A.tel(href="tel:+84958855011") 8 (495) 885-50-11
+						.col-xl-auto
+							+btn('Связаться с нами', typ= "a").btn.btn-outline-primary
+					+e.A.email(href="mailto:info@avmsteel.ru") info@avmsteel.ru
+
+					+soc()
+						+item-sos('telegram').--telegram
+						+item-sos('whatsapp').--whatsapp
+						+item-sos('viber').--viber
+					+dowload-link('Реквизиты организации')
+
+		+e.bottom-line
+			.container
+				+e.row.row
+					.col-md-6
+						+e.copyright.secondary-link #[span.currentYear] © ООО «АВМ инжиниринг». Все права защищены.
+					.col-md-6
+						+e.row-sm.row
+							.col-xxl-auto
+								+e.policy.secondary-link(href="#") Политика конфиденцильности
+							.col
+								+e.developer Разработка сайта – #[a(href="#" target="_blank").strong Artsman] 

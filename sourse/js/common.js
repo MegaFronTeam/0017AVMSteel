@@ -309,6 +309,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
+	JSCCommon.getCurrentYear('.currentYear');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();

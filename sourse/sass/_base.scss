@@ -528,6 +528,7 @@ iframe {
 	--bs-btn-padding-y: #{rem(20)};
 	--bs-btn-font-size: #{$h5-font-size};
 	--bs-btn-line-height: 1.4;
+	--bs-btn-font-weight: bold;
 }
 
 .breadcrumb {
@@ -573,5 +574,12 @@ iframe {
 	&:hover,
 	&:focus {
 		color: #09dad3;
+	}
+}
+.secondary-link {
+	color: $secondary;
+	&:hover,
+	&:focus {
+		color: #00BCB6;
 	}
 }
