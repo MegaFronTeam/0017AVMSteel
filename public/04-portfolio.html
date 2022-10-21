@@ -26,11 +26,16 @@
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Трубошпунт</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аренда</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Продажа</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Выкуп</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Спецтехника</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Компания</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -542,14 +547,27 @@
 									</svg>
 								</a>
 							</div>
-							<a class="dowload-link" href="#" download="">
-								<svg class="icon icon-download ">
-									<use xlink:href="img/svg/sprite.svg#download"></use>
-								</svg><span>Реквизиты организации</span>
-								<svg class="icon icon-PDF ">
-									<use xlink:href="img/svg/sprite.svg#PDF"></use>
-								</svg>
-							</a>
+							<div class="footer__inner-row row">
+								<div class="col-auto d-flex align-items-center">
+									<a class="dowload-link" href="#" download="">
+										<svg class="icon icon-download ">
+											<use xlink:href="img/svg/sprite.svg#download"></use>
+										</svg><span>Реквизиты организации</span>
+										<svg class="icon icon-PDF ">
+											<use xlink:href="img/svg/sprite.svg#PDF"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="col-auto">
+									<div class="footer__scroll-up">Наверх
+										<div class="footer__icon-wrap">
+											<svg class="icon icon-arrow-up ">
+												<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -577,7 +595,7 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
@@ -608,6 +626,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
