@@ -29,16 +29,54 @@
 } // end.sPortfolio
 
 .portfolio-item {
-	--swiperArrowPosition: calc(var(--swiperArrowSize) - #{rem(40)});
+	--swiperArrowPosition: calc(var(--swiperArrowSize) - (var(--swiperArrowSize) * 0.57));
 	padding: 40px 0;
 	border-bottom: 1px solid #e4e4e4;
 	@include media-breakpoint-up(md) {
 		padding: 90px 0;
 	}
+	@include media-breakpoint-only(lg) {
+		--swiperArrowSize: #{rem(50)};
+	}
+	@include media-breakpoint-only(xl) {
+		--swiperArrowSize: #{rem(60)};
+	}
 	.row {
 		--bs-gutter-y: 30px;
+		// @include media-breakpoint-up(xxl) {
+		// 	--bs-gutter-x: 60px;
+		// }
+	}
+	&__col {
 		@include media-breakpoint-up(xxl) {
-			--bs-gutter-x: 60px;
+			padding-left: rem(45);
+		}
+	}
+	&__slider {
+		position: relative;
+	}
+	&__location {
+		position: absolute;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		left: calc(var(--swiperArrowSize) * 0.29);
+		top: calc(var(--swiperArrowSize) * 0.29);
+		@include media-breakpoint-up(md) {
+			left: calc(var(--swiperArrowSize) * 0.43);
+			top: calc(var(--swiperArrowSize) * 0.43);
+		}
+		line-height: 1.25;
+		padding: rem(15) rem(20) rem(15) rem(24);
+		background-color: rgba(20, 20, 21, 0.5);
+		backdrop-filter: blur(7.5px);
+		border-radius: 10px;
+		color: $white;
+		z-index: 2;
+		.icon {
+			font-size: rem(16);
+			margin-right: rem(10);
+			color: $primary;
 		}
 	}
 	h3 {
@@ -80,11 +118,12 @@
 		}
 		.icon-wrap {
 			position: relative;
-			min-width: var(--i-width);
+			// min-width: var(--i-width);
+			width: var(--i-width);
 			height: var(--i-width);
 			background-color: #f8f8f8;
 			border-radius: 50%;
-			flex-grow: 1;
+			flex: 0 0 50px;
 		}
 		.icon {
 			@include a-cent;
@@ -103,6 +142,14 @@
 		}
 	}
 	.swiper-button-hand {
+		.icon {
+			@include media-breakpoint-only(lg) {
+				font-size: 15px;
+			}
+			@include media-breakpoint-only(xl) {
+				font-size: 18px;
+			}
+		}
 		@include media-breakpoint-down(md) {
 			display: none;
 		}
