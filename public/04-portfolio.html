@@ -26,11 +26,16 @@
 										</div>
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Трубошпунт</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аренда</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Продажа</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Выкуп</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Спецтехника</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Компания</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -59,7 +64,7 @@
 					<h1>Наши работы</h1>
 				</div>
 				<!-- start sFaq-->
-				<section class="sFaq section" id="sFaq">
+				<div class="sFaq section" id="sFaq">
 					<div class="container">
 						<div class="sFaq__row row">
 							<div class="col-lg">
@@ -131,38 +136,40 @@
 								</div>
 							</div>
 							<div class="col-lg-auto">
-								<div class="need-help"><img src="img/svg/question.svg" alt="" loading="lazy"/>
-									<h4>Нужна помощь?</h4>
-									<p>Не&nbsp;можете найти необходимую информацию?</p>
-									<p>Вы&nbsp;всегда можете обратиться к&nbsp;нам по&nbsp;контактам указанным ниже. Мы&nbsp;будем рады помочь!</p>
-									<a class="need-help__tel" href="tel:84958856053">8 (495) 885-60-53
-									</a>
-									<a class="need-help__tel" href="tel:84958855011">8 (495) 885-50-11
-									</a>
-									<a class="need-help__mail" href="mailto:info@avmsteel.ru">info@avmsteel.ru
-									</a>
-									<div class="soc">
-										<a class="soc__item" href="#" target="_blank" style="--color: #2fa6d9;">
-											<svg class="icon icon-telegram ">
-												<use xlink:href="img/svg/sprite.svg#telegram"></use>
-											</svg>
+								<div class="sFaq__need-help-wrap">
+									<div class="need-help"><img src="img/svg/question.svg" alt="" loading="lazy"/>
+										<h4>Нужна помощь?</h4>
+										<p>Не&nbsp;можете найти необходимую информацию?</p>
+										<p>Вы&nbsp;всегда можете обратиться к&nbsp;нам по&nbsp;контактам указанным ниже. Мы&nbsp;будем рады помочь!</p>
+										<a class="need-help__tel" href="tel:84958856053">8 (495) 885-60-53
 										</a>
-										<a class="soc__item" href="#" target="_blank" style="--color: #00c958;">
-											<svg class="icon icon-whatsapp ">
-												<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-											</svg>
+										<a class="need-help__tel" href="tel:84958855011">8 (495) 885-50-11
 										</a>
-										<a class="soc__item" href="#" target="_blank" style="--color: #8852c1;">
-											<svg class="icon icon-viber ">
-												<use xlink:href="img/svg/sprite.svg#viber"></use>
-											</svg>
+										<a class="need-help__mail" href="mailto:info@avmsteel.ru">info@avmsteel.ru
 										</a>
+										<div class="soc">
+											<a class="soc__item" href="#" target="_blank" style="--color: #2fa6d9;">
+												<svg class="icon icon-telegram ">
+													<use xlink:href="img/svg/sprite.svg#telegram"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank" style="--color: #00c958;">
+												<svg class="icon icon-whatsapp ">
+													<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank" style="--color: #8852c1;">
+												<svg class="icon icon-viber ">
+													<use xlink:href="img/svg/sprite.svg#viber"></use>
+												</svg>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 				<!-- end sFaq-->
 			</main>
 			<footer class="footer section">
@@ -225,14 +232,27 @@
 									</svg>
 								</a>
 							</div>
-							<a class="dowload-link" href="#" download="">
-								<svg class="icon icon-download ">
-									<use xlink:href="img/svg/sprite.svg#download"></use>
-								</svg><span>Реквизиты организации</span>
-								<svg class="icon icon-PDF ">
-									<use xlink:href="img/svg/sprite.svg#PDF"></use>
-								</svg>
-							</a>
+							<div class="footer__inner-row row">
+								<div class="col-auto d-flex align-items-center">
+									<a class="dowload-link" href="#" download="">
+										<svg class="icon icon-download ">
+											<use xlink:href="img/svg/sprite.svg#download"></use>
+										</svg><span>Реквизиты организации</span>
+										<svg class="icon icon-PDF ">
+											<use xlink:href="img/svg/sprite.svg#PDF"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="col-auto">
+									<div class="footer__scroll-up">Наверх
+										<div class="footer__icon-wrap">
+											<svg class="icon icon-arrow-up ">
+												<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -260,7 +280,7 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
@@ -278,7 +298,7 @@
 						<button class="form-wrap__btn btn" type="submit"> 
 						</button>
 						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Я&nbsp;ознакомился с&nbsp;условиями обработки<a href="#"> персональных данных</a></small>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text">Я&nbsp;ознакомился с&nbsp;условиями обработки<a href="#"> персональных данных</a></small>
 							</label>
 						</div>
 					</form>
@@ -291,6 +311,7 @@
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

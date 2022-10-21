@@ -392,6 +392,18 @@ function eventHandler() {
 
 	// modal window
 
+	var Sticky = new hcSticky('.need-help', {
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: '.sFaq__need-help-wrap',
+				top: 90,
+			}
+		}
+  });
+
+	document.querySelector('.footer__scroll-up').addEventListener('click', () => window.scrollTo(0, 0));
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -3,14 +3,30 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(16px);
 		flex-wrap: wrap;
+		justify-content: space-between;
+		font-size: 14px;
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 200vw;
+			height: 1px;
+			left: -50vw;
+			bottom: 0;
+			background-color: #E4E4E4;
+		}
 	}
-
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: 20px;
+		font-size: 16px;
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+	padding-left: 0;
 	li{
 		
 		// margin-left: 0;

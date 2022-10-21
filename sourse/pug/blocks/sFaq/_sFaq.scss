@@ -10,6 +10,13 @@
 	&__row{
 		--bs-gutter-x: #{rem(60)};
 		--bs-gutter-y: #{rem(40)};
+
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: #{rem(20)};
+		}
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(60)};
+		}
 	}
 	.dd-group {
 		--bs-gutter-y: #{rem(15)};
@@ -32,6 +39,11 @@
 						top: 50%;
 						transform: translateY(-50%) rotate(-180deg);
 					}
+				}
+			}
+			&:hover {
+				.dd-group__head {
+					color: $teal;
 				}
 			}
 		}
@@ -104,6 +116,12 @@
 					margin-bottom: 0;
 				}
 			}
+		}
+	}
+	&__need-help-wrap {
+		@include media-breakpoint-up(lg) {
+			width: rem(360);
+			height: 100%;
 		}
 	}
 	@include media-breakpoint-up(xl) {}

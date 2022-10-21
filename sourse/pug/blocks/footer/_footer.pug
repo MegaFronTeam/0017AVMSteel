@@ -47,7 +47,14 @@ mixin footer()
 						//- +item-sos('telegram').--telegram
 						//- +item-sos('whatsapp').--whatsapp
 						//- +item-sos('viber').--viber
-					+dowload-link('Реквизиты организации')
+					+e.inner-row.row
+						.col-auto.d-flex.align-items-center
+							+dowload-link('Реквизиты организации')
+						.col-auto
+							+e.scroll-up
+								| Наверх
+								+e.icon-wrap
+									+icon('arrow-up')
 
 		+e.bottom-line
 			.container

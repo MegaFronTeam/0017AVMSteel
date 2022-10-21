@@ -209,6 +209,40 @@
 			}
 		}
 	}
+	&__inner-row {
+		--bs-gutter-y: #{rem(20)};
+
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__scroll-up {
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+		color: #fff;
+		cursor: pointer;
+		&:hover {
+			.footer__icon-wrap {
+				background-color: $primary;
+				color: #fff;
+			}
+		}
+	}
+	&__icon-wrap {
+		@include mt;
+		margin-left: rem(10);
+		width: rem(50);
+		height: rem(50);
+		background-color: rgba($color: #fff, $alpha: .1);
+		color: $primary;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		svg {
+			font-size: rem(20);
+		}
+	}
 	//
 	@include media-breakpoint-up(xl) {
 	}
