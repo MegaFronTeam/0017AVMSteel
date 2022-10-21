@@ -13,12 +13,14 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
+include ../blocks/sFaq/_sFaq.pug
+
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '02-contacts.jpg'
+	- let  bg= '04-portfolio.jpg'
 
 block title
-	- let  title= contacts.head.title
+	- let  title= 'Наши работы'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,8 +30,8 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head(title, 'Контакты')
-		+sContact()
+		+page-head(title, 'Наши работы')
+		+sFaq()
 	+footer()
       
 
