@@ -1,13 +1,16 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
+		+e.container.container
 			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
+				.h2 Свяжитесь с нами для обсуждения 
+					span вашего проекта
+				p Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы ответить на&nbsp;ваши вопросы и&nbsp;предложить решение
+				+e.row.row
+					.col-md
+						+input('Ваш телефон', 'tel')
+					.col-md
+						+e.BUTTON.btn.btn.btn-primary(type='submit') Связаться с нами
+				+policy
+				+img('img/sForm-img-1.png').img
 	// end sForm
