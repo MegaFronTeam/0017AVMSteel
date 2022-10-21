@@ -24,24 +24,24 @@
 				color: $white;
 			}
 		}
-		&--telegram {
-			&:hover {
-				background-color: #2fa6d9;
-				border-color: #2fa6d9;
-			}
-		}
-		&--whatsapp {
-			&:hover {
-				background-color: #00c958;
-				border-color: #00c958;
-			}
-		}
-		&--viber {
-			&:hover {
-				background-color: #8852c1;
-				border-color: #8852c1;
-			}
-		}
+		// &--telegram {
+		// 	&:hover {
+		// 		background-color: #2fa6d9;
+		// 		border-color: #2fa6d9;
+		// 	}
+		// }
+		// &--whatsapp {
+		// 	&:hover {
+		// 		background-color: #00c958;
+		// 		border-color: #00c958;
+		// 	}
+		// }
+		// &--viber {
+		// 	&:hover {
+		// 		background-color: #8852c1;
+		// 		border-color: #8852c1;
+		// 	}
+		// }
 	}
 	.icon {
 		@include mt;
