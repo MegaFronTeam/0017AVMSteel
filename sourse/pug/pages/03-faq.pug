@@ -14,6 +14,7 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
 include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sForm/_sForm.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -32,6 +33,7 @@ block pagecontent
 	main
 		+page-head(title, 'Ответы на вопросы')
 		+sFaq()
+		+sForm
 	+footer()
       
 

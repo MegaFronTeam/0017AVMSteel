@@ -100,6 +100,16 @@
 		display: block;
 	}
 	&__policy {
+		.custom-input {
+			display: flex;
+			align-items: center;
+			padding-left: 0;
+			&__input {
+				margin-left: 0;
+				margin-right: rem(15);
+				flex: 0 0 auto;
+			}
+		}
 		a {
 			@extend .primary-link;
 		}
