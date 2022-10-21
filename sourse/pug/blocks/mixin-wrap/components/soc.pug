@@ -11,6 +11,6 @@ mixin soc()
 			block
 		else
 			each soc in social
-				+item-sos(soc)
+				+item-sos(soc.name)(style=`--color: ${soc.color}`)
 
 //- /social buttons 

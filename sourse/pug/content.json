@@ -10,7 +10,9 @@
 			}
 	],
 	"social":[
-		"fb","instagram","telegram"
+		{"name": "telegram", "color": "#2fa6d9"},
+		{"name": "whatsapp", "color": "#00c958"},
+		{"name": "viber", "color": "#8852c1"}
 	],
 	"index":{
 		"head": {
