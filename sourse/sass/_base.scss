@@ -309,7 +309,7 @@ ul {
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
-	border-radius: 50%;
+	border-radius: $border-radius;
 	background-color: var(--swiperBgDef);
 	border: 2px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
@@ -331,7 +331,7 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
 	}
 
 	&::after {
@@ -347,17 +347,19 @@ ul {
 }
 
 .swiper-pagination {
+	display: flex;
 	width: 100%;
-	text-align: center;
+	justify-content: center;
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: rem(10);
+		height: rem(10);
 		border-radius: 50%;
-		background-color: #e6e6e6;
+		background-color: #F8F8F8;
 		outline: none !important;
 		@include mt;
+		opacity: 0.5;
 		margin-left: rem(8);
 		// padding-right: rem(8);
 		margin-right: rem(5);
@@ -365,7 +367,8 @@ ul {
 
 		&-active,
 		&:hover {
-			background-color: var(--bs-primary);
+			opacity: 1;
+			// background-color: var(--bs-primary);
 		}
 	}
 }
@@ -581,5 +584,16 @@ iframe {
 	&:hover,
 	&:focus {
 		color: #00BCB6;
+	}
+}
+
+.img-wrap-center {
+	@include a-cent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+		max-width: 100%;
+		height: auto;
 	}
 }
