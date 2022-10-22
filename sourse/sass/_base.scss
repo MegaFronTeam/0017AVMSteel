@@ -356,7 +356,7 @@ ul {
 		width: rem(10);
 		height: rem(10);
 		border-radius: 50%;
-		background-color: #F8F8F8;
+		background-color: #f8f8f8;
 		outline: none !important;
 		@include mt;
 		opacity: 0.5;
@@ -583,7 +583,7 @@ iframe {
 	color: $secondary;
 	&:hover,
 	&:focus {
-		color: #00BCB6;
+		color: #00bcb6;
 	}
 }
 
@@ -592,8 +592,19 @@ iframe {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	img{
+	img {
 		max-width: 100%;
 		height: auto;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	span {
+		color: $primary;
 	}
 }
