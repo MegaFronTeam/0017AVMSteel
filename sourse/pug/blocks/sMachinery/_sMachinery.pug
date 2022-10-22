@@ -1,0 +1,22 @@
+mixin sMachinery(data)
+	// start sMachinery
+	+b.SECTION.sMachinery.section#sMachinery&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Используемая техника нашей компанией #[span при погружении шпунта]
+			+e.row.row
+				mixin item(t, img)
+					.col-md-6.col-xl-4 
+						+e.A.item(href="#")
+							+e.img-wrap
+								.img-wrap-center
+									+img(`img/sMachinery-${img}.jpg`, 'bg')
+							h5!= t
+				+item(`Установка статического вдавливания Giken Silent Piler&nbsp;F3`, 1)
+				+item(`Вибропогружатель ICE&minus;815C`, 2)
+				+item(`Вибропогружатель MOVAX SPH80 на базе экскаватора HITACHI&nbsp;ZX&nbsp;330&nbsp;LC`, 3)
+				+item(`Вибропогружатель Muller&nbsp;ms&minus;32&nbsp;HFV`, 4)
+				+item(`Буровая установка JUN JIN CSM`, 5)
+				+item(`Автокран Галичанин`, 6)
+
+	// end sMachinery

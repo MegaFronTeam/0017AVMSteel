@@ -3,7 +3,14 @@ mixin sMounting(data)
 	+b.SECTION.sMounting.section#sMounting&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Монтаж шпунта осуществляется <br> #[span двумя способами]
-				
+				h2 Монтаж шпунта осуществляется #[span двумя способами]
 			+e.row.row
+				.col-md-6
+					+e.A.item(href="#")
+						+icon('wave')
+						h4 Вибропогружатели с&nbsp;различной частотой вращения
+				.col-md-6
+					+e.A.item(href="#")
+						+icon('arrow-bottom')
+						h4 Установки статического вдавливания
 	// end sMounting
