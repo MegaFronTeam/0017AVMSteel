@@ -13,6 +13,14 @@
 	}
 	&__item {
 	}
+	h2 {
+		br {
+			display: none;
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+	}
 
 	&__slider-wrap {
 		position: relative;
@@ -33,7 +41,6 @@
 	&__img-wrap {
 		@include block(290, 410);
 		background-color: #e4e4e4;
-		
 	}
 	&__btn-zoom {
 		@include mt;
@@ -51,7 +58,6 @@
 		@include media-breakpoint-up(xxl) {
 			width: 70px;
 			height: 70px;
-
 		}
 		.icon {
 			color: $white;
