@@ -401,7 +401,7 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		touchRatio: 0.4,
 		slideToClickedSlide: true,
 		// freeModeMomentum: true,
 		navigation: {
@@ -429,8 +429,8 @@ function eventHandler() {
 		slidesPerView: 1,
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
+		touchRatio: 0.4,
+		// slideToClickedSlide: true,
 		// freeModeMomentum: true,
 		breakpoints: {
 			445: {
@@ -454,14 +454,7 @@ function eventHandler() {
 			nextEl: '.sTeam__slider-wrap--team .swiper-button-next',
 			prevEl: '.sTeam__slider-wrap--team .swiper-button-prev',
 		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+		
 
 	});
 	const swiper7 = new Swiper('.sTeam__slider-wrap--partners .sTeam__slider--js', {
@@ -475,8 +468,8 @@ function eventHandler() {
 		slidesPerView: 1,
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
+		touchRatio: 0.4,
+		// slideToClickedSlide: true,
 		// freeModeMomentum: true,
 		breakpoints: {
 			445: {
@@ -500,14 +493,46 @@ function eventHandler() {
 			nextEl: '.sTeam__slider-wrap--partners .swiper-button-next',
 			prevEl: '.sTeam__slider-wrap--partners .swiper-button-prev',
 		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
+		
+
+	});
+	const swiper8 = new Swiper('.sCertificates__slider--js', {
+		// slidesPerView: 5,
+		lazy: {
+			loadPrevNext: true,
 		},
+		watchOverflow: true,
+		spaceBetween: 20,
+		loop: true,
+		slidesPerView: 1,
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		breakpoints: {
+			445: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			993: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+		},
+		navigation: {
+			nextEl: '.sCertificates__slider-wrap .swiper-button-next',
+			prevEl: '.sCertificates__slider-wrap .swiper-button-prev',
+		},
+		
 
 	});
 

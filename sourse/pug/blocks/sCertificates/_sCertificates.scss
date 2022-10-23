@@ -1,0 +1,83 @@
+// start .sCertificates
+.sCertificates {
+	--sPT: 0;
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	&__slider-wrap {
+		position: relative;
+		padding: 0 60px;
+		@include media-breakpoint-up(sm) {
+			padding: 0 80px;
+		}
+	}
+	&__slide {
+		&:hover {
+			cursor: pointer;
+			.sCertificates__btn-zoom {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__img-wrap {
+		@include block(290, 410);
+		background-color: #e4e4e4;
+		
+	}
+	&__btn-zoom {
+		@include mt;
+		@include a-cent;
+		width: 56px;
+		height: 56px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $primary;
+		border-radius: $border-radius;
+		z-index: 20;
+		opacity: 0;
+		pointer-events: none;
+		@include media-breakpoint-up(xxl) {
+			width: 70px;
+			height: 70px;
+
+		}
+		.icon {
+			color: $white;
+			font-size: rem(20);
+		}
+	}
+	.swiper-button-hand {
+		--swiperArrowPosition: 0;
+		--swiperArrowSize: 40px;
+		@include media-breakpoint-up(sm) {
+			--swiperArrowSize: 50px;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCertificates

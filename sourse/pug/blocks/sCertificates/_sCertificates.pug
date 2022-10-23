@@ -1,0 +1,24 @@
+mixin cert-slide(t, p, i)
+	+e.slide.swiper-slide
+		+e.A.img-wrap(data-fancybox='sCertificates' data-src=`img/sCertificates-lg-${i}.jpg`)
+			+e.btn-zoom
+				+icon('zoom')
+			.img-wrap-center
+				+img(`img/sCertificates-${i}.jpg`, 'bg')
+
+mixin sCertificates(data)
+	// start sCertificates
+	+b.SECTION.sCertificates.section#sCertificates&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Необходимые #[span сертификаты и&nbsp;допуски]
+			+e.slider-wrap
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+cert-slide(`Васильев Константин`, `Генеральный директор`, 1)
+						+cert-slide(`Иванов Василий`, `Генеральный директор`, 2)
+						+cert-slide(`Максимова Анастасия`, `Руководитель отдела продаж`, 1)
+						+cert-slide(`Иван Петров`, `Директор по маркетингу`, 2)
+				+arrow-rounded()
+
+	// end sCertificates
