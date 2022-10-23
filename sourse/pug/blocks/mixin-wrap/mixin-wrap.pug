@@ -42,8 +42,8 @@ mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length
 		+breadcrumb('Главная',...items)
-
-		h1= t
+		.container
+			h1!= t
 
 mixin dowload-link(t)
 	+b.A.dowload-link(href='#' download='')

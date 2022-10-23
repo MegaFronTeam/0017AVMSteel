@@ -6,3 +6,5 @@
 4. <https://megafronteam.github.io/0017AVMSteel/public/04-portfolio.html>
 5. 
 6. <https://megafronteam.github.io/0017AVMSteel/public/06-equipment.html>
+7. 
+8. <https://megafronteam.github.io/0017AVMSteel/public/08-buyout.html>
