@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -23,8 +23,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -33,7 +33,7 @@ const JSCCommon = {
 		});
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if(!element) return;
+			if (!element) return;
 			let modal = document.querySelector("#" + element.dataset.src);
 			const data = element.dataset;
 
@@ -75,7 +75,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -149,7 +149,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -280,28 +280,28 @@ const JSCCommon = {
 		}
 	},
 	imgToSVG() {
-    const convertImages = (query, callback) => {
+		const convertImages = (query, callback) => {
 			const images = document.querySelectorAll(query);
-	
+
 			images.forEach(image => {
 				fetch(image.src)
 					.then(res => res.text())
 					.then(data => {
 						const parser = new DOMParser();
 						const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-	
+
 						if (image.id) svg.id = image.id;
 						if (image.className) svg.classList = image.classList;
-	
+
 						image.parentNode.replaceChild(svg, image);
 					})
 					.then(callback)
 					.catch(error => console.error(error))
 			});
 		};
-	
+
 		convertImages('.img-svg-js');
-  },
+	},
 };
 const $ = jQuery;
 
@@ -317,7 +317,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -371,13 +371,13 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
 	});
-	
+
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -398,6 +398,12 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
+		slidesPerView: 'auto',
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -410,12 +416,98 @@ function eventHandler() {
 			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
 			// }
 		},
-		slidesPerView: 'auto',
+
+	});
+	const swiper6 = new Swiper('.sTeam__slider-wrap--team .sTeam__slider--js', {
+		// slidesPerView: 5,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 20,
+		loop: true,
+		slidesPerView: 1,
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// freeModeMomentum: true,
+		breakpoints: {
+			445: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			993: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+		},
+		navigation: {
+			nextEl: '.sTeam__slider-wrap--team .swiper-button-next',
+			prevEl: '.sTeam__slider-wrap--team .swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+
+	});
+	const swiper7 = new Swiper('.sTeam__slider-wrap--partners .sTeam__slider--js', {
+		// slidesPerView: 5,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 20,
+		loop: true,
+		slidesPerView: 1,
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		breakpoints: {
+			445: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			993: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+		},
+		navigation: {
+			nextEl: '.sTeam__slider-wrap--partners .swiper-button-next',
+			prevEl: '.sTeam__slider-wrap--partners .swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
 
 	});
 
@@ -429,7 +521,7 @@ function eventHandler() {
 				top: 90,
 			}
 		}
-  });
+	});
 
 	document.querySelector('.footer__scroll-up').addEventListener('click', () => window.scrollTo(0, 0));
 
@@ -453,7 +545,7 @@ if (document.querySelector("#map")) {
 
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
-			center: [55.751300430341765,37.624486136718716],
+			center: [55.751300430341765, 37.624486136718716],
 			zoom: 9,
 			controls: ['zoomControl']
 		}, {

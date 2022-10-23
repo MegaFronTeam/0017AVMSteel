@@ -4,6 +4,7 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sTeam/_sTeam.pug
 //- include ../blocks/sMachinery/_sMachinery.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
@@ -25,7 +26,7 @@ block pagecontent
 	main
 		+page-head(title, title)
 		+sAbout()
-		//- +sMachinery()
+		+sTeam()
 		+sForm()
 	+footer()
       

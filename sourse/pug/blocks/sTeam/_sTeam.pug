@@ -1,0 +1,33 @@
+mixin slide(t, p, i)
+	+e.slide.swiper-slide
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/sTeam-${i}.jpg`, 'bg')
+		+e.slide-caption
+			h5!= t
+			span!= p
+
+mixin sTeam(data)
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наша #[span команда]
+			+e.slider-wrap--team
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide(`Васильев Константин`, `Генеральный директор`, 1)
+						+slide(`Иванов Василий`, `Генеральный директор`, 2)
+						+slide(`Максимова Анастасия`, `Руководитель отдела продаж`, 3)
+						+slide(`Иван Петров`, `Директор по маркетингу`, 4)
+				+arrow-rounded()
+			h3 Наши партнеры #[span Tecnoterra&nbsp;SA (Швейцария)]
+			+e.slider-wrap--partners
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+slide(`Васильев Константин`, `Генеральный директор`, 1)
+						+slide(`Иванов Василий`, `Генеральный директор`, 2)
+						+slide(`Максимова Анастасия`, `Руководитель отдела продаж`, 3)
+						+slide(`Иван Петров`, `Директор по маркетингу`, 4)
+				+arrow-rounded()
+	// end sTeam

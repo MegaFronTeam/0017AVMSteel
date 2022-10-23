@@ -311,7 +311,7 @@ ul {
 	height: var(--swiperArrowSize);
 	border-radius: $border-radius;
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	border: 1px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -343,6 +343,22 @@ ul {
 
 	&-prev {
 		left: var(--swiperArrowPosition);
+	}
+	&--rounded {
+		border-radius: 50%;
+		--swiperArrowSize: 50px;
+		--swiperBgDef: #{$white};
+		--swiperBorderColorDef: #e4e4e4;
+		--swiperColorDef: #{$primary};
+		--swiperArrowPosition: calc(var(--swiperArrowSize) * -1 / 2);
+		&:hover {
+			background-color: var(--swiperBgDefHover);
+			border-color: var(--swiperBorderColorDefHover);
+			color: var(--swiperColorDefHover);
+		}
+		.icon {
+			font-size: rem(20);
+		}
 	}
 }
 
@@ -571,7 +587,7 @@ iframe {
 			padding: rem(30) 0 rem(30);
 		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			width: 120vw;
 			height: 1px;
