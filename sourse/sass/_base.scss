@@ -552,7 +552,7 @@ iframe {
 
 .breadcrumb {
 	flex-wrap: nowrap;
-	padding: rem(20) 0;
+	padding: 20px 0;
 	@include media-breakpoint-up(sm) {
 		padding: rem(30) 0;
 	}
@@ -582,7 +582,7 @@ iframe {
 	h1 {
 		position: relative;
 		text-align: center;
-		padding: rem(20) 0;
+		padding: 20px 0;
 		@include media-breakpoint-up(sm) {
 			padding: rem(30) 0;
 		}
@@ -614,7 +614,7 @@ iframe {
 			object-position: center 63%;
 		}
 		h1 {
-			padding: rem(60) 0;
+			padding: 60px 0;
 		@include media-breakpoint-up(sm) {
 			padding: rem(90) 0;
 		}
