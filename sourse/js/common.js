@@ -550,6 +550,12 @@ function eventHandler() {
 
 	document.querySelector('.footer__scroll-up').addEventListener('click', () => window.scrollTo(0, 0));
 
+	let menuItemHasChildrens = document.querySelectorAll('.menu-item-has-children');
+	for (let menuItemHasChildren of menuItemHasChildrens) {
+		menuItemHasChildren.addEventListener('click', function() {
+			$(this).toggleClass('shown');
+		});
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
