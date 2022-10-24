@@ -4,35 +4,5 @@ mixin headerBlock()
 		.container
 			+b.section-title.text-center
 				h1 Шпунт Ларсена h1
-				h2 Шпунт Ларсена h2
-				h3 Шпунт Ларсена h3
-				h4 Шпунт Ларсена h4
-				h5 Шпунт Ларсена h5
-				h6 Шпунт Ларсена h6
 
-	
-			+form-wrap
-				+input('Ваше имя', 'email', 'Электронная почта')
-				+input('123456', 'tel', 'Телефон').parsley-error
-				+input('', 'date', 'Дата рождения')
-				+input('Ваша электронная почта', 'email')
-				+in-c('checkbox', 'Beatae, ipsum.')
-				+in-c("checkbox", 'Я ознакомился с условиями обработки персональных данных')
-				+in-c("checkbox", 'Beatae, ipsum.')
-			
-			ul
-				li Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit voluptatem provident vero autem aliquid incidunt ex quaerat expedita accusantium vitae!
-				li Lorem ipsum dolor sit amet.
-				li Lorem ipsum dolor sit amet.
-				li Lorem ipsum dolor sit amet.
-			.row
-				.col-auto
-					a(href="#") ССЫЛКА Lorem ipsum dolor sit.
-				.col-auto
-					+btn('Отправить заявку', typ= "submit").btn.btn-primary
-				.col-auto
-					+btn('Подробнее о компании', typ= "a").btn.btn-outline-primary
-				
-
-						
 	// end headerBlock

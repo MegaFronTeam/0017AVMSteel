@@ -1,0 +1,94 @@
+// start .sServices
+.sServices {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+		position: relative;
+		display: block;
+		display: flex;
+		flex-direction: column;
+		background-color: $body-color;
+		border-radius: $border-radius-lg;
+		color: $white;
+		height: 100%;
+		padding: rem(45);
+		min-height: rem(520);
+		overflow: hidden;
+		&:hover {
+			color: $white;
+			.sServices__img-wrap {
+				
+			}
+			.sServices__btn {
+				transform: translateY(0);
+			}
+		}
+		h4 {
+			margin-bottom: rem(30);
+		}
+		ul {
+			margin-bottom: rem(30);
+			li {
+				&:not(:last-child) {
+					margin-bottom: rem(15);
+				}
+			}
+		}
+	}
+
+	&__img-wrap {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		
+		img {
+			opacity: 0.6;
+		}
+	}
+	&__btn {
+		@extend .swiper-button-hand;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		align-self: flex-end;
+		margin-top: auto;
+		margin-bottom: 0;
+		pointer-events: none;
+		transform: translateY(150px);
+		z-index: 3;
+	}
+
+	&__item-content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		z-index: 2;
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sServices
