@@ -589,9 +589,9 @@ iframe {
 		&::before {
 			content: "";
 			position: absolute;
-			width: 120vw;
+			width: 100%;
 			height: 1px;
-			left: -10vw;
+			left: 0;
 			top: 0;
 			background-color: #e4e4e4;
 		}
@@ -610,7 +610,7 @@ iframe {
 		img {
 			position: absolute;
 			opacity: 0.5;
-			object-position: center 63%;
+			object-position: center 65%;
 			left: 0;
 			top: 0;
 			z-index: -1;
@@ -623,12 +623,6 @@ iframe {
 			&::before {
 				background-color: $white;
 				opacity: 0.2;
-			}
-			h1 {
-				margin-bottom: 20px;
-				@include media-breakpoint-up(sm) {
-					margin-bottom: rem(30);
-				}
 			}
 		}
 		.breadcrumb {
@@ -694,6 +688,22 @@ h6 {
 			padding: 60px 0 98px;
 			@include media-breakpoint-up(sm) {
 				padding: rem(90) 0 rem(147);
+			}
+			h1 {
+				margin-bottom: 20px;
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(30);
+				}
+			}
+		}
+	}
+}
+.glossary-page {
+	.page-head--bg {
+		.page-head__content {
+			// padding: 60px 0 90px;
+			@include media-breakpoint-up(sm) {
+				padding: rem(90) 0 rem(135);
 			}
 		}
 	}
