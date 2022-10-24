@@ -3,7 +3,7 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(13px);
+		@include roww(2px);
 		flex-wrap: wrap;
 		justify-content: space-between;
 		font-size: 14px;
@@ -19,7 +19,7 @@
 		}
 	}
 	@include media-breakpoint-up(xl) {
-		--bs-gutter-x: 20px;
+		// --bs-gutter-x: 20px;
 		font-size: 16px;
 	}
 	list-style: none;
