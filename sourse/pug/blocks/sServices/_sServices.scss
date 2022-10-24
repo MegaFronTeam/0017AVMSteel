@@ -43,13 +43,13 @@
 			height: 100%;
 			left: 0;
 			top: 0;
-			background-color: rgba(124, 126, 139, 0.8);
+			background-color: rgb(124, 126, 139);
 			opacity: 0;
 		}
 		&:hover {
 			color: $white;
 			&::before {
-				opacity: 0.8;
+				opacity: 1;
 			}
 			&::after {
 				opacity: 0.8;
