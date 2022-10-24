@@ -555,7 +555,14 @@ function eventHandler() {
 		menuItemHasChildren.addEventListener('click', function() {
 			$(this).toggleClass('shown');
 		});
-	}
+		document.addEventListener('click', function(event) {
+			let container = event.target.closest('.sub-menu');
+			let btn = event.target.closest('.menu-item-has-children.shown');
+			if(!container && !btn) {
+				menuItemHasChildren.classList.remove('shown');
+			}
+		});
+	};
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
