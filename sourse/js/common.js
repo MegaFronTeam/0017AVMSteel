@@ -554,6 +554,9 @@ function eventHandler() {
 	for (let menuItemHasChildren of menuItemHasChildrens) {
 		menuItemHasChildren.addEventListener('click', function() {
 			$(this).toggleClass('shown');
+			if (window.innerWidth < 992) {
+				$(this.querySelector('.sub-menu')).slideToggle();
+			}
 		});
 		document.addEventListener('click', function(event) {
 			let container = event.target.closest('.sub-menu');
@@ -563,6 +566,17 @@ function eventHandler() {
 			}
 		});
 	};
+
+	$('.topLine__tel-wrap').on('click', function() {
+		$(this).toggleClass('active');
+	});
+	document.addEventListener('click', function(event) {
+		let container = event.target.closest('.topLine__content');
+		let btn = event.target.closest('.topLine__tel--js');
+		if(!container && !btn) {
+			$('.topLine__tel-wrap').removeClass('active');
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
