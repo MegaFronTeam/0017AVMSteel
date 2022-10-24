@@ -9,7 +9,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'buyout-page' 
 	- let  bg= '08-buyout.jpg'
 
 block title
@@ -23,7 +23,8 @@ block pagecontent
 		+top-nav()
 		//- +topLine
 	main
-		+page-head(`Выкупим Ваш шпунт Ларсена <br> по&nbsp;максимальной рыночной цене`, title )
+		+page-head-bg(3,`Выкупим Ваш шпунт Ларсена <br> по&nbsp;максимальной рыночной цене`, title )
+			+e.subtitle Выкупаем в&nbsp;том числе неликвидный шпунт
 		//- +sMounting()
 		//- +sMachinery()
 		+sForm()

@@ -579,7 +579,7 @@ iframe {
 
 .page-head {
 	background-color: #f8f8f8;
-	h1 {
+	&__content {
 		position: relative;
 		text-align: center;
 		padding: 20px 0;
@@ -595,6 +595,8 @@ iframe {
 			top: 0;
 			background-color: #e4e4e4;
 		}
+	}
+	h1 {
 		br {
 			display: none;
 			@include media-breakpoint-up(xl) {
@@ -603,24 +605,30 @@ iframe {
 		}
 	}
 	&--bg {
-		position: relative;
 		background-color: $body-color;
 		color: $white;
 		img {
 			position: absolute;
-			left: 0;
-			top: 0;
 			opacity: 0.5;
 			object-position: center 63%;
+			left: 0;
+			top: 0;
+			z-index: -1;
 		}
-		h1 {
+		.page-head__content {
 			padding: 60px 0;
-		@include media-breakpoint-up(sm) {
-			padding: rem(90) 0;
-		}
+			@include media-breakpoint-up(sm) {
+				padding: rem(90) 0;
+			}
 			&::before {
 				background-color: $white;
 				opacity: 0.2;
+			}
+			h1 {
+				margin-bottom: 20px;
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(30);
+				}
 			}
 		}
 		.breadcrumb {
@@ -637,8 +645,12 @@ iframe {
 				}
 			}
 		}
+		.page-head__subtitle {
+			font-size: rem(20);
+		}
 	}
 }
+
 .primary-link {
 	color: $primary;
 	&:hover,
@@ -673,5 +685,16 @@ h5,
 h6 {
 	span {
 		color: $primary;
+	}
+}
+
+.buyout-page {
+	.page-head--bg {
+		.page-head__content {
+			padding: 60px 0 98px;
+			@include media-breakpoint-up(sm) {
+				padding: rem(90) 0 rem(147);
+			}
+		}
 	}
 }

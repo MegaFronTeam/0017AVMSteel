@@ -49,17 +49,19 @@ mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length
 		+breadcrumb('Главная',...items)
-		.container
-			h1!= t
+		+e.content
+			.container
+				h1!= t
 
 mixin page-head-bg(i, t,...items)
-	+b.page-head--bg
+	+b.page-head--bg.bg-wrap
 		+img(`img/page-head-bg-${i}.jpg`, `bg`)
 		- let l = items.length
 		+breadcrumb('Главная',...items)
-		.container
-			h1!= t
-			block
+		+e.content
+			.container
+				h1!= t
+				block
 
 mixin dowload-link(t)
 	+b.A.dowload-link(href='#' download='')
