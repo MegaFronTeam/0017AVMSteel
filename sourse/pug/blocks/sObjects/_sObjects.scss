@@ -7,7 +7,7 @@
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(md) {
 			--bs-gutter-x: 20px;
 		}
 	}
@@ -32,7 +32,7 @@
 			}
 		}
 	}
-	
+
 	&__item {
 		text-align: center;
 		// display: flex;
@@ -88,7 +88,7 @@
 		}
 		.sObjects__btn {
 			@include mt;
-			// pointer-events: none;
+			pointer-events: none;
 			@include media-breakpoint-down(lg) {
 				display: none;
 			}
@@ -105,6 +105,11 @@
 	}
 	&__btn-wrap {
 		text-align: center;
+		margin-top: 30px;
+		.sObjects__btn {
+			width: 320px;
+			max-width: 100%;
+		}
 		@include media-breakpoint-up(lg) {
 			display: none;
 		}
@@ -122,6 +127,16 @@
 			left: 0;
 			top: 0;
 			z-index: 3;
+			padding: rem(45);
+		}
+		h4 {
+			@include media-breakpoint-down(lg) {
+				font-size: rem(20);
+				margin-top: 15px;
+			}
+			@include media-breakpoint-down(md) {
+				font-size: rem(16);
+			}
 		}
 	}
 
@@ -131,7 +146,7 @@
 		border-radius: $border-radius-lg;
 		overflow: hidden;
 		@include media-breakpoint-up(lg) {
-			--ratio: 330/450;
+			--ratio: 329/450;
 		}
 		img {
 			position: absolute;
