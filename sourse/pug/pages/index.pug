@@ -9,6 +9,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sServices/_sServices.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sObjects/_sObjects.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/footer/_footer.pug
 
@@ -31,6 +32,7 @@ block pagecontent
 	main
 		+headerBlock 
 		+sServices()
+		+sObjects()
 		+sCatalog
 		+sTeam()
 		+sMap()
