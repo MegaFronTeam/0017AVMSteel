@@ -1,8 +1,23 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section#headerBlock&attributes(attributes).bg-wrap
+		+img('img/headerBlock-img-1.jpg', 'bg').picture-bg
 		.container
-			+b.section-title.text-center
-				h1 Шпунт Ларсена h1
-
+			+e.row.row
+				.col-lg
+					+e.content
+						h1 Шпунт Ларсена
+						h3 Л4, Л5, Л5УМ, VL, AZ, GU, ZU, ZZ, Трубошпунт, ПВХ
+				.col-lg
+					+e.link-wrap
+						mixin link(title)
+							+e.link(href="#")
+								.h4!= title
+								+e.icon-wrap
+									+icon('arrow-right')
+						+link('Проектирование<br>и строительно-монтажные работы')
+						+link('Монтаж/демонтаж шпунта')
+						+link('Аренда шпунта')
+						+link('Продажа шпунта')
+						+link('Выкуп шпунта')
 	// end headerBlock

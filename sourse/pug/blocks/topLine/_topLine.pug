@@ -2,8 +2,25 @@ mixin topLine()
 	// start topLine
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h1 Проектирование и строительно-монтажные работы
-				
-			.row
+			+e.row.row
+				.col
+					+e.logo(href="/")
+						img(src="../img/svg/logo.svg" alt="")
+						span ABM ИНЖИНИРИНГ
+				.col-auto.d-none.d-lg-block
+					+e.mail(href="mailto:info@avmsteel.ru") info@avmsteel.ru
+				.col-auto.d-none.d-lg-block
+					+e.tel-wrap
+						+e.tel--js
+							| 8 (495) 885-60-53
+							+icon('chevron-down')
+						+e.content 
+							+e.tel(href="tel:84958856053") 8 (495) 885-60-53
+							+e.tel(href="tel:84958855011") 8 (495) 885-50-11
+							+soc()
+							+dowload-link('Скачать реквизиты')
+				.col-auto.d-none.d-lg-block
+					+e.btn.btn.btn-outline-primary(href="#") Связаться с нами
+				.col-auto.d-lg-none
+					+menu-toggle()
 	// end topLine

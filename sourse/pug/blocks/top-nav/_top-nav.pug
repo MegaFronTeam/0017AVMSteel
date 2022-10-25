@@ -11,7 +11,7 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js
+	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
@@ -22,12 +22,12 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col.order-lg-0.order-last
+				.col.order-lg-0.order-last.d-none.d-lg-block
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
 					
-				.col-auto.d-lg-none
-					+menu-toggle()
+				//- .col-auto.d-lg-none
+				//- 	+menu-toggle()
 	// end top-nav
