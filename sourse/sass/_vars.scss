@@ -24,9 +24,9 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #F8F8F8;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
+$gray-300: #E4E4E4;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #686974 !default;
@@ -341,7 +341,7 @@ $theme-colors: (
 
 $theme-colors: map-remove($theme-colors, 
 
-"light", 
+
 "dark",  
 "success",
 'warning', 
@@ -515,7 +515,7 @@ $border-widths: (
 ) !default;
 
 $border-style:                solid !default;
-$border-color:                #E4E4E4 !default;
+$border-color:                $gray-300 !default;
 $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 

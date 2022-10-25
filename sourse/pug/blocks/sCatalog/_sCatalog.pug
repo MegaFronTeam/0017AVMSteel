@@ -1,14 +1,20 @@
-mixin product-item(i, t, p ,pr)
+mixin product-item(i, t)
 	+b.ARTICLE.product-item
 		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
+			+e.label--yellow Б/У
+			+e.label--blue Новый
+			+e.label--black 7,4 кг/м
+			//- .img-wrap-center 
+			+img(`img/prod-${i}.jpg`, 'bg')
 		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
+			+e.title.h5!= t
+			mixin tr(key, val)
+				tr
+					td!= key
+					td!= val
+			table
+				block
+			+e.btn.btn.btn-primary(href='#') Узнать цену
 	// /.product-item
 
 mixin sCatalog(data)
@@ -16,26 +22,37 @@ mixin sCatalog(data)
 	+b.sCatalog.section&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
+				h2 Каталог 
+					span шпунта
+				p АВМ инжиниринг&nbsp;&mdash; узкоспециализированная команда в&nbsp;сфере устройства шпунтовых ограждений
 
 			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
-
+				- const wrapClass="col-md-6 col-lg-4 col-xl-3"
+				-for(let i = 0; i < 2; i++)
+					+e.col(class= wrapClass)
+						+product-item(`1`,`Трубошпунт`,``,``) 
+							+tr('B', '400 мм')
+							+tr('S', '14,8 мм')
+							+tr('H', '359 мм')
+							+tr('Т', '9,5 мм')
+					+e.col(class= wrapClass)
+						+product-item(`2`,`Шпунт Ларсена Л4`,``,``) 
+							+tr('B', '400 мм')
+							+tr('S', '14,8 мм')
+							+tr('H', '359 мм')
+							+tr('Т', '9,5 мм')
+					+e.col(class= wrapClass)
+						+product-item(`3`,`Шпунт Ларсена Л5`,``,``) 
+							+tr('B', '400 мм')
+							+tr('S', '14,8 мм')
+							+tr('H', '359 мм')
+							+tr('Т', '9,5 мм')
+					+e.col(class= wrapClass)
+						+product-item(`4`,`Шпунт Ларсена Л5-УМ`,``,``)
+							+tr('B', '400 мм')
+							+tr('S', '14,8 мм')
+							+tr('H', '359 мм')
+							+tr('Т', '9,5 мм')
+			+e.btn.btn.btn-outline-primary(href='#') Смотреть весь каталог
+ 
 	// end sCatalog

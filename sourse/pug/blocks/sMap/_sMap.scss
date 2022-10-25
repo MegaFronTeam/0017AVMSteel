@@ -1,0 +1,374 @@
+// start .sMap
+.sMap {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(40)};
+	// --sTPB: #{rem()};
+	background-color: $gray-100;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(83.200)};
+		--sPB: #{rem(91.200)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(20);
+		}
+		h2 {
+			max-width: rem(990);
+			margin: 0 auto;
+			@include media-breakpoint-down(sm) {
+				font-size: 28px;
+			}
+		}
+	}
+	.map {
+		display: none;
+		@include media-breakpoint-up(xl) {
+			display: block;
+			width: 100%;
+		}
+	}
+	&__wrap {
+		position: relative;
+	}
+	ul {
+		columns: 2;
+		padding-left: 0;
+		list-style-type: none;
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md) { 
+			columns: 3;
+		}
+		@include media-breakpoint-up(lg) { 
+			columns: 4;
+			margin-bottom: rem(35);
+		}
+		@include media-breakpoint-up(xl) {
+			columns: unset;
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-down(xl) {
+			--bs-gutter-y: #{rem(10)};
+			margin-top: calc(var(--bs-gutter-y) * -1);
+			& > * {
+				margin-top: var(--bs-gutter-y);
+			}
+		}
+		li {
+			display: none;
+			font-size: rem(16);
+			@include media-breakpoint-down(xl) {
+				width: 100%;
+				display: inline-block;
+				position: relative;
+				padding-left: rem(18);
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 9px;
+					width: 5px;
+					height: 5px;
+					background-color: $primary;
+					border-radius: 50%;
+				}
+			}
+			@include media-breakpoint-up(xl) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				font-size: calc(14px + .1045vw);
+				display: flex;
+				img {
+					flex: 0 0 auto;
+					width: 100%;
+					max-width: calc(18px + .261vw);
+					margin-right: rem(5);
+				}
+				&:nth-child(1) {
+					left: 88%;
+					top: 8.9%;
+				}
+				&:nth-child(2) {
+					left: 27.8%;
+					top: 9.3%;
+				}
+				&:nth-child(3) {
+					left: 19.6%;
+					top: 14.2%;
+				}
+				&:nth-child(4) {
+					left: 14.8%;
+    			top: 18.7%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(5) {
+					left: 18.8%;
+					top: 21.7%;
+				}
+				&:nth-child(6) {
+					left: 4.6%;
+					top: 24%;
+					flex-direction: row-reverse;
+					img {
+						margin-left: rem(5);
+						margin-right: 0;
+					}
+				}
+				&:nth-child(7) {
+					left: 13.7%;
+					top: 26.1%;
+					flex-direction: row-reverse;
+					img {
+						margin-left: rem(5);
+						margin-right: 0;
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(8) {
+					left: 19.7%;
+					top: 26.2%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(9) {
+					left: 35.2%;
+					top: 27.4%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(10) {
+					left: 44.9%;
+					top: 28.4%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(11) {
+					left: 22.3%;
+					top: 29.2%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(12) {
+					left: 9.2%;
+					top: 30.5%;
+				}
+				&:nth-child(13) {
+					left: 31%;
+					top: 31.8%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(14) {
+					left: 39%;
+					top: 31.8%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(15) {
+					left: 19.3%;
+					top: 32.9%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(16) {
+					left: 77.3%;
+					top: 33.8%;
+				}
+				&:nth-child(17) {
+					left: 28.2%;
+					top: 35.8%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(18) {
+					left: 9.4%;
+					top: 36%;
+				}
+				&:nth-child(19) {
+					left: 21.6%;
+					top: 37.9%;
+				}
+				&:nth-child(20) {
+					left: 36.9%;
+					top: 40%;
+					img {
+						max-width: calc(15.1px + 0.261vw);
+					}
+				}
+				&:nth-child(21) {
+					left: 11.2%;
+					top: 40.7%;
+				}
+				&:nth-child(22) {
+					left: 66.4%;
+					top: 42.7%;
+				}
+				&:nth-child(23) {
+					left: 20.6%;
+					top: 42.8%;
+				}
+				&:nth-child(24) {
+					left: 80.3%;
+					top: 40.7%;
+					flex-direction: column;
+					max-width: 183px;
+					text-align: center;
+					line-height: 1.3;
+				}
+				&:nth-child(25) {
+					left: 34.7%;
+					top: 43.9%;
+				}
+				&:nth-child(26) {
+					left: 7.6%;
+					top: 44.4%;
+				}
+				&:nth-child(27) {
+					left: 26.7%;
+					top: 46.9%;
+				}
+				&:nth-child(28) {
+					left: 42.5%;
+					top: 48%;
+				}
+				&:nth-child(29) {
+					left: 20.6%;
+					top: 49.4%;
+				}
+				&:nth-child(30) {
+					left: 5.5%;
+					top: 49.3%;
+				}
+				&:nth-child(31) {
+					left: 32.4%;
+					top: 51.2%;
+				}
+				&:nth-child(32) {
+					left: 40.1%;
+					top: 53.1%;
+				}
+				&:nth-child(33) {
+					left: 81.3%;
+					top: 54.4%;
+				}
+				&:nth-child(34) {
+					left: 7%;
+					top: 56.3%;
+				}
+				&:nth-child(35) {
+					left: 26.1%;
+					top: 56.7%;
+				}
+				&:nth-child(36) {
+					left: 42.3%;
+					top: 58%;
+				}
+				&:nth-child(37) {
+					left: 73.8%;
+					top: 59.2%;
+				}
+				&:nth-child(38) {
+					left: 51.6%;
+					top: 59.6%;
+				}
+				&:nth-child(39) {
+					left: 35.1%;
+					top: 62.1%;
+					flex-direction: row-reverse;
+					img {
+						margin-left: rem(5);
+						margin-right: 0;
+					}
+				}
+				&:nth-child(40) {
+					left: 60.3%;
+					top: 63.2%;
+					flex-direction: row-reverse;
+					img {
+						margin-left: rem(5);
+						margin-right: 0;
+					}
+				}
+				&:nth-child(41) {
+					left: 45.4%;
+					top: 64%;
+				}
+				&:nth-child(42) {
+					left: 55.8%;
+					top: 69%;
+				}
+				&:nth-child(43) {
+					left: 76.9%;
+					top: 70.1%;
+				}
+			}
+			@include media-breakpoint-up(xxl) {
+				img {
+					max-width: calc(25px + .261vw);
+				}
+			}
+		}
+		img {
+			display: none;
+			@include media-breakpoint-up(xl) {
+				display: block;
+			}
+		}
+	}
+	&__footer-content {
+		text-align: center;
+		position: relative;
+		z-index: 3;
+		@include media-breakpoint-up(xl) {
+			margin-top: rem(-124.600);
+		}
+		h5 {
+			margin-bottom: rem(20);
+			line-height: 1.4em;
+			@include media-breakpoint-up(md) { 
+				margin-bottom: rem(45);
+			}
+			@include media-breakpoint-down(sm) {
+				font-size: 16px;
+			}
+			@include media-breakpoint-up(xl) {
+				max-width: rem(636);
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: rem(47.600);
+			}
+		}
+	}
+	&__btn {
+		display: block;
+		@include media-breakpoint-up(sm) {
+			max-width: rem(270);
+			margin: 0 auto;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMap
