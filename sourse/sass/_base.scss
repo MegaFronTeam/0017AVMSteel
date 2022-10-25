@@ -348,7 +348,7 @@ ul {
 		border-radius: 50%;
 		--swiperArrowSize: 50px;
 		--swiperBgDef: #{$white};
-		--swiperBorderColorDef: #e4e4e4;
+		--swiperBorderColorDef: $gray-300;
 		--swiperColorDef: #{$primary};
 		--swiperArrowPosition: calc(var(--swiperArrowSize) * -1 / 2);
 		&:hover {
@@ -372,7 +372,7 @@ ul {
 		width: rem(10);
 		height: rem(10);
 		border-radius: 50%;
-		background-color: #f8f8f8;
+		background-color: $gray-100;
 		outline: none !important;
 		@include mt;
 		opacity: 0.5;
@@ -578,7 +578,7 @@ iframe {
 }
 
 .page-head {
-	background-color: #f8f8f8;
+	background-color: $gray-100;
 	&__content {
 		position: relative;
 		text-align: center;
@@ -593,7 +593,7 @@ iframe {
 			height: 1px;
 			left: 0;
 			top: 0;
-			background-color: #e4e4e4;
+			background-color: $gray-300;
 		}
 	}
 	h1 {

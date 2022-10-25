@@ -23,7 +23,7 @@
 		margin-top: calc(var(--bs-gutter-y) * -1);
 		&__item {
 			@include mt;
-			border: 1px solid #E4E4E4;
+			border: 1px solid $gray-300;
 			border-radius: 15px;
 
 			margin-top: var(--bs-gutter-y);

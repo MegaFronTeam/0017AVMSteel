@@ -15,7 +15,7 @@
 			height: 1px;
 			left: -50vw;
 			bottom: 0;
-			background-color: #E4E4E4;
+			background-color: $gray-300;
 		}
 	}
 	@include media-breakpoint-up(xl) {

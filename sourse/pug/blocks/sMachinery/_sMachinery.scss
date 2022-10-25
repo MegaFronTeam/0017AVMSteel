@@ -18,7 +18,7 @@
 	}
 	&__img-wrap {
 		@include block(450, 338);
-		background-color: #e4e4e4;
+		background-color: $gray-300;
 		border-radius: $border-radius-lg;
 		overflow: hidden;
 		margin-bottom: 20px;
