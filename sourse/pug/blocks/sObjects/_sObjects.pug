@@ -1,0 +1,27 @@
+mixin sObjects(data)
+	// start sObjects
+	+b.SECTION.sObjects.section#sObjects&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span Виды объектов] на&nbsp;которых <br> мы&nbsp;работаем
+				p Работаем на&nbsp;объектах любой сложности, за&nbsp;которые не&nbsp;возьмутся другие
+			+e.row.row
+				mixin item(i, t)
+					.col-6.col-xxl-4
+						+e.A.item(href='#')
+							+e.img-wrap
+								+img(`img/sObjects-${i}.jpg`, `bg`)
+							+e.item-content
+								h4!= t
+								+e.wrapper
+									+e.btn.btn.btn-primary Связаться с нами
+				+item(1, `Ограждение и&nbsp;укрепление котлована`)
+				+item(2, `Укрепление берега`)
+				+item(3, `Укрепление склонов`)
+				+item(4, `Укрепление дороги`)
+				+item(5, `Укрепление мостов, причалов, пирсов`)
+				+item(6, `Ливневые очистные сооружения`)
+			+e.btn-wrap
+				+e.btn.btn.btn-primary(href='#') Связаться с нами
+							
+	// end sObjects

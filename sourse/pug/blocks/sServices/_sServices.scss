@@ -6,6 +6,9 @@
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: 20px;
+		}
 	}
 	.section-title {
 	}
@@ -13,7 +16,6 @@
 	}
 	&__item {
 		position: relative;
-		display: block;
 		display: flex;
 		flex-direction: column;
 		background-color: $body-color;
