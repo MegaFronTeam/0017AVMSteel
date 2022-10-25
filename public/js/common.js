@@ -577,6 +577,8 @@ function eventHandler() {
 			$('.topLine__tel-wrap').removeClass('active');
 		}
 	});
+
+	AOS.init();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

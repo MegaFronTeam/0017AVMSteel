@@ -84,12 +84,12 @@
 				left: 0;
 				display: flex;
 				align-items: center;
-				font-size: calc(14px + .1045vw);
+				font-size: calc(13px + .1045vw);
 				display: flex;
 				img {
 					flex: 0 0 auto;
 					width: 100%;
-					max-width: calc(18px + .261vw);
+					max-width: calc(16px + .261vw);
 					margin-right: rem(5);
 				}
 				&:nth-child(1) {
@@ -321,6 +321,7 @@
 				}
 			}
 			@include media-breakpoint-up(xxl) {
+				font-size: calc(14px + .1045vw);
 				img {
 					max-width: calc(25px + .261vw);
 				}
