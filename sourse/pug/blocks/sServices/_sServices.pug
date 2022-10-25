@@ -6,7 +6,7 @@ mixin sServices(data)
 				h2 Полный спектр #[span услуг компании]
 			+e.row.row
 				mixin item(i, t, ...items)
-					.col-4
+					.col-lg-6.col-xl-4
 						+e.A.item(href='#')
 							+e.img-wrap
 								+img(`img/sServices-${i}.jpg`, `bg`)
