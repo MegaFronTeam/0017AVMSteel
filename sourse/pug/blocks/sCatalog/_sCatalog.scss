@@ -104,8 +104,8 @@
 			top: 20px;
 			left: 20px;
 			@include media-breakpoint-up(md) {
-				top: 13.7%;
-				left: 9.1%;
+				top: rem(30);
+				left: rem(30);
 			}
 		}
 		&--blue {
@@ -114,8 +114,8 @@
 			top: 20px;
 			left: 76px;
 			@include media-breakpoint-up(md) {
-				top: 13.7%;
-				left: 26%;
+				top: rem(30);
+				left: rem(85);
 			}
 		}
 		&--black {
@@ -126,8 +126,8 @@
 			backdrop-filter: blur(7.5px);
 			color: #fff;
 			@include media-breakpoint-up(md) {
-				left: 9.1%;
-				bottom: 13.7%;
+				left: rem(30);
+				bottom: rem(30);
 			}
 		} 
 	}

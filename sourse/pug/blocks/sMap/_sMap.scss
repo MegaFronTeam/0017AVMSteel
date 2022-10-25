@@ -67,6 +67,7 @@
 				display: inline-block;
 				position: relative;
 				padding-left: rem(18);
+				opacity: 1 !important;
 				&::before {
 					content: "";
 					position: absolute;
