@@ -1,0 +1,108 @@
+// start .sStages
+.sStages {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		counter-reset: num;
+
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-down(md) {
+			--bs-gutter-y: 50px;
+		}
+	}
+	.section-title {
+	}
+	&__col {
+		&:last-child {
+			.icon-sStages-arrow {
+				display: none;
+			}
+		}
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		height: 100%;
+		padding-top: 15px;
+		
+		p {
+			margin-bottom: 0;
+		}
+		a {
+			@extend .h5;
+			margin-top: 15px;
+			line-height: 20px;
+		}
+	}
+	&__icon-wrap {
+		position: relative;
+		margin-bottom: 15px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 30px;
+		}
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			right: -15px;
+			top: -15px;
+			width: 30px;
+			height: 30px;
+			color: $white;
+			background-color: #ABACB7;
+			border-radius: 50%;
+		}
+		.icon {
+			color: $primary;
+			font-size: 90px;
+		}
+	}
+	&__btn-wrap {
+		text-align: center;
+	}
+	&__btn {
+		width: 320px;
+		max-width: 100%;
+		margin-top: 30px;
+		@include media-breakpoint-up(md) {
+			width: 270px;
+			margin-top: 45px;
+		}
+	}
+
+	.icon-sStages-arrow {
+		position: absolute;
+		left: 50%;
+		top: 100%;
+		color: #ABACB7;
+		font-size: 15.5px;
+		transform: rotate(90deg) translateY(100%) translateX(90%);
+		@include media-breakpoint-up(md) {
+			left: 100%;
+			top: 60px;
+			transform: translateY(-50%);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sStages

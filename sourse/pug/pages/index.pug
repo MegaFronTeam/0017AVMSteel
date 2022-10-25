@@ -4,7 +4,7 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/headerBlock/_headerBlock.pug
-//- include ../blocks/sForm/_sForm.pug
+include ../blocks/sStages/_sStages.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sServices/_sServices.pug
@@ -32,10 +32,12 @@ block pagecontent
 	main
 		+headerBlock 
 		+sServices()
-		+sObjects()
 		+sCatalog
-		+sTeam()
+		+sObjects()
 		+sMap()
+		+sStages()
+		+sTeam()
+
 		//- +sForm()
 		//- +sContact()
 		
