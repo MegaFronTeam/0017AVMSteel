@@ -1,0 +1,61 @@
+mixin sMap(data)
+	// start sMap
+	+b.SECTION.sMap.section#sMap&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Выезжаем на объект в любую точку России 
+					span в течение суток
+			+e.wrap
+				+img('img/svg/mapOfRussia.svg').map
+				ul
+					mixin listitem(city)
+						li
+							+img('img/svg/logo.svg')
+							!= city
+					+listitem('Анадырь')
+					+listitem('Мурманск')
+					+listitem('Санкт-Петербург')
+					+listitem('Псков')
+					+listitem('Москва')
+					+listitem('Смоленск')
+					+listitem('Тула')
+					+listitem('Нижний Новгород')
+					+listitem('Воркута')
+					+listitem('Норильск')
+					+listitem('Ульяновск')
+					+listitem('Белгород')
+					+listitem('Пермь')
+					+listitem('Салехард')
+					+listitem('Воронеж')
+					+listitem('Магадан')
+					+listitem('Екатеринбург')
+					+listitem('Ростов-на-Дону')
+					+listitem('Казань')
+					+listitem('Лангепас')
+					+listitem('Волгоград')
+					+listitem('Якутск')
+					+listitem('Самара')
+					+listitem('Петропавловск-Камчатский')
+					+listitem('Ханты-Мансийск')
+					+listitem('Краснодар')
+					+listitem('Челябинск')
+					+listitem('Томск')
+					+listitem('Уфа')
+					+listitem('Сочи')
+					+listitem('Омск')
+					+listitem('Красноярск')
+					+listitem('Южно-Сахалинск')
+					+listitem('Владикавказ')
+					+listitem('Новосибирск')
+					+listitem('Абакан')
+					+listitem('Хабаровск')
+					+listitem('Братск')
+					+listitem('Барнаул')
+					+listitem('Благовещенск')
+					+listitem('Иркутск')
+					+listitem('Чита')
+					+listitem('Владивосток')
+			+e.footer-content
+				h5 Не нашли свой город? Оставьте заявку и мы предоставим для Вас индивидуальные условия
+				+e.btn.btn.btn-primary(href="#") Связаться с нами
+	// end sMap

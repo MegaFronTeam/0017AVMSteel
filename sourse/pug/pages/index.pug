@@ -12,6 +12,8 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/footer/_footer.pug
 
+include ../blocks/sMap/_sMap.pug
+
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= 'main.jpg'
@@ -31,6 +33,7 @@ block pagecontent
 		+sServices()
 		+sCatalog
 		+sTeam()
+		+sMap()
 		//- +sForm()
 		//- +sContact()
 		
