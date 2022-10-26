@@ -77,10 +77,25 @@
 		}
 	}
 	.form-wrap {
+		
 		.row {
 			--bs-gutter-y: var(--bs-gutter-x);
 			@include media-breakpoint-down(md) {
 				--bs-gutter-x: 10px;
+			}
+		}
+
+		&__input-wrap {
+			&::before {
+				content: "";
+				position: absolute;
+				left: 1px;
+				top: 1px;
+				width: calc(100% - 2px);
+				height: 2rem;
+				background-color: $white;
+				border-radius: $input-border-radius $input-border-radius 0 0;
+				pointer-events: none;
 			}
 		}
 

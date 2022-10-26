@@ -7,17 +7,7 @@
 		--sp-y: #{$input-padding-y};
 		--fz: #{$input-font-size};
 
-		&::before {
-			content: "";
-			position: absolute;
-			left: 1px;
-			top: 1px;
-			width: calc(100% - 2px);
-			height: 2rem;
-			background-color: $white;
-			border-radius: $input-border-radius $input-border-radius 0 0;
-			pointer-events: none;
-		}
+		
 		// + span {
 		// 	display: block;
 		// 	background-color: #fff;

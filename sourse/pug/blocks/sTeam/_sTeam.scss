@@ -6,8 +6,21 @@
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
+		
+	}
+	&__sliders {
+		--bs-gutter-y: 30px;
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: #{rem(60)};
+		}
+		margin-top: calc(-1 * var(--bs-gutter-y));
+		& > * {
+			margin-top: var(--bs-gutter-y);
+		}
 	}
 	.section-title {
+		margin-bottom: 0;
+		padding-bottom: var(--sTPB);
 	}
 	&__col {
 	}
@@ -35,6 +48,9 @@
 	.swiper-button-hand {
 		--swiperArrowPosition: 0;
 		--swiperArrowSize: 40px;
+		top: calc(var(--slideH) / 2);
+		margin: 0;
+		transform: translateY(-50%);
 		@include media-breakpoint-up(sm) {
 			--swiperArrowSize: 50px;
 		}
