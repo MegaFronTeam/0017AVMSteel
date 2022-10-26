@@ -1,0 +1,12 @@
+mixin sPage404(data)
+	// start sPage404
+	+b.SECTION.sPage404.section#sPage404&attributes(attributes)
+		.container
+			+e.img-wrap
+				+img(`img/svg/404.svg`)
+				h6 Добро пожаловать на страницу 404!
+			+b.section-title.text-center
+				h1 К сожалению, запрашиваемая <br> страница не найдена
+				p Скорее всего, это случилось по&nbsp;одной из&nbsp;следующих причин: страница переехала, страницы больше нет, возможно, вы&nbsp;допустили небольшую опечатку при вводе адреса или вам просто нравится изучать 404&nbsp;страницы.
+			+e.btn.btn.btn-primary(href='/') Перейти на главную
+	// end sPage404

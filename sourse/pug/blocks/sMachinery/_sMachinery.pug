@@ -1,9 +1,9 @@
 mixin sMachinery(data)
 	// start sMachinery
-	+b.SECTION.sMachinery.section#sMachinery&attributes(attributes)
+	+b.sMachinery.section#sMachinery&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 Используемая техника нашей компанией #[span при погружении шпунта]
+			//- +b.section-title.text-center
+			//- 	h2 Используемая техника нашей компанией #[span при погружении шпунта]
 			+e.row.row
 				mixin item(t, img)
 					.col-md-6.col-xl-4 
