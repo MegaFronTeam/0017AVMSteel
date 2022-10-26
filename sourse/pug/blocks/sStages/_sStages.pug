@@ -1,24 +1,11 @@
-mixin sStages(data)
+mixin sStages(title)
 	// start sStages
 	+b.SECTION.sStages.section#sStages&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Этапы #[span работы]
+				h2!= title
 			+e.row.row
-				mixin item(i, t)
-					+e.col.col-md-6.col-lg-4.col-xxl
-						+e.item
-							+e.icon-wrap
-								+icon(`sStages-${i}`)
-							p!= t
-							+icon('sStages-arrow')
-							block
-				+item(1, `Оставляете заявку или звоните нам по телефону:`)
-					a(href="tel:84958856053") 8 (495) 885-60-53
-				+item(2, `Подготавливаем предварительное коммерческое предложение в течении 2-х часов для понимания бюджета и сроков выполнения работ`)
-				+item(3, `Выезжаем на объект, подготавливаем окончательное коммерческое предложение`)
-				+item(4, `Мобилизация техники, проведение строительно-монтажных работ`)
-				+item(5, `Сдача объекта`)
+				block
 			+e.btn-wrap
 				+e.btn.btn.btn-primary(href='#') Связаться с нами
 	// end sStages

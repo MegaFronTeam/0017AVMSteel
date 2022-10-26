@@ -3,15 +3,16 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/sPortfolio/_sPortfolio.pug
+include ../blocks/sPage404/_sPage404.pug
+//- include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
-	- let  bg= '04-portfolio.jpg'
+	- let  mainPage= 'main-page'
+	- let  bg= '11-page-404.jpg'
 
 block title
-	- let  title= 'Наши работы'
+	- let  title= 'Cтраница 404'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -21,8 +22,7 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
-		+page-head('', title, title)
-		+sPortfolio()
+		+sPage404()
 	+footer()
       
 

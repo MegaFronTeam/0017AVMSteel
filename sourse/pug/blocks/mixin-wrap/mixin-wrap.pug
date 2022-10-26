@@ -45,17 +45,11 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
-	+b.page-head
-		- let l = items.length
-		+breadcrumb('Главная',...items)
-		+e.content
-			.container
-				h1!= t
 
-mixin page-head-bg(i, t,...items)
-	+b.page-head--bg.bg-wrap
-		+img(`img/page-head-bg-${i}.jpg`, `bg`)
+mixin page-head(i, t,...items)
+	+b.page-head.bg-wrap
+		if i
+			+img(`img/page-head-bg-${i}.jpg`, `bg`)
 		- let l = items.length
 		+breadcrumb('Главная',...items)
 		+e.content
@@ -79,3 +73,12 @@ mixin needHelp()
 		+e.tel(href="tel:84958855011") 8 (495) 885-50-11
 		+e.mail(href="mailto:info@avmsteel.ru") info@avmsteel.ru
 		+soc()
+
+mixin sStages-item(i, t)
+	+e.col.col-md-6.col-lg-4.col-xxl
+		+e.item
+			+e.icon-wrap
+				+icon(`sStages-${i}`)
+			p!= t
+			+icon('sStages-arrow')
+			block

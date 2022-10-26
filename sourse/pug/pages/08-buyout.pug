@@ -3,12 +3,12 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-//- include ../blocks/sMachinery/_sMachinery.pug
+include ../blocks/sStages/_sStages.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'buyout-page' 
+	- let  mainPage= 'main-page' 
 	- let  bg= '08-buyout.jpg'
 
 block title
@@ -22,9 +22,15 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
-		+page-head-bg(3,`Выкупим Ваш шпунт Ларсена <br> по&nbsp;максимальной рыночной цене`, title )
+		+page-head(3,`Выкупим Ваш шпунт Ларсена <br> по&nbsp;максимальной рыночной цене`, title )
 			+e.subtitle Выкупаем в&nbsp;том числе неликвидный шпунт
-		//- +sMachinery()
+		+sStages(`Процесс <span>выкупа шпунта</span>`)
+			+sStages-item(1, `Оставляете заявку или звоните нам по телефону:`)
+				a(href="tel:84958856053") 8 (495) 885-60-53
+			+sStages-item(6, `Для предварительной оценки укажите в заявке характеристики Вашего шпунта или продиктуйте данные специалисту`)
+			+sStages-item(3, `К Вам выезжает специалист, который назовет точную максимальную рыночную стоимость за шпунт`)
+			+sStages-item(4, `Мы извлечём и выкупим шпунт, если он находится в земле`)
+			+sStages-item(7, `Вы получаете оплату в тот же день. Работаем с юридическими и физическими лицами`)
 		+sForm()
 	+footer()
       

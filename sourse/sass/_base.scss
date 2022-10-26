@@ -578,13 +578,22 @@ iframe {
 }
 
 .page-head {
-	background-color: $gray-100;
+	color: $white;
+	background-color: $body-color;
+	img {
+		position: absolute;
+		opacity: 0.5;
+		object-position: center 65%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
 	&__content {
 		position: relative;
 		text-align: center;
-		padding: 20px 0;
+		padding: 60px 0;
 		@include media-breakpoint-up(sm) {
-			padding: rem(30) 0;
+			padding: rem(90) 0;
 		}
 		&::before {
 			content: "";
@@ -593,7 +602,8 @@ iframe {
 			height: 1px;
 			left: 0;
 			top: 0;
-			background-color: $gray-300;
+			background-color: $white;
+			opacity: 0.3;
 		}
 	}
 	h1 {
@@ -604,44 +614,23 @@ iframe {
 			}
 		}
 	}
-	&--bg {
-		background-color: $body-color;
-		color: $white;
-		img {
-			position: absolute;
-			opacity: 0.5;
-			object-position: center 65%;
-			left: 0;
-			top: 0;
-			z-index: -1;
-		}
-		.page-head__content {
-			padding: 60px 0;
-			@include media-breakpoint-up(sm) {
-				padding: rem(90) 0;
+	.breadcrumb {
+		&-item {
+			a {
+				&:not(:hover) {
+					color: $white;
+				}
 			}
-			&::before {
-				background-color: $white;
-				opacity: 0.2;
-			}
-		}
-		.breadcrumb {
-			&-item {
+			&.active {
 				a {
-					&:not(:hover) {
-						color: $white;
-					}
-				}
-				&.active {
-					a {
-						opacity: 0.5;
-					}
+					opacity: 0.5;
 				}
 			}
 		}
-		.page-head__subtitle {
-			font-size: rem(20);
-		}
+	}
+	.page-head__subtitle {
+		font-size: rem(20);
+		margin-top: rem(30);
 	}
 }
 
@@ -682,29 +671,14 @@ h6 {
 	}
 }
 
-.buyout-page {
-	.page-head--bg {
-		.page-head__content {
-			padding: 60px 0 98px;
-			@include media-breakpoint-up(sm) {
-				padding: rem(90) 0 rem(147);
-			}
-			h1 {
-				margin-bottom: 20px;
-				@include media-breakpoint-up(sm) {
-					margin-bottom: rem(30);
-				}
-			}
-		}
-	}
-}
-.glossary-page {
-	.page-head--bg {
-		.page-head__content {
-			// padding: 60px 0 90px;
-			@include media-breakpoint-up(sm) {
-				padding: rem(90) 0 rem(135);
-			}
-		}
-	}
-}
+
+// .glossary-page {
+// 	.page-head--bg {
+// 		.page-head__content {
+// 			// padding: 60px 0 90px;
+// 			@include media-breakpoint-up(sm) {
+// 				padding: rem(90) 0 rem(135);
+// 			}
+// 		}
+// 	}
+// }
