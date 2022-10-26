@@ -1,0 +1,37 @@
+mixin sContactInfo(data)
+	// start sContactInfo
+	+b.SECTION.sContactInfo.section#sContactInfo&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Контактная 
+					span информация
+				p Направьте свой запрос, наши специалисты перезвонят в&nbsp;ближайшее время
+			+e.row.row
+				mixin person(name, tel, href, text)
+					.col-sm-6.col-lg-4.col-xl-3
+						+e.item
+							+e.name!=name
+							a.h4(href=`${href}`)!= tel
+							p!= text
+				+person('Дмитрий', '8 (495) 885-60-53', 'tel:84958856053', 'Расчет строительно-монтажных работ')
+				+person('Алексей', '8 (495) 885-60-53', 'tel:84958856053', 'Продажа и аренда шпунта, работа под ключ')
+				+person('Николай', '8 (495) 885-60-53', 'tel:84958856053', 'Выкуп шпунта по максимальной рыночной цене')
+				+person('Электронный адрес', 'info@avmsteel.ru', 'mailto:info@avmsteel.ru', 'Пишите в любое время по любым вопросам')
+			+form-wrap
+				+e.callBack-row.row
+					+e.col.col-12.col-xl-auto.col-xxl
+						+input('Ваше имя', 'text')
+							+img('img/svg/user.svg')
+					+e.col.col-12.col-xl-auto.col-xxl
+						+input('Ваш телефон', 'tel')
+							+img('img/svg/call.svg')
+					.col-12.col-xl
+						+e.send
+							+policy
+							+e.btn.BUTTON.btn.btn-primary(type='submit') Отправить заявку
+					+e.map-col
+						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c' type='text/javascript')
+						+e.map
+							#map
+			+e.sub-text Склады по&nbsp;всей территории РФ. Для уточнения наличия метала в&nbsp;вашем городе&nbsp;&mdash; звоните по&nbsp;телефону.
+	// end sContactInfo
