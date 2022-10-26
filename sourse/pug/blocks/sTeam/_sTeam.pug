@@ -13,7 +13,7 @@ mixin sTeam(data)
 		.container
 			+b.section-title.text-center
 				h2 Наша #[span команда]
-			+e.slider-wrap--team
+			+e.slider-wrap
 				+e.slider--js.swiper
 					.swiper-wrapper
 						+team-slide(`Васильев Константин`, `Генеральный директор`, 1)
@@ -22,7 +22,7 @@ mixin sTeam(data)
 						+team-slide(`Иван Петров`, `Директор по маркетингу`, 4)
 				+arrow-rounded()
 			h3 Наши партнеры #[span Tecnoterra&nbsp;SA (Швейцария)]
-			+e.slider-wrap--partners
+			+e.slider-wrap
 				+e.slider--js.swiper
 					.swiper-wrapper
 						+team-slide(`Васильев Константин`, `Генеральный директор`, 1)

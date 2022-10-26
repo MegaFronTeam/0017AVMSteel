@@ -212,6 +212,28 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
+	heightSlide() {
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		function getSlideH() {
+			let slideI = document.querySelectorAll('.sTeam__img-wrap');
+			if (!slideI) return;
+			let slideH, index = 0;
+			for (const iterator of slideI) {
+				if (index < 1) {
+					slideH = iterator.offsetHeight;
+					index++;
+				} else break;
+			}
+			console.log(slideH);
+			document.documentElement.style.setProperty('--slideH', `${slideH}px`);
+		};
+		getSlideH();
+		// We listen to the resize event
+		window.addEventListener('resize', () => {
+			// We execute the same script as before
+			getSlideH();
+		}, { passive: true });
+	},
 	animateScroll() {
 		$(document).on('click', " .menu li a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
@@ -314,6 +336,8 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
+	
+
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
@@ -418,84 +442,52 @@ function eventHandler() {
 		},
 
 	});
-	const swiper6 = new Swiper('.sTeam__slider-wrap--team .sTeam__slider--js', {
-		// slidesPerView: 5,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 20,
-		loop: true,
-		slidesPerView: 1,
-		// freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.4,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		breakpoints: {
-			445: {
-				slidesPerView: 1,
-			},
-			768: {
-				slidesPerView: 2,
-			},
-			993: {
-				slidesPerView: 3,
-			},
-			1200: {
-				slidesPerView: 4,
-			},
-			1400: {
-				slidesPerView: 4,
-				spaceBetween: 30,
-			},
-		},
-		navigation: {
-			nextEl: '.sTeam__slider-wrap--team .swiper-button-next',
-			prevEl: '.sTeam__slider-wrap--team .swiper-button-prev',
-		},
-		
 
-	});
-	const swiper7 = new Swiper('.sTeam__slider-wrap--partners .sTeam__slider--js', {
-		// slidesPerView: 5,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 20,
-		loop: true,
-		slidesPerView: 1,
-		// freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.4,
-		// slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		breakpoints: {
-			445: {
-				slidesPerView: 1,
+	const sTeamSliderWraps = document.querySelectorAll('.sTeam__slider-wrap');
+	for (const sTeamSliderWrap of sTeamSliderWraps) {
+		const swiper6 = new Swiper(sTeamSliderWrap.querySelector('.sTeam__slider--js'), {
+			// slidesPerView: 5,
+			lazy: {
+				loadPrevNext: true,
 			},
-			768: {
-				slidesPerView: 2,
+			watchOverflow: true,
+			spaceBetween: 20,
+			loop: true,
+			slidesPerView: 1,
+			// freeMode: true,
+			loopFillGroupWithBlank: true,
+			touchRatio: 0.4,
+			// slideToClickedSlide: true,
+			// freeModeMomentum: true,
+			breakpoints: {
+				445: {
+					slidesPerView: 2,
+				},
+				993: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 4,
+				},
+				1400: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
 			},
-			993: {
-				slidesPerView: 3,
+			navigation: {
+				nextEl: sTeamSliderWrap.querySelector('.swiper-button-next'),
+				prevEl: sTeamSliderWrap.querySelector(' .swiper-button-prev'),
 			},
-			1200: {
-				slidesPerView: 4,
-			},
-			1400: {
-				slidesPerView: 4,
-				spaceBetween: 30,
-			},
-		},
-		navigation: {
-			nextEl: '.sTeam__slider-wrap--partners .swiper-button-next',
-			prevEl: '.sTeam__slider-wrap--partners .swiper-button-prev',
-		},
-		
+			
+	
+		});
+	};
 
-	});
+	
+	
+
+	JSCCommon.heightSlide();
+
 	const swiper8 = new Swiper('.sCertificates__slider--js', {
 		// slidesPerView: 5,
 		lazy: {
