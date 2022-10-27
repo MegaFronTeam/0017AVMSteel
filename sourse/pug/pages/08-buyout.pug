@@ -7,8 +7,10 @@ include ../blocks/sStages/_sStages.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
+include ../blocks/sAdvantages/_sAdvantages.pug
+
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'buyout-page' 
 	- let  bg= '08-buyout.jpg'
 
 block title
@@ -31,6 +33,7 @@ block pagecontent
 			+sStages-item(3, `К Вам выезжает специалист, который назовет точную максимальную рыночную стоимость за шпунт`)
 			+sStages-item(4, `Мы извлечём и выкупим шпунт, если он находится в земле`)
 			+sStages-item(7, `Вы получаете оплату в тот же день. Работаем с юридическими и физическими лицами`)
+		+sAdvantages2
 		+sForm()
 	+footer()
       
