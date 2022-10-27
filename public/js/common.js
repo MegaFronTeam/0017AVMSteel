@@ -224,7 +224,7 @@ const JSCCommon = {
 					index++;
 				} else break;
 			}
-			console.log(slideH);
+			// console.log(slideH);
 			document.documentElement.style.setProperty('--slideH', `${slideH}px`);
 		};
 		getSlideH();
@@ -449,7 +449,7 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		loop: true,
+		// loop: true,
 		slidesPerView: 3,
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
@@ -488,15 +488,15 @@ function eventHandler() {
 	const sProjectsSlider = new Swiper('.sProjects__slider--js', {
 		// slidesPerView: 5,
 		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
+		// lazy: {
+		// 	loadPrevNext: true,
+		// },
 		watchOverflow: true,
 		spaceBetween: 0,
-		loop: true,
+		// loop: true,
 		slidesPerView: 'auto',
 		// freeMode: true,
-		loopFillGroupWithBlank: true,
+		// loopFillGroupWithBlank: true,
 		touchRatio: 0.4,
 		slideToClickedSlide: true,
 		thumbs: {
@@ -518,6 +518,22 @@ function eventHandler() {
 
 	});
 	
+	if(sProjectsSlider) {
+		let allActiveSlides = document.querySelectorAll('.sProjects__active-slide'),
+				allSlides = document.querySelectorAll('.sProjects__all-slides');
+		for (let allActiveSlide of allActiveSlides) {
+			allActiveSlide.innerHTML = sProjectsSlider.activeIndex + 1 + " ";
+			sProjectsSlider.on('slideChange', function () {
+				allActiveSlide.innerHTML = sProjectsSlider.activeIndex + 1 + " ";
+			});
+		}
+		for (let allSlide of allSlides) {
+			let slides = document.querySelectorAll('.sProjects__slider--js .sProjects__slide');
+			allSlide.innerHTML = slides.length;
+		}
+	}
+
+
 
 	const sTeamSliderWraps = document.querySelectorAll('.sTeam__slider-wrap');
 	for (const sTeamSliderWrap of sTeamSliderWraps) {
@@ -558,9 +574,6 @@ function eventHandler() {
 	
 		});
 	};
-
-	
-	
 
 	JSCCommon.heightSlide();
 
@@ -659,6 +672,8 @@ function eventHandler() {
 		spaceBetween: 15,
 		slidesPerView: 'auto',
 	});
+
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -9,6 +9,8 @@ include ../blocks/sCertificates/_sCertificates.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
+include ../blocks/sProjects/_sProjects.pug
+
 block variables
 	- let  mainPage= 'company-page' 
 	- let  bg= '07-company.jpg'
@@ -27,6 +29,7 @@ block pagecontent
 		+page-head(1, title, title)
 		+sAbout()
 		+sTeam()
+		+sProjects()
 		+sCertificates()
 		+sForm()
 	+footer()
