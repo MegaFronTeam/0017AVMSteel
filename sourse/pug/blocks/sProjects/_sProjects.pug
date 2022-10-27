@@ -1,0 +1,50 @@
+mixin sProjects(data)
+	// start sProjects
+	+b.SECTION.sProjects.section#sProjects&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши #[span проекты]
+				p Персональная ответственность за&nbsp;соблюдение сроков выполнения работ
+			+e.siders
+				
+				+e.slider-thumbs--js.swiper
+					.swiper-wrapper
+						- for (let i = 0; i < 5; i++) 
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-1.jpg`, 'bg')
+					//- +arrow-rounded()
+					+e.arrow-wrap
+						.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-prev.swiper-button-prev
+							+icon('arrow-left')
+						.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-next.swiper-button-next
+							+icon('arrow-right')
+				+e.slider--js.swiper
+					.swiper-wrapper
+						- for (let i = 0; i < 5; i++) 
+							+e.slide.swiper-slide
+								+portfolio-item(`Нижний Новгород`, `Устройство шпунтового ограждения многоквартирного жилого дома с&nbsp;подземной автостоянкой`, `Шпунт Ларсена Л5-УМ L=16&nbsp;м`, 1)
+									+portfolio-list(`Оборудование`, 
+										`Автокран г/п 50&nbsp;т`, 
+										`Вибропогружатель MULLER MS-28&nbsp;HFV`, 
+										`Буровая установка ENTECO E300&nbsp;на гусеничном ходу`)
+									+portfolio-list(`Список работ`, 
+										`Стыковка шпунта в&nbsp;L=16&nbsp;м на&nbsp;собственном производстве`, 
+										`Поставка шпунта на&nbsp;обьект строительства`, `Лидерное бурение скважин D=300&nbsp;мм.&nbsp;на&nbsp;глубину 16&nbsp;метров`, 
+										`Погружение шпунта в&nbsp;проектные отметки`, 
+										`Извлечение шпунта после устройства подземной части здания`, 
+										`Обратный выкуп шпунта&nbsp;75%`)
+				+e.arrow-wrap
+					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-prev.swiper-button-prev
+						+icon('arrow-left')
+					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-next.swiper-button-next
+						+icon('arrow-right')
+				//- +e.slider-thumbs--js.swiper
+				//- 	.swiper-wrapper
+				//- 		- for (let i = 0; i < 5; i++) 
+				//- 			+e.slide.swiper-slide
+				//- 				+e.img-wrap
+				//- 					+img(`img/sPortfolio-1.jpg`, 'bg')
+				//- 	+arrow-rounded()
+
+	// end sProjects

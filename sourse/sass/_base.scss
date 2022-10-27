@@ -219,7 +219,7 @@ main {
 }
 
 ul {
-	padding-left: rem(18);
+	padding-left: 18px;
 	li::marker {
 		color: $primary;
 	}
@@ -577,62 +577,7 @@ iframe {
 	}
 }
 
-.page-head {
-	color: $white;
-	background-color: $body-color;
-	img {
-		position: absolute;
-		opacity: 0.5;
-		object-position: center 65%;
-		left: 0;
-		top: 0;
-		z-index: -1;
-	}
-	&__content {
-		position: relative;
-		text-align: center;
-		padding: 60px 0;
-		@include media-breakpoint-up(sm) {
-			padding: rem(90) 0;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 1px;
-			left: 0;
-			top: 0;
-			background-color: $white;
-			opacity: 0.3;
-		}
-	}
-	h1 {
-		br {
-			display: none;
-			@include media-breakpoint-up(xl) {
-				display: block;
-			}
-		}
-	}
-	.breadcrumb {
-		&-item {
-			a {
-				&:not(:hover) {
-					color: $white;
-				}
-			}
-			&.active {
-				a {
-					opacity: 0.5;
-				}
-			}
-		}
-	}
-	.page-head__subtitle {
-		font-size: rem(20);
-		margin-top: rem(30);
-	}
-}
+
 
 .primary-link {
 	color: $primary;
