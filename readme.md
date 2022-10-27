@@ -8,7 +8,7 @@
 6. <https://megafronteam.github.io/0017AVMSteel/public/06-equipment.html>
 7. <https://megafronteam.github.io/0017AVMSteel/public/07-company.html>
 8. <https://megafronteam.github.io/0017AVMSteel/public/08-buyout.html>
-9. 
-10. 
+9. <https://megafronteam.github.io/0017AVMSteel/public/09-description.html>
+10. <https://megafronteam.github.io/0017AVMSteel/public/10-services.html>
 11. <https://megafronteam.github.io/0017AVMSteel/public/11-page-404.html>
 11. <https://megafronteam.github.io/0017AVMSteel/public/12-thanx.html>

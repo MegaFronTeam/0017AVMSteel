@@ -1,0 +1,48 @@
+mixin sCases(data)
+	// start sCases
+	+b.SECTION.sCases.section#sCases&attributes(attributes)
+		.container
+			+e.row.row
+				mixin card(i, title, ...items)
+					+e.wrap
+						+e.img-wrap
+							.img-wrap-center.bg-wrap
+								+img(`img/sCases-img-${i}.jpg`, 'bg').picture-bg
+						+e.content
+							h4!= title
+							ul
+								each item in items
+									li!= item
+				.col-md-6.col-xl-4
+					+card(1, 'Проектирование и расчет устойчивости шпунтовых ограждений', 'Собственный проектный отдел', 'Совместное управление проектами с Tecnoterra SA (Швейцария)')
+				.col-md-6.col-xl-4
+					+card(2, 'Трубошпунт', 'Альтернатива всем видам шпунта с&nbsp;уменьшением сметы расходов до 45%', 'Сертифицированное собственное производство')
+				.col-md-6.col-xl-4
+					+card(3, 'Аренда шпунта', 'Договор аренды без перехода права собственности', 'Унифицированная форма МХ-1', 'Залоговая стоимость металла не&nbsp;облагается НДС', 'Вы&nbsp;не&nbsp;несете ответственность за&nbsp;состояние шпунта при его возврате')
+				.col-md-6.col-lg-12
+					+e.horizontal-card
+						+e.horizontal-card-row.row
+							.col-lg.order-2.order-lg-1
+								+e.left
+									h4 Монтаж / Демонтаж
+									+e.list-wrap
+										ul
+											li: h5 Погружение
+											li Вибропогружение
+											li Статическое вдавливание
+											li Бурение
+										ul
+											li: h5 Укрепление
+											li Распорная система
+											li Анкерное крепление
+											li Обвязочные пояса
+							.col-lg.order-1.order-lg-2
+								+e.right.bg-wrap
+									+img('img/sCases-img-6.jpg', 'bg').picture-bg
+				.col-md-6.col-xl-4
+					+card(4, 'Выкуп шпунта', 'Гарантированный обратный выкуп шпунта с&nbsp;демонтажем', 'Вы&nbsp;получите деньги в&nbsp;день выемки')
+				.col-md-6.col-xl-4
+					+card(2, 'Сварка&nbsp;/ Стыковка&nbsp;/ Восстановление', 'Собственная производственная база 2000 кв.м.&nbsp;в&nbsp;г. Можайск (Московская обл.)', 'Срочный выкуп неликвидных остатков')
+				.col-md-6.col-xl-4
+					+card(5, 'Шпунтовое ограждение котлована', 'Нужен текст для этого направления 1', 'Нужен текст для этого направления 2', 'Нужен текст для этого направления 3')
+	// end sCases

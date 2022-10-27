@@ -682,7 +682,7 @@ h6 {
 	.page-head {
 		&__content {
 			@include media-breakpoint-up(md) {
-				padding: rem(53.200) 0 rem(59.600);
+				padding: rem(83.600) 0 rem(91.600);
 			}
 		}
 		&__btn {
@@ -691,7 +691,58 @@ h6 {
 			max-width: rem(270);
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: rem(36.400);
+			margin-top: rem(50.800);
 		}
+	}
+	.sAdvantages {
+		background-color: #fff;
+		h3 {
+			max-width: rem(628);
+			span {
+				display: inline;
+			}
+		}
+		&__row {
+			--bs-gutter-x: #{rem(31.6)};
+
+			margin-bottom: 0;
+		}
+		&__content {
+			&:not(:last-child) {
+				margin-bottom: rem(45);
+				@include media-breakpoint-up(md) {
+					margin-bottom: rem(72.400);
+				}
+			}
+			&:nth-child(odd) {
+				.sAdvantages__row {
+					@include media-breakpoint-up(lg) {
+						flex-direction: row-reverse;
+					}
+				}
+				.sAdvantages__wrap {
+					@include media-breakpoint-up(lg) {
+						// margin-right: rem(29);
+						margin-left: rem(29);
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		&__wrap {
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(29);
+			}
+		}
+	}
+	.sCertificates {
+		--sPT: #{rem(8)};
+		background-color: #fff;
+		@include media-breakpoint-up(md) {
+			--sTPB: #{rem(84.600)};
+		}
+	}
+	.sForm {
+		background-color: #fff;
 	}
 }

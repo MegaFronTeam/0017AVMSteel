@@ -1,0 +1,34 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sStages/_sStages.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+include ../blocks/sCases/_sCases.pug
+
+block variables
+	- let  mainPage= 'services-page' 
+	- let  bg= '10-services.jpg'
+
+block title
+	- let  title= 'Услуги и работы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		+topLine
+	main
+		+page-head(5, `Услуги и работы`, title )
+		+sCases
+		+sForm()
+	+footer()
+      
+
+
+
