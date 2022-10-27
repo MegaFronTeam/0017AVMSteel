@@ -571,6 +571,10 @@ function eventHandler() {
 	});
 
 	AOS.init();
+
+	document.querySelector('.cookies__btn').addEventListener('click', function() {
+		document.querySelector('.cookies').classList.add('hidden');
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
