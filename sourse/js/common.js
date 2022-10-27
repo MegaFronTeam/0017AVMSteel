@@ -534,7 +534,7 @@ function eventHandler() {
 		mobileFirst: true,
 		responsive: {
 			992: {
-				stickTo: '.sFaq__need-help-wrap',
+				stickTo: '.need-help-wrap',
 				top: 90,
 			}
 		}
@@ -572,8 +572,16 @@ function eventHandler() {
 
 	AOS.init();
 
-	document.querySelector('.cookies__btn').addEventListener('click', function() {
-		document.querySelector('.cookies').classList.add('hidden');
+	let cookies = document.querySelector('.cookies');
+	if(cookies) {
+		document.querySelector('.cookies__btn').addEventListener('click', function() {
+			cookies.classList.add('hidden');
+		});
+	};
+
+	const sGlossarySwiper = new Swiper('.sGlossary__slider--js', {
+		spaceBetween: 15,
+		slidesPerView: 'auto',
 	});
 };
 if (document.readyState !== 'loading') {

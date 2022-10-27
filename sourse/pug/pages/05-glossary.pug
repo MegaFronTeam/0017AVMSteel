@@ -3,10 +3,10 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/sMounting/_sMounting.pug
-include ../blocks/sMachinery/_sMachinery.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
+
+include ../blocks/sGlossary/_sGlossary.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -24,8 +24,7 @@ block pagecontent
 		+topLine
 	main
 		+page-head(4, title, title)
-		//- +sMounting()
-		//- +sMachinery()
+		+sGlossary
 		+sForm()
 	+footer()
       

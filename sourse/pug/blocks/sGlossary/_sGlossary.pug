@@ -1,0 +1,65 @@
+mixin sGlossary(data)
+	// start sGlossary
+	+b.SECTION.sGlossary.section#sGlossary&attributes(attributes)
+		.container
+			+e.slider-wrap
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin slide(id)
+							+e.slide.swiper-slide
+								a(href='#' + id)!= id
+						+slide('a')
+						+slide('б')
+						+slide('в')
+						+slide('г')
+						+slide('д')
+						+slide('е')
+						+slide('ж')
+						+slide('з')
+						+slide('и')
+						+slide('к')
+						+slide('л')
+						+slide('м')
+						+slide('н')
+						+slide('о')
+						+slide('п')
+						+slide('р')
+						+slide('с')
+						+slide('т')
+						+slide('у')
+						+slide('ф')
+						+slide('х')
+						+slide('ч')
+						+slide('ш')
+						+slide('щ')
+						+slide('э')
+						+slide('ю')
+						+slide('я')
+			+e.row.row
+				.col-lg
+					mixin listItem( title, withSpan=false, ...texts)
+						li
+							.h5!= title
+							if withSpan
+								p Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее #[span стандартное заполнение шаблона], а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации.
+							each text in texts
+								p!= text
+					mixin wrap(letter)
+						+e.wrap
+							+e.letter(id=letter)!= letter
+							ul
+								block
+					+wrap('а')
+						+listItem('Аккредитация', 'true')
+						+listItem('Ансамбль', '', 'Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст..', 'Здесь ваш текст.. Здесь ваш текст..&raquo; Многие программы электронной вёрстки и&nbsp;редакторы HTML используют Lorem Ipsum в&nbsp;качестве текста по&nbsp;умолчанию, так что поиск по&nbsp;ключевым словам &laquo;lorem ipsum&raquo; сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За&nbsp;прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по&nbsp;ошибке, некоторые&nbsp;&mdash; намеренно (например, юмористические варианты).')
+						+listItem('Аккумулятор', '', 'Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться.')
+					+wrap('б')
+						+listItem('Баян', 'true')
+						+listItem('Банан', '', 'Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться.')
+					+wrap('в')
+						+listItem('Веранда', 'true')
+						+listItem('Вернисаж', '', 'Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться.')
+				.col-lg-auto
+					.need-help-wrap
+						+needHelp
+	// end sGlossary
