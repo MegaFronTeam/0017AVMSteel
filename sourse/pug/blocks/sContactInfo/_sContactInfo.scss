@@ -119,6 +119,9 @@
 				width: auto;
 			}
 			@include media-breakpoint-up(xl) {
+				width: auto;
+			}
+			@include media-breakpoint-up(xxl) {
 				width: 100%;
 				max-width: rem(314);
 			}
@@ -151,11 +154,16 @@
 			border-radius: 0;
 			border-bottom-color: transparent;
 			padding-right: rem(50);
+			background-image: var(--bgImg);
+			background-repeat: no-repeat;
+			background-position: 97% center;
+			background-size: auto;
 			@include media-breakpoint-up(md) {
 				padding-right: rem(70);
 			} 
 			@include media-breakpoint-up(xl) {
 				padding-right: rem(50);
+				background-position: 90% center;
 			} 
 			@include media-breakpoint-up(xxl) {
 				padding-right: rem(70);
@@ -174,7 +182,21 @@
 					border-bottom-color: $border-color;
 					border-right: none;
 				}
+				background-image: var(--bgImgFocus);
+				& ~ .form-wrap__bottom-border {
+					max-width: 100%;
+				}
 			}
+		}
+		&__bottom-border {
+			@include mt;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: 0;
+			background-color: $primary;
+			max-width: 0;
 		}
 		&__input-title {
 			@include media-breakpoint-up(lg) {

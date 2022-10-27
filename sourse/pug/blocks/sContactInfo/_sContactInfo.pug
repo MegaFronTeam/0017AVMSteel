@@ -20,11 +20,21 @@ mixin sContactInfo(data)
 			+form-wrap
 				+e.callBack-row.row
 					+e.col.col-12.col-xl-auto.col-xxl
-						+input('Ваше имя', 'text')
-							+img('img/svg/user.svg')
+						//- +input('Ваше имя', 'text')
+						//- 	+img('img/svg/user.svg')
+						+e.input-wrap.form-group
+							label
+								+e.INPUT.input.form-control(name='text' type='text' placeholder='Ваше имя' style='--bgImg: url(../img/svg/user.svg); --bgImgFocus: url(../img/svg/user-colored.svg)')
+								+e.SPAN.input-title Ваше имя
+								+e.SPAN.bottom-border
 					+e.col.col-12.col-xl-auto.col-xxl
-						+input('Ваш телефон', 'tel')
-							+img('img/svg/call.svg')
+						//- +input('Ваш телефон', 'tel')
+						//- 	+img('img/svg/call.svg')
+						+e.input-wrap.form-group
+							label
+								+e.INPUT.input.form-control(name='text' type='text' placeholder='Ваше имя' style='--bgImg: url(../img/svg/call.svg); --bgImgFocus: url(../img/svg/call-colored.svg)')
+								+e.SPAN.input-title Ваше имя
+								+e.SPAN.bottom-border
 					.col-12.col-xl
 						+e.send
 							+policy
