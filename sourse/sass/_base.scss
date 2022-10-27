@@ -677,3 +677,21 @@ h6 {
 		background-color: $gray-100;
 	}
 }
+
+.description-page {
+	.page-head {
+		&__content {
+			@include media-breakpoint-up(md) {
+				padding: rem(53.200) 0 rem(59.600);
+			}
+		}
+		&__btn {
+			display: block;
+			width: 100%;
+			max-width: rem(270);
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: rem(36.400);
+		}
+	}
+}

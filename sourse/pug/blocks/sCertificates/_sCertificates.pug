@@ -6,13 +6,17 @@ mixin cert-slide(t, p, i)
 			.img-wrap-center
 				+img(`img/sCertificates-${i}.jpg`, 'bg')
 
-mixin sCertificates(data)
+mixin sCertificates(def=true)
 	// start sCertificates
 	+b.SECTION.sCertificates.section#sCertificates&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Необходимые 
-					span сертификаты <br> и&nbsp;допуски
+				if def
+					h2 Необходимые 
+						span сертификаты <br> и&nbsp;допуски
+				else
+					h2 Сертификаты 
+						span и ТУ
 			+e.slider-wrap
 				+e.slider--js.swiper
 					.swiper-wrapper
