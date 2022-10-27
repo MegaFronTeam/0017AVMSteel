@@ -14,6 +14,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/footer/_footer.pug
 
 include ../blocks/sMap/_sMap.pug
+include ../blocks/sProjects/_sProjects.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sContactInfo/_sContactInfo.pug
 
@@ -32,6 +33,7 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
+		+sProjects()
 		+headerBlock 
 		+sServices()
 		+sCatalog

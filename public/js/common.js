@@ -413,7 +413,7 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	const swiper5 = new Swiper('.portfolio-item__slider--js', {
+	const portfolioItemSlider = new Swiper('.portfolio-item__slider--js', {
 		// slidesPerView: 5,
 		spaceBetween: 0,
 		lazy: {
@@ -442,10 +442,72 @@ function eventHandler() {
 		},
 
 	});
+	const sProjectsSliderThumbs = new Swiper('.sProjects__slider-thumbs--js', {
+		// slidesPerView: 5,
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		slidesPerView: 4,
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		// navigation: {
+		// 	nextEl: '.swiper-button-next',
+		// 	prevEl: '.swiper-button-prev',
+		// },
+		// pagination: {
+		// 	el: ' .swiper-pagination',
+		// 	type: 'bullets',
+		// 	clickable: true,
+		// 	// renderBullet: function (index, className) {
+		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+		// 	// }
+		// },
+
+	});
+	const sProjectsSlider = new Swiper('.sProjects__slider--js', {
+		// slidesPerView: 5,
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		slidesPerView: 'auto',
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		thumbs: {
+			swiper: sProjectsSliderThumbs,
+		},
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sProjects__arrow-wrap > .swiper-button-next',
+			prevEl: '.sProjects__arrow-wrap > .swiper-button-prev',
+		},
+		// pagination: {
+		// 	el: ' .swiper-pagination',
+		// 	type: 'bullets',
+		// 	clickable: true,
+		// 	// renderBullet: function (index, className) {
+		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+		// 	// }
+		// },
+
+	});
+	
 
 	const sTeamSliderWraps = document.querySelectorAll('.sTeam__slider-wrap');
 	for (const sTeamSliderWrap of sTeamSliderWraps) {
-		const swiper6 = new Swiper(sTeamSliderWrap.querySelector('.sTeam__slider--js'), {
+		const sTeamSlider = new Swiper(sTeamSliderWrap.querySelector('.sTeam__slider--js'), {
 			// slidesPerView: 5,
 			lazy: {
 				loadPrevNext: true,
@@ -488,7 +550,7 @@ function eventHandler() {
 
 	JSCCommon.heightSlide();
 
-	const swiper8 = new Swiper('.sCertificates__slider--js', {
+	const sCertificatesSlider = new Swiper('.sCertificates__slider--js', {
 		// slidesPerView: 5,
 		lazy: {
 			loadPrevNext: true,
