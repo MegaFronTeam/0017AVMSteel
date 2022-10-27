@@ -1,13 +1,14 @@
 // start .sProjects
 .sProjects {
-	--sPT: 0;
-	--sPB: 0;
+	// --sPT: 0;
+	// --sPB: 0;
 	// --sTPB: #{rem()};
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 	}
-	.container {
+	& > .container {
+		padding: 0;
 		.container {
 			padding: 0;
 		}
@@ -23,11 +24,52 @@
 			}
 		}
 	}
+	// &__sliders {
+	// }
+	&__couter-slides {
+		@include media-breakpoint-up(sm) {
+			display: none;
+		}
+		& > * {
+			display: inline;
+		}
+	}
 	&__arrow-wrap {
+		position: relative;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
+		padding: 20px;
+		border: 1px solid $border-color;
+		background-color: $light;
+		@include media-breakpoint-up(sm) {
+			justify-content: center;
+			border-radius: $border-radius-lg $border-radius-lg 0px 0px;
+		}
+		.sProjects__slider-thumbs {
+			margin: 0 20px;
+		}
 		.swiper-button-hand {
-			// position: static;
+			position: static;
+			@include media-breakpoint-down(sm) {
+				--swiperArrowSize: 40px;
+			}
+		}
+	}
+	&__slider {
+		border: 1px solid $border-color;
+		border-bottom: none;
+		border-top: none;
+		@include media-breakpoint-up(sm) {
+			border-bottom: 1px solid $border-color;
+			border-radius: 0px 0px $border-radius-lg $border-radius-lg;
+		}
+	}
+	&__slider-thumbs {
+		width: 555px;
+		max-width: 50%;
+		@include media-breakpoint-down(sm) {
+			display: none;
 		}
 	}
 	&__col {
@@ -35,13 +77,13 @@
 	&__item {
 	}
 	.portfolio-item {
+		border-bottom: none;
+		padding: 20px 20px 20px 20px;
 		@include media-breakpoint-up(sm) {
-			border-radius: 0px 0px $border-radius-lg $border-radius-lg;
-			border: 1px solid $border-color;
-			padding: rem(30);
+			padding: rem(30) rem(30) rem(30) rem(30);
 		}
 		@include media-breakpoint-up(xxl) {
-			padding: rem(60);
+			padding: rem(60) rem(60) rem(60) rem(60);
 		}
 	}
 

@@ -5,23 +5,25 @@ mixin sProjects(data)
 			+b.section-title.text-center
 				h2 Наши #[span проекты]
 				p Персональная ответственность за&nbsp;соблюдение сроков выполнения работ
-			+e.siders
-				
-				+e.slider-thumbs--js.swiper
-					.swiper-wrapper
-						- for (let i = 0; i < 5; i++) 
-							+e.slide.swiper-slide
-								+e.img-wrap
-									+img(`img/sPortfolio-1.jpg`, 'bg')
-					//- +arrow-rounded()
-					+e.arrow-wrap
-						.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-prev.swiper-button-prev
-							+icon('arrow-left')
-						.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-next.swiper-button-next
-							+icon('arrow-right')
+			+e.sliders
+				+e.arrow-wrap
+					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-prev.swiper-button-prev
+						+icon('arrow-left')
+					+e.slider-thumbs--js.swiper
+						.swiper-wrapper
+							- for (let i = 0; i < 6; i++) 
+								+e.slide.swiper-slide
+									+e.img-wrap
+										+img(`img/sPortfolio-1.jpg`, 'bg')
+					+e.couter-slides
+						+e.active-slide 
+						span из 
+						+e.all-slides 
+					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-next.swiper-button-next
+						+icon('arrow-right')
 				+e.slider--js.swiper
 					.swiper-wrapper
-						- for (let i = 0; i < 5; i++) 
+						- for (let i = 0; i < 6; i++) 
 							+e.slide.swiper-slide
 								+portfolio-item(`Нижний Новгород`, `Устройство шпунтового ограждения многоквартирного жилого дома с&nbsp;подземной автостоянкой`, `Шпунт Ларсена Л5-УМ L=16&nbsp;м`, 1)
 									+portfolio-list(`Оборудование`, 
@@ -34,9 +36,13 @@ mixin sProjects(data)
 										`Погружение шпунта в&nbsp;проектные отметки`, 
 										`Извлечение шпунта после устройства подземной части здания`, 
 										`Обратный выкуп шпунта&nbsp;75%`)
-				+e.arrow-wrap
+				+e.arrow-wrap.d-sm-none
 					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-prev.swiper-button-prev
 						+icon('arrow-left')
+					+e.couter-slides
+						+e.active-slide
+						span из
+						+e.all-slides
 					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-next.swiper-button-next
 						+icon('arrow-right')
 				//- +e.slider-thumbs--js.swiper

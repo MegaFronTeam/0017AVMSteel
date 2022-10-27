@@ -444,18 +444,32 @@ function eventHandler() {
 	});
 	const sProjectsSliderThumbs = new Swiper('.sProjects__slider-thumbs--js', {
 		// slidesPerView: 5,
-		spaceBetween: 0,
+		spaceBetween: 10,
 		lazy: {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
 		loop: true,
-		slidesPerView: 4,
+		slidesPerView: 3,
 		// freeMode: true,
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.4,
 		slideToClickedSlide: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
+			},
+			993: {
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 6,
+			},
+			1400: {
+				slidesPerView: 6,
+				spaceBetween: 15,
+			},
+		},
 		// freeModeMomentum: true,
 		// navigation: {
 		// 	nextEl: '.swiper-button-next',
