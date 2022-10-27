@@ -11,10 +11,24 @@ mixin sProjects(data)
 						+icon('arrow-left')
 					+e.slider-thumbs--js.swiper
 						.swiper-wrapper
-							- for (let i = 0; i < 6; i++) 
-								+e.slide.swiper-slide
-									+e.img-wrap
-										+img(`img/sPortfolio-1.jpg`, 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-1.jpg`, 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-2.jpg`, 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-3.jpg`, 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-4.jpg`, 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-5.jpg`, 'bg')
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/sPortfolio-1.jpg`, 'bg')
 					+e.couter-slides
 						+e.active-slide 
 						span из 
@@ -23,7 +37,55 @@ mixin sProjects(data)
 						+icon('arrow-right')
 				+e.slider--js.swiper
 					.swiper-wrapper
-						- for (let i = 0; i < 6; i++) 
+							+e.slide.swiper-slide
+								+portfolio-item(`Нижний Новгород`, `Устройство шпунтового ограждения многоквартирного жилого дома с&nbsp;подземной автостоянкой`, `Шпунт Ларсена Л5-УМ L=16&nbsp;м`, 1)
+									+portfolio-list(`Оборудование`, 
+										`Автокран г/п 50&nbsp;т`, 
+										`Вибропогружатель MULLER MS-28&nbsp;HFV`, 
+										`Буровая установка ENTECO E300&nbsp;на гусеничном ходу`)
+									+portfolio-list(`Список работ`, 
+										`Стыковка шпунта в&nbsp;L=16&nbsp;м на&nbsp;собственном производстве`, 
+										`Поставка шпунта на&nbsp;обьект строительства`, `Лидерное бурение скважин D=300&nbsp;мм.&nbsp;на&nbsp;глубину 16&nbsp;метров`, 
+										`Погружение шпунта в&nbsp;проектные отметки`, 
+										`Извлечение шпунта после устройства подземной части здания`, 
+										`Обратный выкуп шпунта&nbsp;75%`)
+							+e.slide.swiper-slide
+								+portfolio-item(`Гороховец`, `Устройство шпунтового ограждения набережной реки &laquo;Ключевая&raquo;`, `Шпунт Ларсена AZ&nbsp;18-700 L=6&nbsp;м`, 2)
+									+portfolio-list(`Оборудование`, 
+										`Вибропогружатель Movax SPH80&nbsp;на базе экскаватора Hitachi ZX330`)
+									+portfolio-list(`Список работ`, 
+										`Погружение шпунта без последующей выемки`)
+
+							+e.slide.swiper-slide
+								+portfolio-item(`Московская область`, `Реконструкция автомобильного моста на&nbsp;трассе М5-Урал`, `Шпунт Ларсена Л5-УМ L=12&nbsp;м, L=8&nbsp;м`, 3)
+									+portfolio-list(`Оборудование`, 
+										`Вибропогружатель MULLER MS-24&nbsp;HFV`,
+										`Автокран г/п 50&nbsp;т`)
+									+portfolio-list(`Список работ`, 
+										`Поставка шпунта`,
+										`Погружение`,
+										`Извлечение шпунта после устройства свайного поля опор моста`,
+										`Обратный выкуп&nbsp;75%`)
+							+e.slide.swiper-slide
+								+portfolio-item(`Ярославская область`, `Устройство шпунтового ограждения котлована под комплекс отчистных сооружений`, `Шпунт Ларсена GU22N &amp;&nbsp;VL606a L=10&nbsp;м`, 4)
+									+portfolio-list(`Оборудование`, 
+										`Вибропогружатель MULLER MS-25&nbsp;HHF`,
+										`Автокран г/п 40&nbsp;т`)
+									+portfolio-list(`Список работ`, 
+										`Поставка шпунта`,
+										`Погружение`,
+										`Извлечение шпунта после монтажа очистных сооружений и&nbsp;устройства обратной засыпки котлована`,
+										`Выкуп шпунта 73%`)
+							+e.slide.swiper-slide
+								+portfolio-item(`Москва`, `Устройство 2-х рядного шпунтового ограждения котлована многоквартирного жилого дома с&nbsp;подземной автостоянкой`, `Труба 273*7 L=10&nbsp;м`, 5)
+									+portfolio-list(`Оборудование`, 
+										`Буровая установка Aichi на&nbsp;базе а/м Камаз`,
+										`Вибропогружатель Movax SPH-80&nbsp;на базе экскаватора Hitachi 330`)
+									+portfolio-list(`Список работ`, 
+										`Поставка труб`,
+										`Лидерное бурение скважин D=300&nbsp;мм`,
+										`Погружение труб`,
+										`Устройство распределительного пояса и&nbsp;забирки из&nbsp;доски`)
 							+e.slide.swiper-slide
 								+portfolio-item(`Нижний Новгород`, `Устройство шпунтового ограждения многоквартирного жилого дома с&nbsp;подземной автостоянкой`, `Шпунт Ларсена Л5-УМ L=16&nbsp;м`, 1)
 									+portfolio-list(`Оборудование`, 
@@ -45,12 +107,5 @@ mixin sProjects(data)
 						+e.all-slides
 					.swiper-button-hand.swiper-button-hand--rounded.swiper-button-hand-next.swiper-button-next
 						+icon('arrow-right')
-				//- +e.slider-thumbs--js.swiper
-				//- 	.swiper-wrapper
-				//- 		- for (let i = 0; i < 5; i++) 
-				//- 			+e.slide.swiper-slide
-				//- 				+e.img-wrap
-				//- 					+img(`img/sPortfolio-1.jpg`, 'bg')
-				//- 	+arrow-rounded()
 
 	// end sProjects
