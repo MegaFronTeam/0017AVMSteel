@@ -7,7 +7,7 @@ mixin product-item(i, t)
 			//- .img-wrap-center 
 			+img(`img/prod-${i}.jpg`, 'bg')
 		+e.caption
-			+e.title.h5!= t
+			+e.H5.title!= t
 			mixin tr(key, val)
 				tr
 					td!= key
