@@ -320,7 +320,7 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
 
@@ -348,7 +348,7 @@ ul {
 		border-radius: 50%;
 		--swiperArrowSize: 50px;
 		--swiperBgDef: #{$white};
-		--swiperBorderColorDef: $gray-300;
+		--swiperBorderColorDef: #{$gray-300};
 		--swiperColorDef: #{$primary};
 		--swiperArrowPosition: calc(var(--swiperArrowSize) * -1 / 2);
 		&:hover {
