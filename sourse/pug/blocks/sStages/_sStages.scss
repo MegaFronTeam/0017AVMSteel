@@ -58,7 +58,7 @@
 				content: counter(num);
 				counter-increment: num;
 				@include a-cent1;
-				line-height: 25px;
+				line-height: 16px;
 			}
 		}
 		.icon {
