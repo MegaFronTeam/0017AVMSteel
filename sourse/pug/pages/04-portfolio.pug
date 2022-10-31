@@ -5,6 +5,7 @@ include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sPortfolio/_sPortfolio.pug
 include ../blocks/footer/_footer.pug
+include ../blocks/sForm/_sForm.pug
 
 block variables
 	- let  mainPage= 'portfolio-page' 
@@ -23,6 +24,7 @@ block pagecontent
 	main
 		+page-head(8, title, title)
 		+sPortfolio()
+		+sForm()
 	+footer()
       
 
