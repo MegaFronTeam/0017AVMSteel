@@ -633,10 +633,10 @@ function eventHandler() {
 
 	let menuItemHasChildrens = document.querySelectorAll('.menu-item-has-children');
 	for (let menuItemHasChildren of menuItemHasChildrens) {
-		menuItemHasChildren.addEventListener('click', function() {
-			$(this).toggleClass('shown');
+		menuItemHasChildren.querySelector('span').addEventListener('click', function() {
+			$(menuItemHasChildren).toggleClass('shown');
 			if (window.innerWidth < 992) {
-				$(this.querySelector('.sub-menu')).slideToggle();
+				$(menuItemHasChildren.querySelector('.sub-menu')).slideToggle();
 			}
 		});
 		document.addEventListener('click', function(event) {
@@ -648,13 +648,13 @@ function eventHandler() {
 		});
 	};
 
-	$('.topLine__tel-wrap').on('click', function() {
-		$(this).toggleClass('active');
+	$('.topLine__tel--js').on('click', function() {
+		$('.topLine__tel-wrap').toggleClass('active');
 	});
 	document.addEventListener('click', function(event) {
-		let container = event.target.closest('.topLine__content');
-		let btn = event.target.closest('.topLine__tel--js');
-		if(!container && !btn) {
+		let container = event.target.closest('.topLine__tel-wrap.active');
+		// let btn = event.target.closest('.topLine__tel--js');
+		if(!container) {
 			$('.topLine__tel-wrap').removeClass('active');
 		}
 	});

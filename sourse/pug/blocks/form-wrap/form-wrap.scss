@@ -32,6 +32,17 @@
 			// 		color: rgba(#05141F, .5);
 			opacity: 0 !important	;
 		}
+		&.is-invalid, &.is-valid {
+			background-image: none;
+			padding-right: rem(20);
+		}
+		&.is-invalid {
+			box-shadow: 0 0 0 1px #DB4545!important;
+		}
+		&.is-valid {
+			box-shadow: 0 0 0 1px $primary!important;
+			border-color: $primary;
+		}
 	}
 	&__btn {
 		cursor: pointer;

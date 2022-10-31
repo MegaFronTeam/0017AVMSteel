@@ -63,15 +63,27 @@
 			}
 		}
 	}
-	&__link-wrap {
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-bottom: 0;
 		@include media-breakpoint-up(lg) {
 			border-left: 1px solid rgba($color: #fff, $alpha: .3);
+			height: calc(100vh - 140px);
 		}
 		@include media-breakpoint-down(lg) {
 			--bs-gutter-y: 5px;
 			margin-top: calc(var(--bs-gutter-y) * -1);
 			& > * {
 				margin-top: var(--bs-gutter-y);
+			}
+		}
+		li {
+			@include media-breakpoint-up(lg) {
+				height: 20%;
+				a {
+					height: 100%;
+				}
 			}
 		}
 	}

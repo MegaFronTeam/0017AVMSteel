@@ -9,15 +9,20 @@ mixin headerBlock()
 						h1 Шпунт Ларсена
 						h3 Л4, Л5, Л5УМ, VL, AZ, GU, ZU, ZZ, Трубошпунт, ПВХ
 				.col-lg
-					+e.link-wrap
+					ul
 						mixin link(title)
 							+e.link(href="#")
 								.h4!= title
 								+e.icon-wrap
 									+icon('arrow-right')
-						+link('Проектирование<br>и строительно-монтажные работы')
-						+link('Монтаж/демонтаж шпунта')
-						+link('Аренда шпунта')
-						+link('Продажа шпунта')
-						+link('Выкуп шпунта')
+						li
+							+link('Проектирование<br>и строительно-монтажные работы')
+						li
+							+link('Монтаж/демонтаж шпунта')
+						li
+							+link('Аренда шпунта')
+						li
+							+link('Продажа шпунта')
+						li
+							+link('Выкуп шпунта')
 	// end headerBlock

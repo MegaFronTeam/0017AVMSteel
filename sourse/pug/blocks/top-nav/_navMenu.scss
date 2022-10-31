@@ -207,6 +207,10 @@
 	font-size: 20px;
 	width: 20px;
 	cursor: pointer;
+	@include mt;
+	&:hover {
+		opacity: .5 !important;
+	}
 	span:after,
 	span:before {
 		content: "";

@@ -63,6 +63,7 @@
 .fancybox__content>.carousel__button.is-close {
 	--fancybox-color: #ABACB7;
 
+	@include mt;
 	top: 10px;
 	right: 10px;
 	@include media-breakpoint-up(md) {
@@ -74,6 +75,9 @@
 		--carousel-button-svg-height: 20px;
 
 		filter: none;
+	}
+	&:hover {
+		opacity: .5;
 	}
 }
 

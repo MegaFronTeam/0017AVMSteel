@@ -9,8 +9,8 @@ mixin modal()
 					+e.title.form-data Связаться с нами
 					p.after-headline Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей
 				+e.content
-					+input("Ваше Имя", 'text')(required)  
-					+input("Ваш телефон", 'tel')(required)  
+					+input("Ваше Имя", 'text')(required).is-invalid
+					+input("Ваш телефон", 'tel')(required).is-valid
 					+input("Ваш email", 'email')(required)  
 					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить заявку
 					+policy()
