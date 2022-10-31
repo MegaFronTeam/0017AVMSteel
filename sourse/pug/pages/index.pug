@@ -17,6 +17,7 @@ include ../blocks/sMap/_sMap.pug
 include ../blocks/sProjects/_sProjects.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sContactInfo/_sContactInfo.pug
+include ../blocks/sForm/_sForm.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -48,8 +49,8 @@ block pagecontent
 			+sStages-item(5, `Сдача объекта`)
 		+sTeam()
 		+sAdvantages
+		+sForm()
 		+sContactInfo
-		//- +sForm()
 		//- +sContact()
 		
 	+footer()
