@@ -7,7 +7,7 @@ include ../blocks/sPortfolio/_sPortfolio.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'portfolio-page' 
 	- let  bg= '04-portfolio.jpg'
 
 block title
@@ -21,7 +21,7 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
-		+page-head('', title, title)
+		+page-head(8, title, title)
 		+sPortfolio()
 	+footer()
       

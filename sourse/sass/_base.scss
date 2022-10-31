@@ -577,8 +577,6 @@ iframe {
 	}
 }
 
-
-
 .primary-link {
 	color: $primary;
 	&:hover,
@@ -621,28 +619,40 @@ h6 {
 		padding-top: 0;
 	}
 }
-
-
-// .glossary-page {
-// 	.page-head--bg {
-// 		.page-head__content {
-// 			// padding: 60px 0 90px;
-// 			@include media-breakpoint-up(sm) {
-// 				padding: rem(90) 0 rem(135);
-// 			}
-// 		}
-// 	}
-// }
+.portfolio-page {
+	.page-head {
+		img {
+			object-position: center 33%;
+		}
+	}
+}
+.contacts-page {
+	.page-head {
+		img {
+			object-position: center 50%;
+		}
+	}
+}
+.glossary-page {
+	.page-head {
+		img {
+			object-position: center 50%;
+		}
+	}
+}
 
 .buyout-page {
 	.page-head {
+		img {
+			object-position: center 50%;
+		}
 		&__content {
 			@include media-breakpoint-up(md) {
-				padding: rem(53.200) 0 rem(59.600);
+				padding: rem(53.2) 0 rem(59.6);
 			}
 		}
 		&__subtitle {
-			margin-top: rem(36.400);
+			margin-top: rem(36.4);
 		}
 	}
 	.sStages {
@@ -682,7 +692,7 @@ h6 {
 	.page-head {
 		&__content {
 			@include media-breakpoint-up(md) {
-				padding: rem(83.600) 0 rem(91.600);
+				padding: rem(83.6) 0 rem(91.6);
 			}
 		}
 		&__btn {
@@ -691,7 +701,7 @@ h6 {
 			max-width: rem(270);
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: rem(50.800);
+			margin-top: rem(50.8);
 		}
 	}
 	.sAdvantages {
@@ -711,7 +721,7 @@ h6 {
 			&:not(:last-child) {
 				margin-bottom: rem(45);
 				@include media-breakpoint-up(md) {
-					margin-bottom: rem(72.400);
+					margin-bottom: rem(72.4);
 				}
 			}
 			&:nth-child(odd) {
@@ -739,7 +749,7 @@ h6 {
 		--sPT: #{rem(8)};
 		background-color: #fff;
 		@include media-breakpoint-up(md) {
-			--sTPB: #{rem(84.600)};
+			--sTPB: #{rem(84.6)};
 		}
 	}
 	.sForm {

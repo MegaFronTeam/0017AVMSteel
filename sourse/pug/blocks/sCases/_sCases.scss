@@ -74,6 +74,7 @@
 		}
 	}
 	&__list-wrap {
+		@include roww(15px, m);
 		display: flex;
 		flex-wrap: wrap;
 		--bs-gutter-y: #{rem(20)};
@@ -83,14 +84,15 @@
 			margin-top: var(--bs-gutter-y);
 		}
 		ul {
+			
 			list-style-type: none;
 			flex-grow: 1;
 			padding-left: 0;
 			margin-bottom: 0;
-			@include media-breakpoint-up(lg) {
-				width: 50%;
+			// @include media-breakpoint-up(lg) {
+			// 	width: 50%;
 
-			}
+			// }
 			li {
 				&:not(:last-child) {
 					margin-bottom: rem(10);

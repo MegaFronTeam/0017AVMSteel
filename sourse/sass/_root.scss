@@ -1,6 +1,6 @@
 :root {
 	--animate-delay: 1.2s;
-	@media (max-width: 576px) {
+	@media (max-width: 1441px) {
 		--bs-body-font-size: calc(#{$em-base} * 0.875);
 	}
 	--bs-body-font-size: #{$em-base};
