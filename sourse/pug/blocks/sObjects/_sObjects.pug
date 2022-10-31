@@ -8,7 +8,7 @@ mixin sObjects(data)
 			+e.row.row
 				mixin item(i, t)
 					.col-6.col-xxl-4
-						+e.A.item(href='#')
+						+e.A.item(href="#"  data-src='modal-call' data-fancybox="modal")
 							+e.img-wrap
 								+img(`img/sObjects-${i}.jpg`, `bg`)
 							+e.item-content
@@ -22,6 +22,6 @@ mixin sObjects(data)
 				+item(5, `Укрепление мостов, причалов, пирсов`)
 				+item(6, `Ливневые очистные сооружения`)
 			+e.btn-wrap
-				+e.btn.btn.btn-primary(href='#') Связаться с нами
+				+e.btn.btn.btn-primary(href="#"  data-src='modal-call' data-fancybox="modal") Связаться с нами
 							
 	// end sObjects

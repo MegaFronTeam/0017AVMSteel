@@ -38,6 +38,9 @@
 				font-size: rem(70);
 			}
 			@include media-breakpoint-up(xl) {
+				font-size: rem(64);
+			}
+			@include media-breakpoint-up(xxl) {
 				font-size: rem(90);
 			}
 		}
@@ -50,8 +53,13 @@
 				margin-bottom: rem(11);
 				font-size: rem(21);
 			}
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(xl) {
+				font-size: rem(20);
+				max-width: 87%;
+			}
+			@include media-breakpoint-up(xxl) {
 				font-size: rem(30);
+				max-width: 100%;
 			}
 		}
 	}
@@ -73,7 +81,7 @@
 		position: relative;
 		z-index: 1;
 		@include media-breakpoint-up(lg) {
-			padding: rem(39.800) 0 rem(44) rem(60);
+			padding: rem(14) 0 rem(14) rem(50);
 			&:before {
 				@include mt;
 				content: '';
@@ -101,6 +109,13 @@
 				}
 			}
 		}
+		@include media-breakpoint-up(xl) {
+			min-height: 87px;
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(39.800) 0 rem(44) rem(60);
+			min-height: auto;
+		}
 		@include media-breakpoint-down(lg) {
 			padding: rem(15) rem(20);
 			background: rgba(31, 31, 33, 0.5);
@@ -123,6 +138,9 @@
 				margin-right: 0;
 			}
 			@include media-breakpoint-up(xl) {
+				font-size: rem(20);
+			}
+			@include media-breakpoint-up(xxl) {
 				font-size: rem(24);
 			}
 			br {
@@ -170,12 +188,16 @@
 			pointer-events: none;
 		}
 		@include media-breakpoint-up(xl) {
+			// width: rem(70);
+			// height: rem(70);
+		}
+		@include media-breakpoint-up(xxl) {
 			width: rem(70);
 			height: rem(70);
 		}
 		.icon {
 			font-size: 16px;
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(xxl) {
 				font-size: rem(20);
 			}
 		}
