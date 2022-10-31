@@ -216,14 +216,14 @@ const JSCCommon = {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		function getSlideH() {
 			let slideI = document.querySelectorAll('.sTeam__img-wrap');
-			if (!slideI) return;
+			if (slideI.length == 0) return;
 			let slideH, index = 0;
 			for (const iterator of slideI) {
 				if (index < 1) {
 					slideH = iterator.offsetHeight;
 					index++;
 				} else break;
-			}
+			};
 			// console.log(slideH);
 			document.documentElement.style.setProperty('--slideH', `${slideH}px`);
 		};

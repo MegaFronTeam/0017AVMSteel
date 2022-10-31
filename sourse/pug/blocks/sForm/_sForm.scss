@@ -91,7 +91,7 @@
 				max-width: rem(479);
 				z-index: -1;
 				pointer-events: none;
-				filter: brightness(0.6);
+				// filter: brightness(0.6);
 			}
 			@include media-breakpoint-up(xxl) { 
 				right: rem(91);
