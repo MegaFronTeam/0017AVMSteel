@@ -7,7 +7,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'contacts-page' 
 	- let  bg= '02-contacts.jpg'
 
 block title
@@ -21,7 +21,7 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
-		+page-head('', title, title)
+		+page-head(6, title, title)
 		+sContact()
 	+footer()
       
