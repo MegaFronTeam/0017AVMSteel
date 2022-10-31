@@ -52,7 +52,7 @@
 			.topLine {
 				&__tel {
 					.icon {
-						transform: rotate(180deg);
+						transform: rotateX(180deg);
 					}
 				}
 				&__content {

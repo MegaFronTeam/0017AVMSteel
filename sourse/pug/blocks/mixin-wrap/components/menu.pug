@@ -4,13 +4,13 @@ mixin mnu()
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			each link in nav
 				if link.active && link.name
-					li.menu-item.active(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+					li.menu-item.current-menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 				else 
 					if link.name
 						li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 				if link.subnav
 					li.menu-item.menu-item-has-children
-						a(href= link.suburl itemprop="url")= link.subname
+						span= link.subname
 						ul.sub-menu
 							each sublink in link.subnav
 								li.menu-item(itemprop="item" )
