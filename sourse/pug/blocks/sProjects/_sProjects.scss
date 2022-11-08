@@ -93,6 +93,9 @@
 			border-radius: 0px 0px $border-radius-lg $border-radius-lg;
 		}
 	}
+	&__slide {
+		height: auto;
+	}
 	&__slider-thumbs {
 		width: 555px;
 		max-width: 50%;

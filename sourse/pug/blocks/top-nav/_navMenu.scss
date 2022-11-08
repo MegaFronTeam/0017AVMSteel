@@ -1,6 +1,5 @@
-.menu{
+.menu {
 	@include media-breakpoint-up(lg) {
-
 		display: flex;
 		text-align: center;
 		@include roww(2px);
@@ -8,7 +7,7 @@
 		justify-content: space-between;
 		font-size: 14px;
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			display: block;
 			width: 200vw;
@@ -31,15 +30,24 @@
 		padding-left: 0;
 		list-style-type: none;
 	}
-	li{
-		
+	li {
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
 	}
-	a, .menu-item-has-children > span{
+	a,
+	.menu-item-has-children > span {
 		display: block;
 		padding: rem(18) calc(var(--bs-gutter-x) / 2);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(15);
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(16);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: 16px;
+		}
 	}
 	&-item {
 		position: relative;
@@ -66,14 +74,17 @@
 			& > span {
 				cursor: pointer;
 				position: relative;
-				padding-right: rem(25) !important;
+				padding-right: rem(20) !important;
 				@include media-breakpoint-down(lg) {
 					padding: 10px 24px 10px 10px !important;
 					border-bottom: 1px solid transparent;
 				}
+				@include media-breakpoint-up(xxl) {
+					padding-right: rem(25) !important;
+				}
 				&:after {
 					@include mt;
-					content: '';
+					content: "";
 					position: absolute;
 					display: block;
 					right: 0;
@@ -81,7 +92,7 @@
 					transform: translateY(-50%);
 					width: rem(20);
 					height: rem(20);
-					background-image: url('../img/svg/arrow-down.svg');
+					background-image: url("../img/svg/arrow-down.svg");
 					background-repeat: no-repeat;
 					background-size: contain;
 					background-position: center;
@@ -164,7 +175,7 @@
 		}
 		&.current-menu-item {
 			&:after {
-				content: '';
+				content: "";
 				position: absolute;
 				display: block;
 				width: 100%;
@@ -178,7 +189,6 @@
 	}
 	.sub-menu {
 		li {
-
 		}
 		a {
 			font-size: rem(16);
@@ -186,8 +196,6 @@
 		}
 	}
 }
-
-
 
 .toggle-menu-mobile {
 	--h: 2px;
@@ -197,39 +205,39 @@
 		--color: transparent;
 	}
 
-	&.on  { 
-		--position: 0; 
+	&.on {
+		--position: 0;
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 10);
-	position: relative; 
+	height: calc(var(--h) * 10);
+	position: relative;
 	font-size: 20px;
 	width: 20px;
 	cursor: pointer;
 	@include mt;
 	&:hover {
-		opacity: .5 !important;
+		opacity: 0.5 !important;
 	}
 	span:after,
 	span:before {
 		content: "";
 		position: absolute;
 		left: 0;
-	} 
+	}
 	span {
 		@include a-cent(y);
 		display: block;
 	}
 
-	span:before { 
+	span:before {
 		top: var(--position);
-		transform: rotate3d(0,0,1, var(--rotate, 0));
+		transform: rotate3d(0, 0, 1, var(--rotate, 0));
 	}
 
 	span:after {
 		bottom: var(--position);
-		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
 	}
 	span,
 	span:after,
@@ -239,14 +247,11 @@
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
-		backface-visibility: hidden; 
+		backface-visibility: hidden;
 		transform-origin: 50% 50%;
-	} 
+	}
 }
 @include media-breakpoint-down(lg) {
-
-	
-
 	.menu-mobile {
 		position: fixed !important;
 		z-index: 999;
@@ -258,25 +263,24 @@
 		// left: 0;
 		right: 0;
 		background-color: $body-bg;
-		&:not(.active){
-			transform: translate3d(120%, 0,0);
+		&:not(.active) {
+			transform: translate3d(120%, 0, 0);
 			--opacity: 0;
-			.toggle-menu-mobile{
+			.toggle-menu-mobile {
 				opacity: 0;
 			}
 		}
-		@include mt(.6s);
+		@include mt(0.6s);
 		will-change: transform;
 
-		
-		.toggle-menu-mobile { 
+		.toggle-menu-mobile {
 			// margin-left: -15%;
-			position: absolute; 
+			position: absolute;
 			right: 9px;
 			// right: auto;
 			color: $gray-900;
 			top: 9px;
-			z-index: 9999; 
+			z-index: 9999;
 			span:after,
 			span:before {
 				--color: #{$gray-900};
@@ -293,12 +297,11 @@
 			// opacity: var(--opacity);
 		}
 
-		&.active { 
+		&.active {
 			.toggle-menu-mobile {
 				opacity: 1;
 			}
 		}
-
 
 		ul {
 			position: relative;
@@ -307,14 +310,13 @@
 		li {
 			display: block;
 			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
+			border-top: 1px solid rgba(255, 255, 255, 0.13);
 
 			a {
 				// font-size: 16px;
 
 				padding: 10px;
 				display: block;
-
 			}
 		}
 	}

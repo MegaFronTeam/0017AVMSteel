@@ -5,10 +5,10 @@
 	// --sTPB: #{rem()};
 	background-color: $gray-100;
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(83.600)};
+		--sPT: #{rem(83.6)};
 		--sPB: #{rem(90)};
 	}
-	&__row{
+	&__row {
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(20)};
 		margin-bottom: 20px;
@@ -17,13 +17,13 @@
 			margin-bottom: rem(45);
 		}
 	}
-	.section-title{
+	.section-title {
 		max-width: rem(990);
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: rem(77);
 		h2 {
-			margin-bottom: rem(36.400);
+			margin-bottom: rem(36.4);
 		}
 		p {
 			font-size: rem(20);
@@ -31,48 +31,50 @@
 		}
 	}
 	&__btn {
-		--bs-btn-color: #{$gray-900};
-		--bs-btn-border-color: #{$border-color};
-		--bs-btn-hover-bg: transparent;
-		// Hover 
-		--bs-btn-hover-color: #{$gray-900};
-    --bs-btn-hover-bg: #{$border-color};
-    --bs-btn-hover-border-color: #{$border-color};
-		// Active
-		--bs-btn-active-color: #{$gray-900};
-    --bs-btn-active-bg: #{$border-color};
-    --bs-btn-active-border-color: #{$border-color};
-		@include media-breakpoint-down(md) {
-			--bs-btn-font-size: 16px;
-		}
-
+		// --bs-btn-color: #{$gray-900};
+		// --bs-btn-border-color: #{$border-color};
+		// --bs-btn-hover-bg: transparent;
+		// // Hover
+		// --bs-btn-hover-color: #{$gray-900};
+		// --bs-btn-hover-bg: #{$border-color};
+		// --bs-btn-hover-border-color: #{$border-color};
+		// // Active
+		// --bs-btn-active-color: #{$gray-900};
+		// --bs-btn-active-bg: #{$border-color};
+		// --bs-btn-active-border-color: #{$border-color};
 		display: block;
 		width: 100%;
-		margin: 0 auto;
-		@include media-breakpoint-up(md) {
-			max-width: rem(334);
+		// margin: 0 auto;
+		@include media-breakpoint-down(md) {
+			--bs-btn-font-size: 16px;
+			// 	max-width: rem(334);
 		}
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCatalog
 
-
-
-.product-item{
+.product-item {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	background: #FFFFFF; 
+	background: #ffffff;
 	overflow: hidden;
 	position: relative;
 	border-radius: 15px;
-	&__img-wrap{
+	&__img-wrap {
 		border-radius: 15px 15px 0 0;
 		@include block(330, 220);
 		overflow: hidden;
@@ -89,49 +91,69 @@
 		}
 	}
 	&__label {
-		position: absolute;
 		font-size: 12px;
-		padding: rem(3.600) rem(10.3);
-		z-index: 3;
+		line-height: 16px;
+		padding: 6px 10px;
 		border-radius: 6px;
 		font-weight: 700;
+		white-space: nowrap;
 		@include media-breakpoint-up(md) {
 			font-size: 14px;
 		}
 		&--yellow {
-			background-color: #DCAF3C;
+			background-color: #dcaf3c;
 			color: $body-color;
-			top: 20px;
-			left: 20px;
-			@include media-breakpoint-up(md) {
-				top: rem(30);
-				left: rem(30);
-			}
+			
 		}
 		&--blue {
-			background-color: #2194D3;
-			color: #fff;
-			top: 20px;
-			left: 76px;
-			@include media-breakpoint-up(md) {
-				top: rem(30);
-				left: rem(85);
-			}
+			background-color: #2194d3;
+			color: $white;
+			
 		}
 		&--black {
-			padding: rem(4.600) rem(10.3);
+			position: absolute;
+			padding: 7px 10px;
 			left: 20px;
 			bottom: 20px;
 			background-color: rgba(20, 20, 21, 0.5);
 			backdrop-filter: blur(7.5px);
-			color: #fff;
+			color: $white;
+			z-index: 3;
 			@include media-breakpoint-up(md) {
 				left: rem(30);
 				bottom: rem(30);
 			}
-		} 
+			@include media-breakpoint-only(xl) {
+				left: rem(25);
+				bottom: rem(25);
+			}
+		}
 	}
-	&__caption{
+	&__top-labels {
+		@include roww(7px, m);
+		
+		position: absolute;
+		display: flex;
+		z-index: 3;
+		flex-wrap: wrap;
+		top: 20px;
+		left: 20px;
+		max-width: calc(100% - 60px);
+		margin-top: calc(-1 * var(--bs-gutter-x));
+		@include media-breakpoint-up(md) {
+			top: rem(30);
+			left: rem(30);
+		}
+		@include media-breakpoint-only(xl) {
+			top: rem(25);
+			left: rem(25);
+		}
+		
+		.product-item__label {
+			margin-top: calc(var(--bs-gutter-x) / 2);
+		}
+	}
+	&__caption {
 		position: relative;
 		border-radius: 0 0 15px 15px;
 		border: 1px solid $border-color;
@@ -139,15 +161,23 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		padding: rem(31.600) rem(30);
+		padding: rem(31.6) rem(30);
+		@include media-breakpoint-only(xl) {
+			padding: rem(25) rem(25);
+		}
+	}
+	&__wrap {
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
 	}
 	&__title {
-		margin-bottom: rem(13.200);
+		// margin-bottom: rem(13.2);
 		@include media-breakpoint-down(md) {
 			font-size: 16px;
 		}
 		&:before {
-			content: '';
+			content: "";
 			position: absolute;
 			display: block;
 			width: 100%;
@@ -159,7 +189,7 @@
 	}
 	table {
 		width: 100%;
-		margin-bottom: rem(16.600);
+		margin: rem(13.2) 0 rem(16.6);
 		tr {
 			&:not(:last-child) {
 				border-bottom: 1px dashed $border-color;
@@ -178,7 +208,7 @@
 	&__btn {
 		position: relative;
 		z-index: 2;
-		margin-top: auto;
+		// margin-top: auto;
 		@include media-breakpoint-down(md) {
 			font-size: 16px;
 		}

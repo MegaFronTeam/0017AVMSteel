@@ -3,10 +3,14 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			+e.row.row
-				.col.col-xxl-6
+				.col.col-lg-auto.d-flex
 					+e.logo(href="/")
 						img(src="img/svg/logo.svg" alt="")
-						span ABM ИНЖИНИРИНГ
+						span ABM Инжиниринг
+				.col.d-none.d-lg-flex
+					+e.btn-calc(href="#")
+						+icon('calc')
+						| Калькулятор
 				.col-auto.d-none.d-lg-block
 					+e.mail(href="mailto:info@avmsteel.ru") info@avmsteel.ru
 				.col-auto.d-none.d-lg-block
@@ -20,7 +24,9 @@ mixin topLine()
 							+soc()
 							+dowload-link('Скачать реквизиты')
 				.col-auto.d-none.d-lg-block
-					+e.btn.btn.btn-outline-primary(href="#"  data-src='modal-call' data-fancybox="modal") Связаться с нами
+					+e.btn.btn.btn-outline-primary(href="#"  data-src='modal-call' data-fancybox="modal")
+						+icon('phone-call')
+						| Связаться с нами
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end topLine

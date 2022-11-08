@@ -89,6 +89,7 @@
 		.sObjects__btn {
 			@include mt;
 			pointer-events: none;
+			width: 290px;
 			@include media-breakpoint-down(lg) {
 				display: none;
 			}
@@ -107,8 +108,10 @@
 		text-align: center;
 		margin-top: 30px;
 		.sObjects__btn {
-			width: 320px;
-			max-width: 100%;
+			width: 100%;
+			@include media-breakpoint-up(sm) {
+				max-width: 290px;
+			}
 		}
 		@include media-breakpoint-up(lg) {
 			display: none;

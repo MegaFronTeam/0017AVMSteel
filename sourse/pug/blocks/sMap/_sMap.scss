@@ -362,7 +362,7 @@
 	&__btn {
 		display: block;
 		@include media-breakpoint-up(sm) {
-			max-width: rem(270);
+			max-width: 290px;
 			margin: 0 auto;
 		}
 	}

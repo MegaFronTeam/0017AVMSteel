@@ -1,4 +1,4 @@
-mixin cert-slide(t, p, i)
+mixin cert-slide(i)
 	+e.slide.swiper-slide
 		+e.A.img-wrap(data-fancybox='sCertificates' data-src=`img/sCertificates-lg-${i}.jpg`)
 			+e.btn-zoom
@@ -20,10 +20,15 @@ mixin sCertificates(def=true)
 			+e.slider-wrap
 				+e.slider--js.swiper
 					.swiper-wrapper
-						+cert-slide(`Васильев Константин`, `Генеральный директор`, 1)
-						+cert-slide(`Иванов Василий`, `Генеральный директор`, 2)
-						+cert-slide(`Максимова Анастасия`, `Руководитель отдела продаж`, 1)
-						+cert-slide(`Иван Петров`, `Директор по маркетингу`, 2)
+						+cert-slide(1)
+						+cert-slide(2)
+						+cert-slide(3)
+						+cert-slide(4)
+						+cert-slide(5)
+						+cert-slide(6)
+						+cert-slide(7)
+						+cert-slide(8)
+						+cert-slide(9)
 				+arrow-rounded()
 
 	// end sCertificates

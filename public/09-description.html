@@ -34,7 +34,28 @@
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
-												<li class="menu-item current-menu-item" itemprop="item"><a href="#" itemprop="url">Трубошпунт</a></li>
+												<li class="menu-item menu-item-has-children"><span>Трубошпунт</span>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 1</a>
+														</li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Длинный пункт меню 2</a>
+														</li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 3</a>
+															<ul class="sub-menu">
+																<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+																<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+																<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+															</ul>
+														</li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 4</a>
+															<ul class="sub-menu">
+																<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+																<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+																<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аренда</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Продажа</a></li>
 												<li class="menu-item menu-item-has-children"><span>Услуги</span>
@@ -84,6 +105,7 @@
 														</li>
 													</ul>
 												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости/Блог</a></li>
 												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 											</ul>
 										</nav>
@@ -98,8 +120,15 @@
 				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="topLine__row row">
-							<div class="col col-xxl-6">
-								<a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/><span>ABM ИНЖИНИРИНГ</span>
+							<div class="col col-lg-auto d-flex">
+								<a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/><span>ABM Инжиниринг</span>
+								</a>
+							</div>
+							<div class="col d-none d-lg-flex">
+								<a class="topLine__btn-calc" href="#">
+									<svg class="icon icon-calc ">
+										<use xlink:href="img/svg/sprite.svg#calc"></use>
+									</svg>Калькулятор
 								</a>
 							</div>
 							<div class="col-auto d-none d-lg-block">
@@ -147,7 +176,10 @@
 								</div>
 							</div>
 							<div class="col-auto d-none d-lg-block">
-								<a class="topLine__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">Связаться с нами
+								<a class="topLine__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
+									<svg class="icon icon-phone-call ">
+										<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+									</svg>Связаться с нами
 								</a>
 							</div>
 							<div class="col-auto d-lg-none">
@@ -161,7 +193,7 @@
 			</header>
 			<!-- end header-->
 			<main>
-				<div class="page-head bg-wrap"><img class="object-fit-js" src="img/page-head-bg-5.jpg" alt="" loading="lazy"/>
+				<div class="page-head bg-wrap">
 					<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
 						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
@@ -169,11 +201,14 @@
 							<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Трубошпунт</span>
 									<meta itemprop="position" content="2"/></a></li>
 						</ol>
-					</nav>
+					</nav><img class="object-fit-js" src="img/page-head-bg-5.jpg" alt="" loading="lazy"/>
 					<div class="page-head__content">
 						<div class="container">
-							<h1>Трубошпунт – выгодная альтернатива<br>Шпунту Ларсена</h1>
-							<a class="page-head__btn btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">Связаться с нами
+							<h1>Трубошпунт – выгодная альтернатива<br> Шпунту Ларсена</h1>
+							<a class="page-head__btn btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">
+								<svg class="icon icon-phone-call ">
+									<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+								</svg>Связаться с нами
 							</a>
 						</div>
 					</div>
@@ -288,24 +323,79 @@
 										</a>
 									</div>
 									<div class="sCertificates__slide swiper-slide">
-										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-1.jpg">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-3.jpg">
 											<div class="sCertificates__btn-zoom">
 												<svg class="icon icon-zoom ">
 													<use xlink:href="img/svg/sprite.svg#zoom"></use>
 												</svg>
 											</div>
-											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-1.jpg" alt="" loading="lazy"/>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-3.jpg" alt="" loading="lazy"/>
 											</div>
 										</a>
 									</div>
 									<div class="sCertificates__slide swiper-slide">
-										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-2.jpg">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-4.jpg">
 											<div class="sCertificates__btn-zoom">
 												<svg class="icon icon-zoom ">
 													<use xlink:href="img/svg/sprite.svg#zoom"></use>
 												</svg>
 											</div>
-											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-2.jpg" alt="" loading="lazy"/>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-4.jpg" alt="" loading="lazy"/>
+											</div>
+										</a>
+									</div>
+									<div class="sCertificates__slide swiper-slide">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-5.jpg">
+											<div class="sCertificates__btn-zoom">
+												<svg class="icon icon-zoom ">
+													<use xlink:href="img/svg/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-5.jpg" alt="" loading="lazy"/>
+											</div>
+										</a>
+									</div>
+									<div class="sCertificates__slide swiper-slide">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-6.jpg">
+											<div class="sCertificates__btn-zoom">
+												<svg class="icon icon-zoom ">
+													<use xlink:href="img/svg/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-6.jpg" alt="" loading="lazy"/>
+											</div>
+										</a>
+									</div>
+									<div class="sCertificates__slide swiper-slide">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-7.jpg">
+											<div class="sCertificates__btn-zoom">
+												<svg class="icon icon-zoom ">
+													<use xlink:href="img/svg/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-7.jpg" alt="" loading="lazy"/>
+											</div>
+										</a>
+									</div>
+									<div class="sCertificates__slide swiper-slide">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-8.jpg">
+											<div class="sCertificates__btn-zoom">
+												<svg class="icon icon-zoom ">
+													<use xlink:href="img/svg/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-8.jpg" alt="" loading="lazy"/>
+											</div>
+										</a>
+									</div>
+									<div class="sCertificates__slide swiper-slide">
+										<a class="sCertificates__img-wrap" data-fancybox="sCertificates" data-src="img/sCertificates-lg-9.jpg">
+											<div class="sCertificates__btn-zoom">
+												<svg class="icon icon-zoom ">
+													<use xlink:href="img/svg/sprite.svg#zoom"></use>
+												</svg>
+											</div>
+											<div class="img-wrap-center"><img class="object-fit-js" src="img/sCertificates-9.jpg" alt="" loading="lazy"/>
 											</div>
 										</a>
 									</div>
@@ -363,20 +453,21 @@
 							</a>
 							<div class="footer__menu">
 								<ul>
-									<li><a href="#">Купить шпунт Ларсена</a></li>
-									<li><a href="#">Услуги </a></li>
-									<li><a href="#">Подбор шпунта</a></li>
+									<li><a href="#">Трубошпунт</a></li>
+									<li><a href="#">Аренда</a></li>
+									<li><a href="#">Продажа</a></li>
+									<li><a href="#">Услуги</a></li>
+									<li><a href="#">Выкуп</a></li>
 								</ul>
 							</div>
 							<div class="footer__submenu">
 								<ul>
-									<li><a href="#">Аренда</a></li>
-									<li><a href="#">Выкуп</a></li>
 									<li><a href="#">Спецтехника</a></li>
 									<li><a href="#">Наши работы</a></li>
 									<li><a href="#">О компании</a></li>
 									<li><a href="#">FAQ</a></li>
 									<li><a href="#">Глоссарий</a></li>
+									<li><a href="#">Новости/Блог</a></li>
 									<li><a href="#">Контакты</a></li>
 								</ul>
 							</div>
@@ -392,7 +483,10 @@
 									</div>
 								</div>
 								<div class="col-xl-auto">
-									<a class="footer__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">Связаться с нами
+									<a class="footer__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
+										<svg class="icon icon-phone-call ">
+											<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+										</svg>Связаться с нами
 									</a>
 								</div>
 							</div>

@@ -32,6 +32,7 @@
 
 		p {
 			margin-bottom: 0;
+			max-width: 400px;
 		}
 		a {
 			@extend .h5;
@@ -69,11 +70,12 @@
 		text-align: center;
 	}
 	&__btn {
-		width: 320px;
-		max-width: 100%;
 		margin-top: 30px;
+		width: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: 290px;
+		}
 		@include media-breakpoint-up(md) {
-			width: 270px;
 			margin-top: 45px;
 		}
 	}

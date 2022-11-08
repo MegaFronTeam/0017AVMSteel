@@ -17,6 +17,7 @@ include ../blocks/sMap/_sMap.pug
 include ../blocks/sProjects/_sProjects.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sContactInfo/_sContactInfo.pug
+include ../blocks/sCertificates/_sCertificates.pug
 include ../blocks/sForm/_sForm.pug
 
 block variables
@@ -37,18 +38,19 @@ block pagecontent
 		+headerBlock 
 		+sServices()
 		+sCatalog
-		+sObjects()
-		+sMap()
-		+sProjects()
-		+sStages(`Этапы <span>работы</span>`)
-			+sStages-item(1, `Оставляете заявку или звоните нам по телефону:`)
-				a(href="tel:84958856053") 8 (495) 885-60-53
-			+sStages-item(2, `Подготавливаем предварительное коммерческое предложение в течении 2-х часов для понимания бюджета и сроков выполнения работ`)
-			+sStages-item(3, `Выезжаем на объект, подготавливаем окончательное коммерческое предложение`)
-			+sStages-item(4, `Мобилизация техники, проведение строительно-монтажных работ`)
-			+sStages-item(5, `Сдача объекта`)
-		+sTeam()
 		+sAdvantages
+		+sObjects()
+		+sStages(`Этапы <span>работы</span>`)
+			+sStages-item(1, `Оставляете заявку или звоните нам по&nbsp;телефону:`)
+				a(href="tel:84958856053") 8 (495) 885-60-53
+			+sStages-item(2, `Подготавливаем предварительное коммерческое предложение в&nbsp;течение 2-х часов для понимания бюджета и&nbsp;сроков выполнения работ`)
+			+sStages-item(3, `Выезжаем на&nbsp;объект, подготавливаем окончательное коммерческое предложение. Фиксируем стоимость на&nbsp;весь период проведения работ`)
+			+sStages-item(4, `Поставка шпунта, мобилизация техники, проведение строительно-монтажных работ`)
+			+sStages-item(5, `Сдача объекта`)
+		+sProjects()
+		+sMap()
+		+sTeam()
+		+sCertificates().bg-light
 		+sForm()
 		+sContactInfo
 		//- +sContact()

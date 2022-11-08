@@ -47,15 +47,15 @@ mixin search()
 
 
 mixin page-head(i, t,...items)
-	+b.page-head.bg-wrap
-		if i
-			+img(`img/page-head-bg-${i}.jpg`, `bg`)
+	+b.page-head(class=(i ? 'bg-wrap' : ''))
 		- let l = items.length
 		+breadcrumb('Главная',...items)
-		+e.content
-			.container
-				h1!= t
-				block
+		if i
+			+img(`img/page-head-bg-${i}.jpg`, `bg`)
+			+e.content
+				.container
+					h1!= t
+					block
 
 mixin dowload-link(t)
 	+b.A.dowload-link(href='#' download='')

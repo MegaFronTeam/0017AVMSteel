@@ -8,20 +8,23 @@ mixin sObjects(data)
 			+e.row.row
 				mixin item(i, t)
 					.col-6.col-xxl-4
-						+e.A.item(href="#"  data-src='modal-call' data-fancybox="modal")
+						+e.A.item(href="#" data-src='modal-call' data-fancybox="modal")
 							+e.img-wrap
 								+img(`img/sObjects-${i}.jpg`, `bg`)
 							+e.item-content
 								h4!= t
 								+e.wrapper
-									+e.btn.btn.btn-primary Связаться с нами
+									+e.btn.btn.btn-primary
+										+icon('phone-call')
+										| Связаться с нами
 				+item(1, `Ограждение и укрепление котлована`)
-				+item(2, `Укрепление берега`)
+				+item(6, `Очистные сооружения (ЛОС, КНС)`)
 				+item(3, `Укрепление склонов`)
-				+item(4, `Укрепление дороги`)
+				+item(4, `Укрепление дорог`)
 				+item(5, `Укрепление мостов, причалов, пирсов`)
-				+item(6, `Ливневые очистные сооружения`)
+				+item(2, `Укрепление берега`)
 			+e.btn-wrap
-				+e.btn.btn.btn-primary(href="#"  data-src='modal-call' data-fancybox="modal") Связаться с нами
-							
+				+e.btn.btn.btn-primary(href="#" data-src='modal-call' data-fancybox="modal")
+					+icon('phone-call')
+					| Связаться с нами
 	// end sObjects

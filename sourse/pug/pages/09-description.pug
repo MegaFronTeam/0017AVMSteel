@@ -25,8 +25,10 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
-		+page-head(5,`Трубошпунт – выгодная альтернатива<br>Шпунту Ларсена`, title )
-			+e.btn.btn.btn-primary(href="#"  data-src='modal-call' data-fancybox="modal") Связаться с нами
+		+page-head(5,`Трубошпунт – выгодная альтернатива<br> Шпунту Ларсена`, title )
+			+e.btn.btn.btn-primary(href="#"  data-src='modal-call' data-fancybox="modal")
+				+icon('phone-call')
+				| Связаться с нами
 		+sAdvantages3
 		+sCertificates(false)
 		+sForm()

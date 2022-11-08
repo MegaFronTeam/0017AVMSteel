@@ -1,13 +1,15 @@
 mixin product-item(i, t)
 	+b.product-item
 		+e.img-wrap(href="#")
-			+e.label--yellow Б/У
-			+e.label--blue Новый
+			+e.top-labels
+				+e.label--yellow Б/У
+				+e.label--blue Новый
 			+e.label--black 7,4 кг/м
 			//- .img-wrap-center 
 			+img(`img/prod-${i}.jpg`, 'bg')
 		+e.caption
-			+e.title.h5(href="#")!= t
+			+e.wrap
+				+e.title.h5(href="#")!= t
 			mixin tr(key, val)
 				tr
 					td!= key
@@ -28,31 +30,55 @@ mixin sCatalog(data)
 
 			+e.row.row
 				- const wrapClass="col-md-6 col-lg-4 col-xl-3"
-				-for(let i = 0; i < 2; i++)
-					+e.col(class= wrapClass)
-						+product-item(`1`,`Трубошпунт`,``,``) 
-							+tr('B', '400 мм')
-							+tr('S', '14,8 мм')
-							+tr('H', '359 мм')
-							+tr('Т', '9,5 мм')
-					+e.col(class= wrapClass)
-						+product-item(`2`,`Шпунт Ларсена Л4`,``,``) 
-							+tr('B', '400 мм')
-							+tr('S', '14,8 мм')
-							+tr('H', '359 мм')
-							+tr('Т', '9,5 мм')
-					+e.col(class= wrapClass)
-						+product-item(`3`,`Шпунт Ларсена Л5`,``,``) 
-							+tr('B', '400 мм')
-							+tr('S', '14,8 мм')
-							+tr('H', '359 мм')
-							+tr('Т', '9,5 мм')
-					+e.col(class= wrapClass)
-						+product-item(`4`,`Шпунт Ларсена Л5-УМ`,``,``)
-							+tr('B', '400 мм')
-							+tr('S', '14,8 мм')
-							+tr('H', '359 мм')
-							+tr('Т', '9,5 мм')
+				//- -for(let i = 0; i < 2; i++)
+				+e.col(class= wrapClass)
+					+product-item(`1`,`Трубошпунт`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`2`,`Трубошпунт`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`3`,`Шпунт Ларсена Л5-УМ`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`4`,`Шпунт Ларсена Л5-УМ`)
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`1`,`Шпунт Ларсена GU22N`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`2`,`Шпунт Ларсена Л4`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`3`,`Шпунт Ларсена Л5`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`4`,`Шпунт Ларсена Л5-УМ`)
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
 			+e.btn.btn.btn-outline-primary(href='#') Смотреть весь каталог
  
 	// end sCatalog
