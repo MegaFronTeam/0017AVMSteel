@@ -21,13 +21,18 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last.d-none.d-lg-block
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
+			.menu-mobile.menu-mobile--js
+				.menu-mobile__inner
+					+e.btn-calc(href="#")
+						+icon('calc')
+						| Калькулятор
+					//- +menu-toggle()
+					+mnu()
+					+e.contacts
+						+e.A.tel(href="tel:+84958856053") 8 (495) 885-60-53
+						+e.A.tel(href="tel:+84958855011") 8 (495) 885-50-11
+						+e.A.email(href="mailto:info@avmsteel.ru") info@avmsteel.ru
+						+soc()
 				//- .col-auto.d-lg-none
 				//- 	+menu-toggle()
 	// end top-nav

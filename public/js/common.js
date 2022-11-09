@@ -633,7 +633,8 @@ function eventHandler() {
 
 	let menuItemHasChildrens = document.querySelectorAll('.menu-item-has-children');
 	for (let menuItemHasChildren of menuItemHasChildrens) {
-		menuItemHasChildren.querySelector('span').addEventListener('click', function() {
+		menuItemHasChildren.firstElementChild.addEventListener('click', function(e) {
+			e.preventDefault();
 			$(menuItemHasChildren).toggleClass('shown');
 			if (window.innerWidth < 992) {
 				$(menuItemHasChildren.querySelector('.sub-menu')).slideToggle();

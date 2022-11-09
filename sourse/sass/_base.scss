@@ -348,7 +348,7 @@ ul {
 		border-radius: 50%;
 		--swiperArrowSize: 50px;
 		--swiperBgDef: #{$white};
-		--swiperBorderColorDef: #{$gray-300};
+		--swiperBorderColorDef: #{$border-color};
 		--swiperColorDef: #{$primary};
 		--swiperArrowPosition: calc(var(--swiperArrowSize) * -1 / 2);
 		&:hover {

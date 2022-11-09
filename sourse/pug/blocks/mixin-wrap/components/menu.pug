@@ -10,11 +10,11 @@ mixin mnu()
 						li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 				if link.subnav
 					li.menu-item.menu-item-has-children
-						span= link.subname
+						a(href="#")= link.subname
 						ul.sub-menu
 							each sublink in link.subnav
 								li.menu-item(itemprop="item" )
-									a(href= sublink.url itemprop="url")= sublink.name
+									a(href= '#' itemprop="url")= sublink.name
 									if sublink.lastsubnav
 										ul.sub-menu
 											each lastsublink in sublink.lastsubnav

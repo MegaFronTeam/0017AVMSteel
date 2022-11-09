@@ -1,9 +1,15 @@
 // start .topLine
 .topLine {
-	--sPT: #{rem(15)};
-	--sPB: #{rem(15)};
+	--sPT: 15px;
+	--sPB: 15px;
 	// --sTPB: #{rem()};
+	position: relative;
+	z-index: 1000;
+	background-color: $white;
+	// border-bottom: 1px solid $gray-300;
+	box-shadow: 0px 4px 3px rgba(31, 31, 33, 0.05);
 	@include media-breakpoint-up(lg) {
+		// box-shadow: none;
 		--sPT: #{rem(20)};
 		--sPB: #{rem(20)};
 	}
@@ -53,7 +59,14 @@
 	&__btn-calc {
 		display: inline-flex;
 		align-items: center;
+		&:hover,
+		&:focus {
+			.icon {
+				color: var(--bs-link-hover-color);
+			}
+		}
 		.icon {
+			@include mt;
 			font-size: 20px;
 			margin-right: 10px;
 			color: $primary;
