@@ -37,8 +37,14 @@
 	}
 	a,
 	.menu-item-has-children > span {
+		@include mt;
 		display: block;
 		padding: rem(18) calc(var(--bs-gutter-x) / 2);
+
+		&:hover {
+			color: var(--bs-link-hover-color);
+		}
+
 		@include media-breakpoint-up(lg) {
 			font-size: rem(15);
 		}
