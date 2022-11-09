@@ -5,15 +5,14 @@
 	// --sTPB: #{rem()};
 	background-color: $gray-100;
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(83.200)};
-		--sPB: #{rem(91.200)};
+		--sPT: #{rem(83.2)};
+		--sPB: #{rem(91.2)};
 	}
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
+	.section-title {
 		margin-bottom: rem(30);
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(20);
@@ -41,10 +40,10 @@
 		padding-left: 0;
 		list-style-type: none;
 		margin-bottom: rem(30);
-		@include media-breakpoint-up(md) { 
+		@include media-breakpoint-up(md) {
 			columns: 3;
 		}
-		@include media-breakpoint-up(lg) { 
+		@include media-breakpoint-up(lg) {
 			columns: 4;
 			margin-bottom: rem(35);
 		}
@@ -79,44 +78,53 @@
 					border-radius: 50%;
 				}
 			}
+			@include media-breakpoint-only(xl) {
+				font-size: 13px;
+			}
 			@include media-breakpoint-up(xl) {
 				position: absolute;
 				top: 0;
 				left: 0;
 				display: flex;
 				align-items: center;
-				font-size: calc(13px + .1045vw);
+				font-size: calc(13px + 0.1045vw);
 				display: flex;
 				img {
 					flex: 0 0 auto;
 					width: 100%;
-					max-width: calc(16px + .261vw);
+					max-width: calc(16px + 0.261vw);
 					margin-right: rem(5);
 				}
-				&:nth-child(1) {
+				&:nth-child(4) {
+					// Анадырь
 					left: 88%;
 					top: 8.9%;
 				}
-				&:nth-child(2) {
+				&:nth-child(21) {
+					// Мурманск
 					left: 27.8%;
 					top: 9.3%;
 				}
-				&:nth-child(3) {
+				&:nth-child(2) {
+					// Санкт-Петербург
 					left: 19.6%;
 					top: 14.2%;
 				}
-				&:nth-child(4) {
+				&:nth-child(27) {
+					// Псков
 					left: 14.8%;
-    			top: 18.7%;
+					top: 18.7%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(5) {
+				&:nth-child(1) {
+					// Москва
 					left: 18.8%;
 					top: 21.7%;
 				}
-				&:nth-child(6) {
+				&:nth-child(32) {
+					// Смоленск
 					left: 4.6%;
 					top: 24%;
 					flex-direction: row-reverse;
@@ -125,7 +133,8 @@
 						margin-right: 0;
 					}
 				}
-				&:nth-child(7) {
+				&:nth-child(35) {
+					// Тула
 					left: 13.7%;
 					top: 26.1%;
 					flex-direction: row-reverse;
@@ -135,7 +144,8 @@
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(8) {
+				&:nth-child(22) {
+					// Нижний Новгород
 					left: 19.7%;
 					top: 26.2%;
 					img {
@@ -143,90 +153,106 @@
 					}
 				}
 				&:nth-child(9) {
+					// Воркута
 					left: 35.2%;
 					top: 27.4%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(10) {
+				&:nth-child(24) {
+					// Норильск
 					left: 44.9%;
 					top: 28.4%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(11) {
+				&:nth-child(36) {
+					// Ульяновск
 					left: 22.3%;
 					top: 29.2%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(12) {
+				&:nth-child(6) {
+					// Белгород
 					left: 9.2%;
 					top: 30.5%;
 				}
-				&:nth-child(13) {
+				&:nth-child(28) {
+					// Пермь
 					left: 31%;
 					top: 31.8%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(14) {
+				&:nth-child(33) {
+					// Салехард
 					left: 39%;
 					top: 31.8%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(15) {
+				&:nth-child(13) {
+					// Воронеж
 					left: 19.3%;
 					top: 32.9%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(16) {
+				&:nth-child(20) {
+					// Магадан
 					left: 77.3%;
 					top: 33.8%;
 				}
-				&:nth-child(17) {
+				&:nth-child(14) {
+					// Екатеринбург
 					left: 28.2%;
 					top: 35.8%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(18) {
+				&:nth-child(29) {
+					// Ростов-на-Дону
 					left: 9.4%;
 					top: 36%;
 				}
-				&:nth-child(19) {
+				&:nth-child(16) {
+					// Казань
 					left: 21.6%;
 					top: 37.9%;
 				}
-				&:nth-child(20) {
+				&:nth-child(19) {
+					// Лангепас
 					left: 36.9%;
 					top: 40%;
 					img {
 						max-width: calc(15.1px + 0.261vw);
 					}
 				}
-				&:nth-child(21) {
+				&:nth-child(10) {
+					// Волгоград
 					left: 11.2%;
 					top: 40.7%;
 				}
-				&:nth-child(22) {
+				&:nth-child(43) {
+					// Якутск
 					left: 66.4%;
 					top: 42.7%;
 				}
-				&:nth-child(23) {
+				&:nth-child(30) {
+					// Самара
 					left: 20.6%;
 					top: 42.8%;
 				}
-				&:nth-child(24) {
+				&:nth-child(26) {
+					// Петропавловск-Камчатский
 					left: 80.3%;
 					top: 40.7%;
 					flex-direction: column;
@@ -234,63 +260,78 @@
 					text-align: center;
 					line-height: 1.3;
 				}
-				&:nth-child(25) {
+				&:nth-child(39) {
+					// Ханты-Мансийск
 					left: 34.7%;
 					top: 43.9%;
 				}
-				&:nth-child(26) {
+				&:nth-child(18) {
+					// Краснодар
 					left: 7.6%;
 					top: 44.4%;
 				}
-				&:nth-child(27) {
+				&:nth-child(40) {
+					// Челябинск
 					left: 26.7%;
 					top: 46.9%;
 				}
-				&:nth-child(28) {
+				&:nth-child(34) {
+					// Томск
 					left: 42.5%;
 					top: 48%;
 				}
-				&:nth-child(29) {
+				&:nth-child(37) {
+					// Уфа
 					left: 20.6%;
 					top: 49.4%;
 				}
-				&:nth-child(30) {
+				&:nth-child(31) {
+					// Сочи
 					left: 5.5%;
 					top: 49.3%;
 				}
-				&:nth-child(31) {
+				&:nth-child(25) {
+					// Омск
 					left: 32.4%;
 					top: 51.2%;
 				}
-				&:nth-child(32) {
+				&:nth-child(17) {
+					// Красноярск
 					left: 40.1%;
 					top: 53.1%;
 				}
-				&:nth-child(33) {
+				&:nth-child(42) {
+					// Южно-Сахалинск
 					left: 81.3%;
 					top: 54.4%;
 				}
-				&:nth-child(34) {
+				&:nth-child(12) {
+					// Владикавказ
 					left: 7%;
 					top: 56.3%;
 				}
-				&:nth-child(35) {
+				&:nth-child(23) {
+					// Новосибирск
 					left: 26.1%;
 					top: 56.7%;
 				}
-				&:nth-child(36) {
+				&:nth-child(3) {
+					// Абакан
 					left: 42.3%;
 					top: 58%;
 				}
-				&:nth-child(37) {
+				&:nth-child(38) {
+					// Хабаровск
 					left: 73.8%;
 					top: 59.2%;
 				}
-				&:nth-child(38) {
+				&:nth-child(7) {
+					// Братск
 					left: 51.6%;
 					top: 59.6%;
 				}
-				&:nth-child(39) {
+				&:nth-child(5) {
+					// Барнаул
 					left: 35.1%;
 					top: 62.1%;
 					flex-direction: row-reverse;
@@ -299,7 +340,8 @@
 						margin-right: 0;
 					}
 				}
-				&:nth-child(40) {
+				&:nth-child(8) {
+					// Благовещенск
 					left: 60.3%;
 					top: 63.2%;
 					flex-direction: row-reverse;
@@ -308,23 +350,26 @@
 						margin-right: 0;
 					}
 				}
-				&:nth-child(41) {
+				&:nth-child(15) {
+					// Иркутск
 					left: 45.4%;
 					top: 64%;
 				}
-				&:nth-child(42) {
+				&:nth-child(41) {
+					// Чита
 					left: 55.8%;
 					top: 69%;
 				}
-				&:nth-child(43) {
+				&:nth-child(11) {
+					// Владивосток
 					left: 76.9%;
 					top: 70.1%;
 				}
 			}
 			@include media-breakpoint-up(xxl) {
-				font-size: calc(14px + .1045vw);
+				font-size: calc(14px + 0.1045vw);
 				img {
-					max-width: calc(25px + .261vw);
+					max-width: calc(25px + 0.261vw);
 				}
 			}
 		}
@@ -340,12 +385,12 @@
 		position: relative;
 		z-index: 3;
 		@include media-breakpoint-up(xl) {
-			margin-top: rem(-124.600);
+			margin-top: rem(-124.6);
 		}
 		h5 {
 			margin-bottom: rem(20);
 			line-height: 1.4em;
-			@include media-breakpoint-up(md) { 
+			@include media-breakpoint-up(md) {
 				margin-bottom: rem(45);
 			}
 			@include media-breakpoint-down(sm) {
@@ -355,7 +400,7 @@
 				max-width: rem(636);
 				margin-left: auto;
 				margin-right: auto;
-				margin-bottom: rem(47.600);
+				margin-bottom: rem(47.6);
 			}
 		}
 	}
@@ -366,11 +411,18 @@
 			margin: 0 auto;
 		}
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sMap

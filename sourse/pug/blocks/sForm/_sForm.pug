@@ -1,16 +1,31 @@
-mixin sForm()
+mixin sForm(h, t)
 	// start sForm
 	+b.sForm.section#sForm&attributes(attributes)
 		+e.container.container
 			+form-wrap
-				.h2 Свяжитесь с нами для обсуждения 
-					span вашего проекта
-				p Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы ответить на&nbsp;ваши вопросы и&nbsp;предложить решение
+				.h2!= h
+				p!= t
 				+e.row.row
 					.col-md
 						+input('Ваш телефон', 'tel')
 					.col-md
-						+e.BUTTON.btn.btn.btn-primary(type='submit') Связаться с нами
+						+e.BUTTON.btn.btn.btn-primary(type='submit') Запросить КП
 				+policy
 				+img('img/sForm-img-1.png').img
 	// end sForm
+//- mixin sForm()
+//- 	// start sForm
+//- 	+b.sForm.section#sForm&attributes(attributes)
+//- 		+e.container.container
+//- 			+form-wrap
+//- 				.h2 Свяжитесь с нами для обсуждения 
+//- 					span вашего проекта
+//- 				p Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы ответить на&nbsp;ваши вопросы и&nbsp;предложить решение
+//- 				+e.row.row
+//- 					.col-md
+//- 						+input('Ваш телефон', 'tel')
+//- 					.col-md
+//- 						+e.BUTTON.btn.btn.btn-primary(type='submit') Связаться с нами
+//- 				+policy
+//- 				+img('img/sForm-img-1.png').img
+//- 	// end sForm
