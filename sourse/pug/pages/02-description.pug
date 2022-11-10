@@ -4,6 +4,8 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sStages/_sStages.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCalculator/_sCalculator.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
@@ -30,8 +32,26 @@ block pagecontent
 				+icon('phone-call')
 				| Связаться с нами
 		+sAdvantages3
-		+sCertificates(false)
-		+sForm()
+		+sCatalog()
+			+e.row.row
+				- const wrapClass="col-md-6 col-lg-4 col-xl-3"
+				//- -for(let i = 0; i < 2; i++)
+				+e.col(class= wrapClass)
+					+product-item(`1`,`Трубошпунт`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+				+e.col(class= wrapClass)
+					+product-item(`2`,`Трубошпунт`) 
+						+tr('Ширина профиля', '400 мм')
+						+tr('Вес 1&nbsp;м.п. шпунта', '14,8 мм')
+						+tr('Вес 1&nbsp;м&sup2; шпунта', '359 мм')
+						+tr('Упр. момент сопр.', '9,5 мм')
+		+sCalculator()
+		+sAdvantages2()
+		+sCertificates()
+		+sForm(`Получите коммерческое предложение <span> в&nbsp;1&nbsp;клик </span>`, `Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы выслать коммерческое предложение и&nbsp;ответить на&nbsp;Ваши вопросы`)
 	+footer()
       
 

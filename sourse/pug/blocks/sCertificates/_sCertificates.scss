@@ -40,8 +40,10 @@
 
 	&__img-wrap {
 		@include block(290, 410);
-		// background-color: $gray-300;
-		border: 1px solid $border-color;
+		background-color: $gray-300;
+		img {
+			border: 1px solid $border-color;
+		}
 	}
 	&__btn-zoom {
 		@include mt;

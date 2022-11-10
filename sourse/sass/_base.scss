@@ -735,35 +735,43 @@ h6 {
 					margin-bottom: rem(72.4);
 				}
 			}
-			&:nth-child(odd) {
+			&:nth-child(even) {
 				.sAdvantages__row {
 					@include media-breakpoint-up(lg) {
 						flex-direction: row-reverse;
 					}
 				}
 				.sAdvantages__wrap {
-					@include media-breakpoint-up(lg) {
+					@include media-breakpoint-up(xl) {
 						// margin-right: rem(29);
-						margin-left: rem(29);
-						margin-right: 0;
+						margin-right: rem(30);
+						margin-left: 0;
 					}
 				}
 			}
 		}
 		&__wrap {
-			@include media-breakpoint-up(lg) {
-				margin-right: rem(29);
+			@include media-breakpoint-up(xl) {
+				margin-left: rem(30);
 			}
 		}
 	}
-	.sCertificates {
-		--sPT: #{rem(8)};
-		background-color: #fff;
-		@include media-breakpoint-up(md) {
-			--sTPB: #{rem(84.6)};
+	.sCatalog {
+		background-color: $body-bg;
+		padding-top: 0;
+		&__row {
+			justify-content: center;
 		}
+	}
+	.sCertificates {
+		--sPT: 0;
+		background-color: #fff;
+		// @include media-breakpoint-up(md) {
+		// 	--sTPB: #{rem(84.6)};
+		// }
 	}
 	.sForm {
 		background-color: #fff;
+		padding-top: 0;
 	}
 }
