@@ -38,6 +38,10 @@
 			@extend .h5;
 			margin-top: 15px;
 			line-height: 20px;
+			&.primary-link {
+				font-size: inherit;
+				font-weight: 400;
+			}
 		}
 	}
 	&__icon-wrap {

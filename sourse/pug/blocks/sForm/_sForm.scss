@@ -6,12 +6,13 @@
 	// @include media-breakpoint-up(md) {
 	// 	--sPB: #{rem(90)};
 	// }
-	
+
 	&__container {
 		@include media-breakpoint-down(sm) {
 			padding: 0;
 		}
 	}
+
 	.form-wrap {
 		position: relative;
 		background-color: $gray-600;
@@ -101,6 +102,20 @@
 				right: 3.5%;
 				// right: rem(91);
 				// filter: none;
+			}
+		}
+	}
+	&--byout {
+		padding-top: 0;
+		.form-wrap {
+			@include media-breakpoint-up(xxl) {
+				padding: rem(105) rem(90);
+			}
+			.img {
+				@include media-breakpoint-up(xl) {
+					max-width: rem(500);
+					right: 0;
+				}
 			}
 		}
 	}

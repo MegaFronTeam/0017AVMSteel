@@ -663,24 +663,25 @@ h6 {
 		}
 	}
 	.sStages {
-		--sPT: #{rem(84)};
-		--sPB: #{rem(85)};
-		--sTPB: #{rem(81)};
-		background-color: $gray-100;
+		// --sPT: #{rem(84)};
+		// --sPB: #{rem(85)};
+		// --sTPB: #{rem(81)};
+		background-color: $white;
 		&__btn {
-			margin-top: rem(50);
+			// margin-top: rem(50);
 		}
 	}
 	.sAdvantages {
 		--sPT: 0;
+		background-color: $white;
 		h3 {
 			max-width: rem(628);
 			span {
-				display: inline;
+				display: inline-block;
 			}
 		}
 		&__row {
-			--bs-gutter-x: #{rem(31.6)};
+			// --bs-gutter-x: #{rem(31.6)};
 
 			margin-bottom: 0;
 		}
@@ -690,9 +691,9 @@ h6 {
 			}
 		}
 	}
-	.sForm {
-		background-color: $gray-100;
-	}
+	// .sForm {
+	// 	background-color: $gray-100;
+	// }
 }
 
 .description-page {
