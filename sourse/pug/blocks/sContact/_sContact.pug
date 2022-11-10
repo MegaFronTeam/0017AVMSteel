@@ -54,31 +54,43 @@ mixin sContact()
 								+input('Ваше сообщение', 'textarea', 'Ваше сообщение')
 							.col-12
 								+policy()
-							.col-auto
+							.col-md-auto
 								+btn('Отправить', typ= "submit").btn.btn-primary
 
-		+e.map-wrap
-			+e.map
-				script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
-				+e.map-widget#map
-			.container
-				p Склады по&nbsp;всей территории РФ. Для уточнения наличия метала в&nbsp;вашем городе&nbsp;&mdash; звоните по&nbsp;телефону.
 		+e.cards
 			.container 
 				.row
-					.col-md-6.col-xl-4
+					.col-md-6.col-lg-4
 						+e.A.card-item(href="tel:+84958856053")
 							span Дмитрий
 							span 8 (495) 885-60-53
 							span Расчет строительно-монтажных работ
-					.col-md-6.col-xl-4
+					.col-md-6.col-lg-4
 						+e.A.card-item(href="tel:+84958856053")
 							span Алексей
 							span 8 (495) 885-60-53
 							span Продажа и&nbsp;аренда шпунта, работа под ключ
-					.col-md-6.col-xl-4
+					.col-md-6.col-lg-4
 						+e.A.card-item(href="tel:+84958856053")
 							span Николай
 							span 8 (495) 885-60-53
 							span Выкуп шпунта по&nbsp;максимальной рыночной цене
+		+e.map-wrap
+			.container
+				+e.map
+					script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+					+e.map-widget#map
+				+e.navigation
+					h4 Проложить маршрут к&nbsp;главному офису
+					+e.map-btn(href="#")
+						+e.img-wrap
+							+img(`img/svg/yandex-icon.svg`)
+						span Яндекс.Карты
+					+e.map-btn(href="#")
+						+e.img-wrap
+							+img(`img/svg/nav-icon.svg`)
+						span Навигатор
+
+			.container
+				p Склады по&nbsp;всей территории РФ. Для уточнения наличия метала в&nbsp;вашем городе&nbsp;&mdash; звоните по&nbsp;телефону.
 	// end sContact
