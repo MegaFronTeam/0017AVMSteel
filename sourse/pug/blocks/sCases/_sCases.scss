@@ -1,17 +1,17 @@
 // start .sCases
 .sCases {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(40)};
-	// --sTPB: #{rem()};
-	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(90)};
-		--sPB: #{rem(90)};
-	}
-	&__row{
+	// --sPT: #{rem(40)};
+	// --sPB: #{rem(40)};
+	// // --sTPB: #{rem()};
+	// @include media-breakpoint-up(lg) {
+	// 	--sPT: #{rem(90)};
+	// 	--sPB: #{rem(90)};
+	// }
+	&__row {
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(30)};
 	}
-	&__wrap{
+	&__wrap {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
@@ -28,7 +28,7 @@
 		flex-grow: 1;
 		padding: rem(20);
 		@include media-breakpoint-up(lg) {
-			padding: rem(45) rem(37) rem(48.200) rem(43.4);
+			padding: rem(45) rem(37) rem(48.2) rem(43.4);
 			min-height: rem(375);
 		}
 		h4 {
@@ -40,7 +40,7 @@
 			}
 		}
 		ul {
-			--bs-gutter-y: #{rem(14.520)};
+			--bs-gutter-y: #{rem(14.52)};
 
 			margin-bottom: 0;
 			margin-top: calc(var(--bs-gutter-y) * -1);
@@ -54,7 +54,6 @@
 	}
 
 	&__horizontal-card {
-
 	}
 	&__horizontal-card-row {
 		--bs-gutter-x: 0;
@@ -70,29 +69,32 @@
 			padding: rem(45);
 		}
 		h4 {
-			margin-bottom: rem(36.400);
+			margin-bottom: rem(36.4);
 		}
 	}
 	&__list-wrap {
-		@include roww(15px, m);
+		@include roww(20px);
 		display: flex;
 		flex-wrap: wrap;
 		--bs-gutter-y: #{rem(20)};
-		
+
 		margin-top: calc(var(--bs-gutter-y) * -1);
 		& > * {
 			margin-top: var(--bs-gutter-y);
 		}
 		ul {
-			
 			list-style-type: none;
 			flex-grow: 1;
-			padding-left: 0;
+			// padding-left: 0;
 			margin-bottom: 0;
 			// @include media-breakpoint-up(lg) {
 			// 	width: 50%;
 
 			// }
+			@include media-breakpoint-up(xxl) {
+				flex: 0 0 auto;
+				width: 50%;
+			}
 			li {
 				&:not(:last-child) {
 					margin-bottom: rem(10);
@@ -100,7 +102,7 @@
 				h5 {
 					margin-bottom: rem(15);
 					@include media-breakpoint-up(lg) {
-						margin-bottom: rem(23.200);
+						margin-bottom: rem(23.2);
 					}
 				}
 			}
@@ -117,11 +119,18 @@
 			border-radius: 0 15px 15px 0;
 		}
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCases
