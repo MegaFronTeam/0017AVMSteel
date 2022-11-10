@@ -14,4 +14,5 @@
 12. <https://megafronteam.github.io/0017AVMSteel/public/12-page-404.html>
 
 14. <https://megafronteam.github.io/0017AVMSteel/public/14-thanx.html>
+15. <https://megafronteam.github.io/0017AVMSteel/public/00-modal.html>
 

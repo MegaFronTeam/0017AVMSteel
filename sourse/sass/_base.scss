@@ -629,26 +629,20 @@ h6 {
 		padding-top: 0;
 	}
 }
-.portfolio-page {
-	.page-head {
-		img {
-			object-position: center 33%;
-		}
+// .portfolio-page {
+// 	.page-head {
+// 		img {
+// 			object-position: center 50%;
+// 		}
+// 	}
+// }
+.equipment-page {
+	.sForm {
+		padding-top: 0;
 	}
 }
-.contacts-page {
-	.page-head {
-		img {
-			object-position: center 50%;
-		}
-	}
-}
+
 .glossary-page {
-	.page-head {
-		img {
-			object-position: center 50%;
-		}
-	}
 	.sForm {
 		padding-top: 0;
 	}
@@ -656,9 +650,6 @@ h6 {
 
 .buyout-page {
 	.page-head {
-		img {
-			object-position: center 50%;
-		}
 		&__content {
 			@include media-breakpoint-up(md) {
 				padding: rem(53.2) 0 rem(59.6);
@@ -669,13 +660,7 @@ h6 {
 		}
 	}
 	.sStages {
-		// --sPT: #{rem(84)};
-		// --sPB: #{rem(85)};
-		// --sTPB: #{rem(81)};
 		background-color: $white;
-		&__btn {
-			// margin-top: rem(50);
-		}
 	}
 	.sAdvantages {
 		--sPT: 0;
@@ -697,9 +682,6 @@ h6 {
 			}
 		}
 	}
-	// .sForm {
-	// 	background-color: $gray-100;
-	// }
 }
 
 .description-page {
@@ -790,10 +772,5 @@ h6 {
 .faq-page {
 	.sForm {
 		padding-top: 0;
-	}
-	.page-head {
-		img {
-			object-position: center 50%;
-		}
 	}
 }
