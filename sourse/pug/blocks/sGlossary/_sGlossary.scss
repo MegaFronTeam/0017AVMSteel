@@ -51,12 +51,25 @@
 		}
 	}
 	&__slider-wrap {
-		border: 1px solid $border-color;
-		padding: rem(35) rem(10);
+		padding: 20px 0;
 		margin-bottom: 40px;
 		@include media-breakpoint-up(md) {
+			border: 1px solid $border-color;
 			margin-bottom: rem(60);
 			border-radius: 15px;
+			padding: rem(35) rem(10);
+		}
+		@include media-breakpoint-down(md) {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 150vw;
+				height: 1px;
+				background-color: $border-color;
+				bottom: 0;
+				left: -50vw;
+			}
 		}
 	}
 	&__slider {
