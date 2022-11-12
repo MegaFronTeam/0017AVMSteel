@@ -1,0 +1,62 @@
+mixin sProduct(data)
+	// start sProduct
+	+b.SECTION.sProduct.section#sProduct&attributes(attributes)
+		.container
+			+b.section-title.text-center.d-lg-none
+				h2 Шпунт Ларсена&nbsp;Л4
+			+e.row.row
+				.col-lg-6
+					+e.slider--js.swiper
+						.swiper-wrapper
+							-for(let i = 1; i < 5; i++)
+								+e.slide.swiper-slide
+									+e.img-wrap(data-fancybox='sCertificates' data-src=`img/sProduct-${i}.jpg`)
+										+img(`img/sProduct-${i}.jpg`, 'bg')
+						+arrow
+					+e.slider-thumbs--js.swiper
+						.swiper-wrapper
+							-for(let i = 1; i < 5; i++)
+								+e.slide.swiper-slide
+									+e.img-wrap
+										+img(`img/sProduct-${i}.jpg`, 'bg')
+				+e.col.col-lg-6
+					+b.section-title.text-center.d-none.d-lg-block
+						h2 Шпунт Ларсена&nbsp;Л4
+					+e.content
+						.row
+							.col-6
+								span Lorem ipsum dolor sit amet.
+							.col-6
+								span Lorem ipsum dolor sit amet.
+						table
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+							tr
+								td 123145
+								td 12345
+						.row
+							.col
+								div Цена за тонну
+								div от 14 000 ₽
+							.col
+								+e.btn.btn.btn-primary(href="#") Узнать точную цену
+	// end sProduct

@@ -7,6 +7,7 @@ include ../blocks/sStages/_sStages.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sCalculator/_sCalculator.pug
+include ../blocks/sProduct/_sProduct.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
@@ -28,6 +29,7 @@ block pagecontent
 		+topLine
 	main
 		+page-head(``, ``, `Продажа`, title )
+		+sProduct()
 		+sAbout(`Особенности <span>шпунта Ларсена Л5</span>`)
 			+about-item(`<span> Наша сильная сторона</span> - решение нестандартных задач любой сложности`, 6).--reverse
 				p Давно выяснено, что при оценке дизайна и&nbsp;композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а&nbsp;также реальное распределение букв и&nbsp;пробелов в&nbsp;абзацах, которое не&nbsp;получается при простой дубликации &laquo;Здесь ваш текст..

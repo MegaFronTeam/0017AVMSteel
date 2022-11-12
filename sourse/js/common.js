@@ -470,20 +470,6 @@ function eventHandler() {
 				spaceBetween: 15,
 			},
 		},
-		// freeModeMomentum: true,
-		// navigation: {
-		// 	nextEl: '.swiper-button-next',
-		// 	prevEl: '.swiper-button-prev',
-		// },
-		// pagination: {
-		// 	el: ' .swiper-pagination',
-		// 	type: 'bullets',
-		// 	clickable: true,
-		// 	// renderBullet: function (index, className) {
-		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// 	// }
-		// },
-
 	});
 	const sProjectsSlider = new Swiper('.sProjects__slider--js', {
 		// slidesPerView: 5,
@@ -507,15 +493,59 @@ function eventHandler() {
 			nextEl: '.sProjects__arrow-wrap > .swiper-button-next',
 			prevEl: '.sProjects__arrow-wrap > .swiper-button-prev',
 		},
-		// pagination: {
-		// 	el: ' .swiper-pagination',
-		// 	type: 'bullets',
-		// 	clickable: true,
-		// 	// renderBullet: function (index, className) {
-		// 	// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// 	// }
-		// },
+	});
 
+	const sProductSliderThumbs = new Swiper('.sProduct__slider-thumbs--js', {
+		// slidesPerView: 5,
+		spaceBetween: 3,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		loop: true,
+		slidesPerView: 5,
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		breakpoints: {
+			500: {
+				spaceBetween: 8
+			},
+			// 993: {
+			// 	slidesPerView: 5,
+			// },
+			// 1200: {
+			// 	slidesPerView: 6,
+			// },
+			// 1400: {
+			// 	slidesPerView: 6,
+			// 	spaceBetween: 15,
+			// },
+		},
+	});
+	const sProductSlider = new Swiper('.sProduct__slider--js', {
+		// slidesPerView: 5,
+		spaceBetween: 0,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// },
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		slidesPerView: 'auto',
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.4,
+		slideToClickedSlide: true,
+		thumbs: {
+			swiper: sProductSliderThumbs,
+		},
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	});
 	
 	if(sProjectsSlider) {
