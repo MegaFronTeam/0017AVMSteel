@@ -1,13 +1,13 @@
 // start .sCatalog
 .sCatalog {
-	--sPT: #{rem(40)};
-	--sPB: #{rem(40)};
+	// --sPT: #{rem(40)};
+	// --sPB: #{rem(40)};
 	// --sTPB: #{rem()};
 	background-color: $gray-100;
-	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(83.6)};
-		--sPB: #{rem(90)};
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	--sPT: #{rem(83.6)};
+	// 	--sPB: #{rem(90)};
+	// }
 	&__row {
 		--bs-gutter-x: #{rem(30)};
 		--bs-gutter-y: #{rem(20)};
@@ -19,7 +19,7 @@
 		max-width: rem(990);
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: rem(77);
+		// margin-bottom: rem(77);
 		h2 {
 			margin-bottom: rem(36.4);
 		}

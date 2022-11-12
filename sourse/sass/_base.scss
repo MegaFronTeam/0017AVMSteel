@@ -662,26 +662,26 @@ h6 {
 	.sStages {
 		background-color: $white;
 	}
-	.sAdvantages {
-		--sPT: 0;
-		background-color: $white;
-		h3 {
-			max-width: rem(628);
-			span {
-				display: inline-block;
-			}
-		}
-		&__row {
-			// --bs-gutter-x: #{rem(31.6)};
+	// .sAdvantages {
+	// 	--sPT: 0;
+	// 	background-color: $white;
+	// 	h3 {
+	// 		max-width: rem(628);
+	// 		span {
+	// 			display: inline-block;
+	// 		}
+	// 	}
+	// 	&__row {
+	// 		// --bs-gutter-x: #{rem(31.6)};
 
-			margin-bottom: 0;
-		}
-		&__wrap {
-			@include media-breakpoint-up(lg) {
-				margin-left: rem(29);
-			}
-		}
-	}
+	// 		margin-bottom: 0;
+	// 	}
+	// 	&__wrap {
+	// 		@include media-breakpoint-up(lg) {
+	// 			margin-left: rem(29);
+	// 		}
+	// 	}
+	// }
 }
 
 .description-page {
@@ -704,47 +704,47 @@ h6 {
 			}
 		}
 	}
-	.sAdvantages {
-		background-color: #fff;
-		h3 {
-			max-width: rem(628);
-			span {
-				display: inline;
-			}
-		}
-		&__row {
-			--bs-gutter-x: #{rem(31.6)};
+	// .sAdvantages {
+	// 	background-color: #fff;
+	// 	h3 {
+	// 		max-width: rem(628);
+	// 		span {
+	// 			display: inline;
+	// 		}
+	// 	}
+	// 	&__row {
+	// 		--bs-gutter-x: #{rem(31.6)};
 
-			margin-bottom: 0;
-		}
-		&__content {
-			&:not(:last-child) {
-				margin-bottom: rem(45);
-				@include media-breakpoint-up(md) {
-					margin-bottom: rem(72.4);
-				}
-			}
-			&:nth-child(even) {
-				.sAdvantages__row {
-					@include media-breakpoint-up(lg) {
-						flex-direction: row-reverse;
-					}
-				}
-				.sAdvantages__wrap {
-					@include media-breakpoint-up(xl) {
-						// margin-right: rem(29);
-						margin-right: rem(30);
-						margin-left: 0;
-					}
-				}
-			}
-		}
-		&__wrap {
-			@include media-breakpoint-up(xl) {
-				margin-left: rem(30);
-			}
-		}
-	}
+	// 		margin-bottom: 0;
+	// 	}
+	// 	&__content {
+	// 		&:not(:last-child) {
+	// 			margin-bottom: rem(45);
+	// 			@include media-breakpoint-up(md) {
+	// 				margin-bottom: rem(72.4);
+	// 			}
+	// 		}
+	// 		&:nth-child(even) {
+	// 			.sAdvantages__row {
+	// 				@include media-breakpoint-up(lg) {
+	// 					flex-direction: row-reverse;
+	// 				}
+	// 			}
+	// 			.sAdvantages__wrap {
+	// 				@include media-breakpoint-up(xl) {
+	// 					// margin-right: rem(29);
+	// 					margin-right: rem(30);
+	// 					margin-left: 0;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	&__wrap {
+	// 		@include media-breakpoint-up(xl) {
+	// 			margin-left: rem(30);
+	// 		}
+	// 	}
+	// }
 	.sCatalog {
 		background-color: $body-bg;
 		padding-top: 0;
