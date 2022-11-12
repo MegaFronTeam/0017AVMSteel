@@ -2,7 +2,7 @@
  
 1. <https://megafronteam.github.io/0017AVMSteel/public>
 2. <https://megafronteam.github.io/0017AVMSteel/public/02-description.html>
-
+3. <https://megafronteam.github.io/0017AVMSteel/public/03-card-item.html>
 4. <https://megafronteam.github.io/0017AVMSteel/public/04-buyout.html>
 5. <https://megafronteam.github.io/0017AVMSteel/public/05-services.html>
 6. <https://megafronteam.github.io/0017AVMSteel/public/06-company.html>
