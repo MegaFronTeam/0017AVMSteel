@@ -12,7 +12,10 @@
 10. <https://megafronteam.github.io/0017AVMSteel/public/10-portfolio.html>
 11. <https://megafronteam.github.io/0017AVMSteel/public/11-equipment.html>
 12. <https://megafronteam.github.io/0017AVMSteel/public/12-page-404.html>
+13. <https://megafronteam.github.io/0017AVMSteel/public/14-thanx.html>
+14. <https://megafronteam.github.io/0017AVMSteel/public/16-calculator.html>
+15. <https://megafronteam.github.io/0017AVMSteel/public/17-news.html>
+16. <https://megafronteam.github.io/0017AVMSteel/public/18-blog.html>
+17. <https://megafronteam.github.io/0017AVMSteel/public/00-modal.html>
 
-14. <https://megafronteam.github.io/0017AVMSteel/public/14-thanx.html>
-15. <https://megafronteam.github.io/0017AVMSteel/public/00-modal.html>
 

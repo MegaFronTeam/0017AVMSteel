@@ -98,9 +98,9 @@
 			}
 		}
 		.sAbout__btn {
-			width: 100%;
+			min-width: 100%;
 			@include media-breakpoint-up(sm) {
-				max-width: 270px;
+				min-width: 270px;
 			}
 		}
 	}

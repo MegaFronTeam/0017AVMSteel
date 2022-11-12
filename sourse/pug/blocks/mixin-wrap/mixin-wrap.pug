@@ -49,7 +49,8 @@ mixin search()
 mixin page-head(i, t,...items)
 	+b.page-head(class=(i ? 'bg-wrap' : ''))
 		- let l = items.length
-		+breadcrumb('Главная',...items)
+		.container
+			+breadcrumb('Главная',...items)
 		if i
 			+img(`img/page-head-bg-${i}.jpg`, `bg`)
 			+e.content

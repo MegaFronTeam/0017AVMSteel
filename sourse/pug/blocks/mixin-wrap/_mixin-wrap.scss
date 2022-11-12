@@ -428,6 +428,9 @@
 .page-head {
 	color: $white;
 	background-color: $light;
+	.swiper {
+		overflow: visible;
+	}
 	.breadcrumb {
 		&-item {
 			a {

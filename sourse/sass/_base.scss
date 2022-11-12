@@ -769,8 +769,30 @@ h6 {
 		padding-top: 0;
 	}
 }
+.calc-page {
+	.page-head {
+		img {
+			object-position: center 32%;
+		}
+	}
+}
+.news-page {
+	.page-head {
+		img {
+			object-position: center 32%;
+		}
+	}
+}
 .faq-page {
 	.sForm {
 		padding-top: 0;
+	}
+}
+.blog-page {
+	.breadcrumb {
+
+		@include media-breakpoint-down(lg) {
+			justify-content: flex-start;
+		}
 	}
 }

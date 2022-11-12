@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sCalculator/_sCalculator.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'news-page' 
+	- let  bg= '17-news.jpg'
+
+block title
+	- let  title= 'Новости Шпунта'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		+topLine
+	main
+		+page-head(11, `Новости Шпунта`, title)
+		+sNews()
+		+sForm(`Получите коммерческое предложение <span> в&nbsp;1&nbsp;клик </span>`, `Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы выслать коммерческое предложение и&nbsp;ответить на&nbsp;Ваши вопросы`)
+	+footer()
+      
+
+
+

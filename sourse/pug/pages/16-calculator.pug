@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sCalculator/_sCalculator.pug
+//- include ../blocks/sMachinery/_sMachinery.pug
+//- include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'calc-page' 
+	- let  bg= '16-calculator.jpg'
+
+block title
+	- let  title= 'Калькулятор'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		+topLine
+	main
+		+page-head(10, `Сравнительный калькулятор стоимости Шпунта`, title)
+		+sCalculator()
+		
+	+footer()
+      
+
+
+

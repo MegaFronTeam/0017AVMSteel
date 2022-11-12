@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sMachinery/_sMachinery.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'blog-page' 
+	- let  bg= '18-blog.jpg'
+
+block title
+	- let  title= 'ЕВРАЗ поставляет шпунт на первый в России проект по рекультивации иловых полей'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+		+topLine
+	main
+		+page-head(7, `ЕВРАЗ поставляет шпунт на первый в России проект по рекультивации иловых полей`, `Новости Шпунта`, title)
+		+sContent()
+		+sForm(`Получите коммерческое предложение <span> в&nbsp;1&nbsp;клик </span>`, `Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы выслать коммерческое предложение и&nbsp;ответить на&nbsp;Ваши вопросы`)
+	+footer()
+      
+
+
+

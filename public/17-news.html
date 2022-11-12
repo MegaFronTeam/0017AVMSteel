@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Новости Шпунта</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="news-page" data-bg="17-news.jpg">
+		<div class="main-wrapper">
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="menu-mobile menu-mobile--js">
+							<div class="menu-mobile__inner">
+								<a class="top-nav__btn-calc" href="#">
+									<svg class="icon icon-calc ">
+										<use xlink:href="img/svg/sprite.svg#calc"></use>
+									</svg>Калькулятор
+								</a>
+								<nav>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+										<li class="menu-item menu-item-has-children"><a href="#">Трубошпунт</a>
+											<ul class="sub-menu">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 1</a>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Длинный пункт меню 2</a>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 3</a>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+													</ul>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 4</a>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аренда</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Продажа</a></li>
+										<li class="menu-item menu-item-has-children"><a href="#">Услуги</a>
+											<ul class="sub-menu">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 1</a>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Длинный пункт меню 2</a>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 3</a>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+													</ul>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 4</a>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Выкуп</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Спецтехника</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
+										<li class="menu-item menu-item-has-children"><a href="#">Компания</a>
+											<ul class="sub-menu">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 1</a>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Длинный пункт меню 2</a>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 3</a>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+													</ul>
+												</li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Пункт меню 4</a>
+													<ul class="sub-menu">
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 1</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Вложенный пункт меню 2</a></li>
+														<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Очень длинный вложенный пункт 3</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости/Блог</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+									</ul>
+								</nav>
+								<div class="top-nav__contacts">
+									<a class="top-nav__tel" href="tel:+84958856053">8 (495) 885-60-53
+									</a>
+									<a class="top-nav__tel" href="tel:+84958855011">8 (495) 885-50-11
+									</a>
+									<a class="top-nav__email" href="mailto:info@avmsteel.ru">info@avmsteel.ru
+									</a>
+									<div class="soc">
+										<a class="soc__item" href="#" target="_blank" style="--color: #2fa6d9;">
+											<svg class="icon icon-telegram ">
+												<use xlink:href="img/svg/sprite.svg#telegram"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank" style="--color: #00c958;">
+											<svg class="icon icon-whatsapp ">
+												<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank" style="--color: #8852c1;">
+											<svg class="icon icon-viber ">
+												<use xlink:href="img/svg/sprite.svg#viber"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="topLine__row row">
+							<div class="col col-lg-auto d-flex">
+								<a class="topLine__logo" href="/"><img src="img/svg/logo.svg" alt=""/><span>ABM Инжиниринг</span>
+								</a>
+							</div>
+							<div class="col d-none d-lg-flex">
+								<a class="topLine__btn-calc" href="#">
+									<svg class="icon icon-calc ">
+										<use xlink:href="img/svg/sprite.svg#calc"></use>
+									</svg>Калькулятор
+								</a>
+							</div>
+							<div class="col-auto d-none d-lg-block">
+								<a class="topLine__mail" href="mailto:info@avmsteel.ru">info@avmsteel.ru
+								</a>
+							</div>
+							<div class="col-auto d-none d-lg-block">
+								<div class="topLine__tel-wrap">
+									<div class="topLine__tel topLine__tel--js">8 (495) 885-60-53
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg>
+									</div>
+									<div class="topLine__content"> 
+										<a class="topLine__tel" href="tel:84958856053">8 (495) 885-60-53
+										</a>
+										<a class="topLine__tel" href="tel:84958855011">8 (495) 885-50-11
+										</a>
+										<div class="soc">
+											<a class="soc__item" href="#" target="_blank" style="--color: #2fa6d9;">
+												<svg class="icon icon-telegram ">
+													<use xlink:href="img/svg/sprite.svg#telegram"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank" style="--color: #00c958;">
+												<svg class="icon icon-whatsapp ">
+													<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+												</svg>
+											</a>
+											<a class="soc__item" href="#" target="_blank" style="--color: #8852c1;">
+												<svg class="icon icon-viber ">
+													<use xlink:href="img/svg/sprite.svg#viber"></use>
+												</svg>
+											</a>
+										</div>
+										<a class="dowload-link" href="#" download="">
+											<svg class="icon icon-download ">
+												<use xlink:href="img/svg/sprite.svg#download"></use>
+											</svg><span>Скачать реквизиты</span>
+											<svg class="icon icon-PDF ">
+												<use xlink:href="img/svg/sprite.svg#PDF"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-none d-lg-block">
+								<a class="topLine__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
+									<svg class="icon icon-phone-call ">
+										<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+									</svg>Связаться с нами
+								</a>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+			</header>
+			<!-- end header-->
+			<main>
+				<div class="page-head bg-wrap">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Новости Шпунта</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+					</div><img class="object-fit-js" src="img/page-head-bg-11.jpg" alt="" loading="lazy"/>
+					<div class="page-head__content">
+						<div class="container">
+							<h1>Новости Шпунта</h1>
+						</div>
+					</div>
+				</div>
+				<!-- start sNews-->
+				<section class="sNews section" id="sNews">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>sNews</h2>
+						</div>
+						<div class="sNews__row row">
+						</div>
+					</div>
+				</section>
+				<!-- end sNews-->
+				<!-- start sForm-->
+				<div class="sForm section" id="sForm">
+					<div class="sForm__container container">
+						<div class="form-wrap">
+							<form>
+								<div class="h2">Получите коммерческое предложение <span> в&nbsp;1&nbsp;клик </span></div>
+								<p>Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы выслать коммерческое предложение и&nbsp;ответить на&nbsp;Ваши вопросы</p>
+								<div class="form-wrap__row row">
+									<div class="col-md">
+										<div class="form-wrap__input-wrap form-group">
+											<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон"/><span class="form-wrap__input-title">Ваш телефон</span>
+											</label>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md">
+										<button class="form-wrap__btn btn btn-primary" type="submit">Запросить КП
+										</button>
+									</div>
+								</div>
+								<div class="form-wrap__policy">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" required="required"/><small class="custom-input__text">Я&nbsp;ознакомился с&nbsp;условиями обработки<a href="#"> персональных данных</a></small>
+									</label>
+								</div><img class="img" src="img/sForm-img-1.png" alt="" loading="lazy"/>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- end sForm-->
+			</main>
+			<footer class="footer section">
+				<div class="container">
+					<div class="footer__row row">
+						<div class="col-md-6">
+							<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt=""/><span>ABM ИНЖИНИРИНГ</span>
+							</a>
+							<div class="footer__menu">
+								<ul>
+									<li><a href="#">Трубошпунт</a></li>
+									<li><a href="#">Аренда</a></li>
+									<li><a href="#">Продажа</a></li>
+									<li><a href="#">Услуги</a></li>
+									<li><a href="#">Выкуп</a></li>
+								</ul>
+							</div>
+							<div class="footer__submenu">
+								<ul>
+									<li><a href="#">Спецтехника</a></li>
+									<li><a href="#">Наши работы</a></li>
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Глоссарий</a></li>
+									<li><a href="#">Новости/Блог</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col">
+									<div class="footer__requisites">
+										<a class="footer__tel" href="tel:+84958856053">8 (495) 885-60-53
+										</a>
+										<a class="footer__tel" href="tel:+84958855011">8 (495) 885-50-11
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-auto">
+									<a class="footer__btn btn btn-outline-primary" href="#" data-src="modal-call" data-fancybox="modal">
+										<svg class="icon icon-phone-call ">
+											<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+										</svg>Связаться с нами
+									</a>
+								</div>
+							</div>
+							<a class="footer__email" href="mailto:info@avmsteel.ru">info@avmsteel.ru
+							</a>
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank" style="--color: #2fa6d9;">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank" style="--color: #00c958;">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank" style="--color: #8852c1;">
+									<svg class="icon icon-viber ">
+										<use xlink:href="img/svg/sprite.svg#viber"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="footer__inner-row row">
+								<div class="col-auto d-flex align-items-center">
+									<a class="dowload-link" href="#" download="">
+										<svg class="icon icon-download ">
+											<use xlink:href="img/svg/sprite.svg#download"></use>
+										</svg><span>Реквизиты организации</span>
+										<svg class="icon icon-PDF ">
+											<use xlink:href="img/svg/sprite.svg#PDF"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="col-auto">
+									<div class="footer__scroll-up">Наверх
+										<div class="footer__icon-wrap">
+											<svg class="icon icon-arrow-up ">
+												<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom-line">
+					<div class="container">
+						<div class="footer__row row">
+							<div class="col-md-6">
+								<div class="footer__copyright text-secondary"><span class="currentYear"></span> © ООО «АВМ инжиниринг». Все права защищены.
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer__row-sm row">
+									<div class="col-xxl-auto">
+										<a class="footer__policy secondary-link" href="#">Политика конфиденцильности
+										</a>
+									</div>
+									<div class="col">
+										<div class="footer__developer">Разработка сайта – <a class="strong" href="#" target="_blank">Artsman</a> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data">Связаться с нами
+							</div>
+							<p class="after-headline">Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей</p>
+						</div>
+						<div class="form-wrap__content">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control is-invalid" name="text" type="text" placeholder="Ваше Имя" required="required"/><span class="form-wrap__input-title">Ваше Имя</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control is-valid" name="tel" type="tel" placeholder="Ваш телефон" required="required"/><span class="form-wrap__input-title">Ваш телефон</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Ваш email" required="required"/><span class="form-wrap__input-title">Ваш email</span>
+								</label> 
+							</div>
+							<!-- +e.input-wrap-->
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<div class="form-wrap__policy">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" required="required"/><small class="custom-input__text">Я&nbsp;ознакомился с&nbsp;условиями обработки<a href="#"> персональных данных</a></small>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="libs/aos/aos.js"> </script>
+		<script src="js/common.js"></script>
+		<div class="cookies"> 
+			<p>На нашем сайте используются Cookie.</p>
+			<div class="cookies__btn">
+			</div>
+		</div>
+	</body>
+</html>
