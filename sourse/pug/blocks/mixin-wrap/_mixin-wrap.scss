@@ -61,6 +61,98 @@
 	}
 }
 
+.soc--content {
+	@include media-breakpoint-down(md) {
+		--bs-gutter-x: 5px;
+	}
+	.soc__item {
+		width: 40px;
+		height: 40px;
+		border-radius: 10px;
+		border-width: 2px;
+		&:hover {
+			background-color: $white;
+		}
+		&--vk {
+			background-color: #4680c2;
+			border-color: #4680c2;
+			&:hover {
+				background-color: $white;
+				.icon {
+					color: #4680c2;
+				}
+			}
+		}
+		&--whatsapp {
+			background-color: #49cb5b;
+			border-color: #49cb5b;
+			&:hover {
+				.icon {
+					color: #49cb5b;
+				}
+			}
+		}
+		&--telegram {
+			background-color: #37aee2;
+			border-color: #37aee2;
+			&:hover {
+				.icon {
+					color: #37aee2;
+				}
+			}
+		}
+		&--copy {
+			background-color: #ff7a00;
+			border-color: #ff7a00;
+			&:hover {
+				.icon {
+					color: #ff7a00;
+				}
+			}
+		}
+		&--share {
+			background-color: #f8f8f8;
+			border-color: #f8f8f8;
+			&:hover {
+				// background-color: $secondary;
+				border-color: $body-color;
+				.icon {
+					// color: $white;
+				}
+			}
+		}
+		.icon {
+			font-size: 24px;
+			color: $white;
+			&-telegram-cont {
+				font-size: 20px;
+			}
+			&-share-cont {
+				color: $body-color;
+			}
+		}
+		&:hover {
+			// .icon {
+			// 	&-vk-cont {
+
+			// 	}
+			// 	&-whatsapp-cont {
+
+			// 	}
+			// 	&-telegram-cont {
+
+			// 	}
+			// 	&-copy-cont {
+
+			// 	}
+			// 	&-share-cont {
+
+			// 	}
+			// }
+		}
+	}
+}
+
 .counter {
 	counter-reset: num;
 	&__item {
@@ -500,7 +592,7 @@
 			}
 		}
 	}
-	
+
 	.page-head__subtitle {
 		font-size: rem(20);
 		margin-top: rem(30);

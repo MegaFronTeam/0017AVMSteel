@@ -118,7 +118,7 @@
 			}
 		}
 	}
-	&__need-help-wrap {
+	.need-help-wrap {
 		@include media-breakpoint-up(lg) {
 			width: rem(360);
 			height: 100%;

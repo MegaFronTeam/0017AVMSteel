@@ -628,6 +628,15 @@ function eventHandler() {
 			}
 		}
 	});
+	var StickySoc = new hcSticky('.soc--content', {
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: '.sContent > .container',
+				top: 90,
+			}
+		}
+	});
 
 	document.querySelector('.footer__scroll-up').addEventListener('click', () => window.scrollTo(0, 0));
 

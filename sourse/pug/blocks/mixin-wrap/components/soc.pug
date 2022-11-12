@@ -1,4 +1,4 @@
-mixin item-sos(icon, a='#')
+mixin item-soc(icon, a='#')
 	+e.A.item(href= a target="_blank")&attributes(attributes)
 		if block
 			block
@@ -11,6 +11,14 @@ mixin soc()
 			block
 		else
 			each soc in social
-				+item-sos(soc.name)(style=`--color: ${soc.color}`)
+				+item-soc(soc.name)(style=`--color: ${soc.color}`)
+
+mixin soc-content()
+	+b.soc--content
+		+item-soc('vk-cont').--vk
+		+item-soc('whatsapp-cont').--whatsapp
+		+item-soc('telegram-cont').--telegram
+		+item-soc('copy-cont').--copy
+		+item-soc('share-cont').--share
 
 //- /social buttons 
