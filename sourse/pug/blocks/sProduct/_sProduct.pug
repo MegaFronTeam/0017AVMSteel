@@ -10,7 +10,7 @@ mixin sProduct(data)
 						.swiper-wrapper
 							-for(let i = 1; i < 5; i++)
 								+e.slide.swiper-slide
-									+e.img-wrap(data-fancybox='sCertificates' data-src=`img/sProduct-${i}.jpg`)
+									+e.img-wrap(data-fancybox='sProduct' data-src=`img/sProduct-${i}.jpg`)
 										+img(`img/sProduct-${i}.jpg`, 'bg')
 						+arrow
 					+e.slider-thumbs--js.swiper

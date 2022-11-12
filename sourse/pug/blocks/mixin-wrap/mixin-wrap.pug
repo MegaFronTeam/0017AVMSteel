@@ -102,7 +102,7 @@ mixin portfolio-item(l, t, s, img)
 						.swiper-wrapper
 							- for (let i = 0; i < 5; i++) 
 								+e.slide.swiper-slide
-									+e.img-wrap
+									+e.img-wrap(data-fancybox='sPortfolio' data-src=`img/sPortfolio-${img}.jpg`)
 										.img-wrap-center
 											+img(`img/sPortfolio-${img}.jpg`, 'bg')
 						.swiper-pagination
