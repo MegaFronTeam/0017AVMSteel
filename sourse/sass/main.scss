@@ -69,7 +69,7 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 .breadcrumb {
-	justify-content: center;
+	// justify-content: center;
 	.active {
 		a {
 			color: $breadcrumb-active-color;

@@ -523,6 +523,11 @@
 	.swiper {
 		overflow: visible;
 	}
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.breadcrumb {
 		&-item {
 			a {
