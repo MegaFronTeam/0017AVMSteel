@@ -119,6 +119,20 @@ mixin portfolio-item(l, t, s, img)
 	// /.portfolio-item
 
 
+mixin sNews-item(i, l, t, d)
+	.col-lg-6
+		+b.sNews-item(href='#')
+			+e.img-wrap
+				+img(`img/sNews-${i}.jpg`, `bg`)
+			+e.content
+				+e.label!= l
+				h4!= t
+			+e.wrap
+				+e.date!= d
+				+e.btn
+					+icon('arrow-right')
+// /sNews-item
+
 mixin portfolio-list(t, ...items)
 	h6!= t
 	ul

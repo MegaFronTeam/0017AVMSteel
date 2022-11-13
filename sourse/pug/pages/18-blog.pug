@@ -5,6 +5,7 @@ include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sContent/_sContent.pug
 //- include ../blocks/sMachinery/_sMachinery.pug
+include ../blocks/sNews/_sNews.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/footer/_footer.pug
 
@@ -25,6 +26,7 @@ block pagecontent
 	main
 		+page-head(7, `ЕВРАЗ поставляет шпунт на первый в России проект по рекультивации иловых полей`, `Новости Шпунта`, title)
 		+sContent()
+		+sNews(`Похожие новости`).pb-0
 		+sForm(`Получите коммерческое предложение <span> в&nbsp;1&nbsp;клик </span>`, `Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, чтобы выслать коммерческое предложение и&nbsp;ответить на&nbsp;Ваши вопросы`)
 	+footer()
       

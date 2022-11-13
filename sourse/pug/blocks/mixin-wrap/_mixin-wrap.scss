@@ -598,3 +598,132 @@
 		margin-top: rem(30);
 	}
 }
+
+.sNews-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: $body-color;
+	border-radius: $border-radius-lg;
+	color: $white;
+	height: 100%;
+	overflow: hidden;
+	padding: 20px;
+	min-height: 260px;
+	@include media-breakpoint-up(sm) {
+		padding: rem(45);
+		min-height: rem(340);
+	}
+	// @include media-breakpoint-up(xl) {
+	// 	min-height: rem(480);
+	// }
+	@include media-breakpoint-up(xxl) {
+		min-height: rem(380);
+	}
+	&::before {
+		@include mt;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		opacity: 0;
+		backdrop-filter: blur(12.5px);
+	}
+	&::after {
+		@include mt;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: rgb(124, 126, 139);
+		opacity: 0;
+	}
+	&:hover {
+		color: $white;
+		&::before {
+			opacity: 1;
+		}
+		&::after {
+			opacity: 0.8;
+		}
+		.sNews-item__btn {
+			transform: translateY(0);
+		}
+	}
+	h4 {
+		margin-bottom: 20px;
+		line-height: calc(35 / 24);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(30);
+		}
+	}
+	ul {
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(30);
+		}
+		li {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(15);
+				}
+			}
+		}
+	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-top: auto;
+	}
+	&__label {
+		font-weight: bold;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(30);
+		}
+	}
+	&__img-wrap {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			opacity: 0.6;
+		}
+	}
+	&__btn {
+		@extend .swiper-button-hand;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		align-self: flex-end;
+		margin-top: auto;
+		margin-bottom: 0;
+		pointer-events: none;
+		z-index: 3;
+		@include media-breakpoint-up(lg) {
+			transform: translateY(140px);
+		}
+		@include media-breakpoint-down(sm) {
+			--swiperArrowSize: 60px;
+		}
+	}
+
+	&__content,
+	&__date {
+		// position: relative;
+		// display: flex;
+		// flex-direction: column;
+		z-index: 3;
+	}
+}

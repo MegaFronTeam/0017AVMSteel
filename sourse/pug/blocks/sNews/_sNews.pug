@@ -1,9 +1,48 @@
-mixin sNews(data)
+mixin sNews(t, btns)
 	// start sNews
-	+b.SECTION.sNews.section#sNews&attributes(attributes)
+	+b.sNews.section#sNews&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sNews
-				
-			+e.row.row
+			if btns
+				+e.filter
+					.row
+						.col-sm-auto
+							.row
+								.col-auto
+									+e.btn(href="#").active За все время
+								.col-auto
+									+e.btn(href="#") 2022
+								.col-auto
+									+e.btn(href="#") 2021
+						.col-auto.order-sm-first
+							+input('Все разделы', 'select', '')
+				+e.row.row
+					+sNews-item(1, `Новости`, 
+						`«Северсталь» поставила трубошпунт для проекта реконструкции набережной в Саратове`,
+						`4&nbsp;ноября 2022`)
+					+sNews-item(2, `Статьи`, 
+						`Что выгоднее: Трубошпунт или Шпунт Ларсена - давайте выясним`,
+						`4&nbsp;ноября 2022`)
+					+sNews-item(3, `Новости`, 
+						`Мурманские портовики впервые обработали 32-метровый трубошпунт`,
+						`4&nbsp;ноября 2022`)
+					+sNews-item(1, `Статьи`, 
+						`«Северсталь» поставила трубошпунт для проекта реконструкции набережной в Саратове`,
+						`4&nbsp;ноября 2022`)
+					+sNews-item(2, `Новости`, 
+						`«Северсталь» поставила трубошпунт для проекта реконструкции набережной в Саратове`,
+						`4&nbsp;ноября 2022`)
+					+sNews-item(3, `Статьи`, 
+						`Мурманские портовики впервые обработали 32-метровый трубошпунт`,
+						`4&nbsp;ноября 2022`)
+				+e.btn-bottom.btn.btn-outline-primary(href='#') Показать еще
+			else
+				+b.section-title
+					h2!= t
+				+e.row.row
+					+sNews-item(1, `Новости`, 
+						`«Северсталь» поставила трубошпунт для проекта реконструкции набережной в Саратове`,
+						`4&nbsp;ноября 2022`)
+					+sNews-item(2, `Статьи`, 
+						`Что выгоднее: Трубошпунт или Шпунт Ларсена - давайте выясним`,
+						`4&nbsp;ноября 2022`)
 	// end sNews

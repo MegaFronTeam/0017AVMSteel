@@ -3,26 +3,80 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-
+	.row {
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: 20px;
+		}
 	}
-	.section-title{
-		
+	.section-title {
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(60);
+		}
 	}
-	&__col{
-
-	}
-	&__item{
-
+	&__col {
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	&__btn-bottom {
+		width: 100%;
+		margin-top: 20px;
+		@include media-breakpoint-up(md) {
+			margin-top: rem(45);
+		}
+	}
+	&__filter {
+		margin-bottom: 40px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(60);
+		}
+		& > .row {
+			justify-content: space-between;
+			align-items: center;
+
+		}
+		.sNews__btn {
+			position: relative;
+			padding-bottom: 4px;
+			&::before {
+				content: "";
+				@include mt;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 2px;
+				max-width: 0;
+				background-color: $link-hover-color;
+			}
+			// @include media-breakpoint-up(md) {
+			// }
+			&.active {
+				color: $link-hover-color;
+				&::before {
+					max-width: 100%;
+				}
+			}
+		}
+		.sNews__input {
+			padding: 5px 25px 5px 0;
+			border: none;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.1391 7.93103L10.0012 12.069L5.86328 7.93103' stroke='%2300BCB6' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+			background-position: right center;
+			background-size: 20px 20px;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sNews
