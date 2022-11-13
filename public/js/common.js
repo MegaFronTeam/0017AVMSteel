@@ -663,7 +663,7 @@ function eventHandler() {
 		responsive: {
 			992: {
 				stickTo: '.sContent > .container',
-				top: 90,
+				top: 150,
 			}
 		}
 	});
