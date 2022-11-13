@@ -363,3 +363,8 @@ input:-webkit-autofill:focus {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
 	display: none;
 }
+
+.form-check-input:checked[type=radio] {
+	background-color: $primary;
+	border-color: $primary;
+}

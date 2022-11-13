@@ -1,10 +1,10 @@
 mixin sProduct(data)
 	// start sProduct
-	+b.SECTION.sProduct.section#sProduct&attributes(attributes)
+	+b.sProduct.section#sProduct&attributes(attributes)
 		.container
 			+b.section-title.text-center.d-lg-none
-				h2 Шпунт Ларсена&nbsp;Л4
-			+e.row.row
+				.h2 Шпунт Ларсена&nbsp;Л4
+			.row.align-items-center
 				.col-lg-6
 					+e.slider--js.swiper
 						.swiper-wrapper
@@ -20,43 +20,43 @@ mixin sProduct(data)
 									+e.img-wrap
 										+img(`img/sProduct-${i}.jpg`, 'bg')
 				+e.col.col-lg-6
-					+b.section-title.text-center.d-none.d-lg-block
-						h2 Шпунт Ларсена&nbsp;Л4
-					+e.content
-						.row
-							.col-6
-								span Lorem ipsum dolor sit amet.
-							.col-6
-								span Lorem ipsum dolor sit amet.
-						table
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-							tr
-								td 123145
-								td 12345
-						.row
-							.col
-								div Цена за тонну
-								div от 14 000 ₽
-							.col
-								+e.btn.btn.btn-primary(href="#") Узнать точную цену
+					+e.row.row
+						.col-12.d-none.d-lg-block
+							+b.section-title
+								.h2 Шпунт Ларсена&nbsp;Л4
+						.col-12
+							.row
+								.col-12.col-sm-6.col-lg-6.col-xl-6
+									+e.type
+										span Тип шпунта
+										+in-c('radio', 'Новый', 'type-1')(checked)
+										+in-c('radio', 'Б/У', 'type-1')
+								.col-12.col-sm-6.col-lg-6.col-xl-6
+									+e.type
+										span Тип заявки
+										+in-c('radio', 'Купить', 'type-2')(checked)
+										+in-c('radio', 'Арендовать', 'type-2')
+						.col-12.order-md-last
+							.row
+								.col
+									+e.price
+										span Цена за тонну
+										strong от 14 000 ₽
+								.col-md-6.col-lg-auto.col-xl-6
+									+btn('Узнать точную цену', 'submit').btn.btn-primary
+									//- +e.btn.btn.btn-primary(href="#") Узнать точную цену
+						.col-12
+							table
+								mixin tr(...cells)
+									tr
+										each cell in cells
+											td!= cell
+								+tr(`Ширина профиля`,`400&nbsp;мм`)
+								+tr(`Высота профиля`,`14,8&nbsp;мм`)
+								+tr(`Ширина стенки`,`359&nbsp;мм`)
+								+tr(`Вес 1&nbsp;м.п. шпунта`,`0,074&nbsp;тн`)
+								+tr(`Вес 1&nbsp;м&sup2; шпунта`,`0,185&nbsp;тн`)
+								+tr(`Упр. момент сопр.`,`2200 см&sup3/м`)
+								+tr(`Момент инерции`,`39600 cм&sup3/м`)
+								+tr(`ТУ`,`У&nbsp;27.1-26524137-1375`)
 	// end sProduct
