@@ -39,6 +39,9 @@
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(15);
 			}
+			&:last-child {
+				margin-bottom: 0;
+			}
 			&::before {
 				content: counter(num);
 				counter-increment: num;
@@ -72,21 +75,14 @@
 	// }
 	// &__item {
 	// }
-	&__slide {
-		height: auto;
-	}
+	
 	&__btn {
 		min-width: 100%;
 		@include media-breakpoint-up(md) {
 			min-width: 270px;
 		}
 	}
-	&__block {
-		margin-bottom: 40px;
-		@include media-breakpoint-up(md) {
-			margin-bottom: rem(60);
-		}
-	}
+	
 	h1,
 	h2,
 	h3,
@@ -107,14 +103,7 @@
 			font-size: rem(20);
 		}
 	}
-	small,
-	strong,
-	p {
-		margin-bottom: 1rem;
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+	
 	.soc--content {
 		display: flex;
 		justify-content: center;
