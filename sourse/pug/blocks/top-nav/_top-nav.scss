@@ -2,7 +2,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-
+	background-color: $white;
+	@include media-breakpoint-up(lg) {
+		z-index: 1001;
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);

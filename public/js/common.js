@@ -667,6 +667,25 @@ function eventHandler() {
 			}
 		}
 	});
+	var StickyNav = new hcSticky('.top-nav', {
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: 'body',
+				top: 0,
+			}
+		}
+	});
+
+	var StickyNavMob = new hcSticky('.topLine', {
+		// mobileFirst: true,
+		responsive: {
+			991.98: {
+				stickTo: 'body',
+				top: 0,
+			}
+		}
+	});
 
 	document.querySelector('.footer__scroll-up').addEventListener('click', () => window.scrollTo(0, 0));
 
