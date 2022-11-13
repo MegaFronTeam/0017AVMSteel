@@ -9,7 +9,10 @@ mixin sForm(h, t)
 					.col-md
 						+input('Ваш телефон', 'tel')
 					.col-md
-						+e.BUTTON.btn.btn.btn-primary(type='submit') Запросить КП
+						if h == 'test'
+							+e.BUTTON.btn.btn.btn-primary(type='submit' disabled) Запросить КП
+						else
+							+e.BUTTON.btn.btn.btn-primary(type='submit') Запросить КП
 				+policy
 				+img('img/sForm-img-1.png').img
 	// end sForm

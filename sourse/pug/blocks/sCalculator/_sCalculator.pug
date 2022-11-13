@@ -6,5 +6,36 @@ mixin sCalculator(data)
 				h2 Сравнительный калькулятор 
 					span стоимости шпунта
 				p Заполните один из&nbsp;параметров: тонны, м&sup2;, м.п.&nbsp;и&nbsp;получите сравнительный расчет стоимости шпунта Ларсена и&nbsp;трубошпунта
-			+e.row.row
+			+e.content
+				+e.head
+					.row
+						.col
+							+input(`Введите тонны`, `number`, ``)
+						.col
+							+input(`Введите м²`, `number`, ``)
+						.col
+							+input(`Введите м.п.`, `number`, ``)
+				+e.table-wrap
+					
+					table
+						thead
+							tr
+								th 
+								th 
+								th 
+								th 
+						tbody
+							tr
+								td 
+								td 
+								td 
+								td
+							tr
+								td 
+								td
+								td
+								td
+							
+					
+
 	// end sCalculator
