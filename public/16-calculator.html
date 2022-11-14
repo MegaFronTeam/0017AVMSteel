@@ -237,51 +237,61 @@
 				</div>
 				<!-- start sCalculator-->
 				<section class="sCalculator section" id="sCalculator">
-					<div class="container">
+					<div class="sCalculator__container container">
 						<div class="section-title text-center">
-							<h2>Сравнительный калькулятор <span>стоимости шпунта</span></h2>
 							<p>Заполните один из&nbsp;параметров: тонны, м&sup2;, м.п.&nbsp;и&nbsp;получите сравнительный расчет стоимости шпунта Ларсена и&nbsp;трубошпунта</p>
 						</div>
 						<div class="sCalculator__content">
-							<div class="sCalculator__head">
-								<div class="row">
-									<div class="col">
-										<div class="sCalculator__input-wrap form-group"><input class="sCalculator__input form-control" name="number" type="number" placeholder="Введите тонны" step="any"/><span class="sCalculator__input-title"></span>
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__row row">
+										<div class="col">
+											<div class="form-wrap__input-wrap form-group">
+												<label>
+													<input class="form-wrap__input form-control" name="number" type="number" placeholder="Введите тонны" step="any"/>
+													<div class="form-wrap__input-title"><span>Введите </span>тонны</div>
+												</label>
+											</div>
 										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col">
-										<div class="sCalculator__input-wrap form-group"><input class="sCalculator__input form-control" name="number" type="number" placeholder="Введите м²" step="any"/><span class="sCalculator__input-title"></span>
+										<div class="col">
+											<div class="form-wrap__input-wrap form-group">
+												<label>
+													<input class="form-wrap__input form-control" name="number" type="number" placeholder="Введите м²" step="any"/>
+													<div class="form-wrap__input-title"><span>Введите </span>м²</div>
+												</label>
+											</div>
 										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col">
-										<div class="sCalculator__input-wrap form-group"><input class="sCalculator__input form-control" name="number" type="number" placeholder="Введите м.п." step="any"/><span class="sCalculator__input-title"></span>
+										<div class="col">
+											<div class="form-wrap__input-wrap form-group">
+												<label>
+													<input class="form-wrap__input form-control" name="number" type="number" placeholder="Введите м.п." step="any"/>
+													<div class="form-wrap__input-title"><span>Введите </span>м.п.</div>
+												</label>
+											</div>
 										</div>
-										<!-- +e.input-wrap-->
 									</div>
-								</div>
+								</form>
 							</div>
 							<div class="sCalculator__table-wrap">
 								<table>
 									<thead>
 										<tr>
-											<th>Наименование профиля</th>
-											<th>Ширина профиля, мм</th>
-											<th>Упругий момент сопротивиления см³/м</th>
-											<th>Вес м² шпунтовой стены, тн</th>
-											<th>Вес 1 м.п. шпунта, тн</th>
-											<th>м²</th>
-											<th>м.п.</th>
-											<th>тн</th>
-											<th>Цена за тонну, руб</th>
-											<th>Стоимость  м² шпунтовой стены, руб</th>
-											<th>Экономия на погружении в м.п.</th>
+											<th scope="col">Наименование профиля</th>
+											<th scope="col">Ширина профиля, мм</th>
+											<th scope="col">Упругий момент сопротивиления см³/м</th>
+											<th scope="col">Вес м² шпунтовой стены, тн</th>
+											<th scope="col">Вес 1 м.п. шпунта, тн</th>
+											<th scope="col">м²</th>
+											<th scope="col">м.п.</th>
+											<th scope="col">тн</th>
+											<th scope="col">Цена за тонну, руб</th>
+											<th scope="col">Стоимость  м² шпунтовой стены, руб</th>
+											<th scope="col">Экономия на погружении в м.п.</th>
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<th>Шпунт AZ 13-770</th>
+											<th scope="row">Шпунт AZ 13-770</th>
 											<td>770</td>
 											<td>1300</td>
 											<td>0,0988</td>
@@ -294,7 +304,7 @@
 											<td>до 40%</td>
 										</tr>
 										<tr>
-											<th>Шпунт AZ 24-700</th>
+											<th scope="row">Шпунт AZ 24-700</th>
 											<td>700</td>
 											<td>2400</td>
 											<td>0,1367</td>
@@ -307,7 +317,7 @@
 											<td>до 40%</td>
 										</tr>
 										<tr>
-											<th>Шпунт GU18N</th>
+											<th scope="row">Шпунт GU18N</th>
 											<td>600</td>
 											<td>1800</td>
 											<td>0,1282</td>
@@ -320,7 +330,7 @@
 											<td>до 20%</td>
 										</tr>
 										<tr>
-											<th>Шпунт Л4</th>
+											<th scope="row">Шпунт Л4</th>
 											<td>400</td>
 											<td>2200</td>
 											<td>0,1850</td>
@@ -333,7 +343,7 @@
 											<td>Нет</td>
 										</tr>
 										<tr>
-											<th>Шпунт Л5</th>
+											<th scope="row">Шпунт Л5</th>
 											<td>420</td>
 											<td>2962</td>
 											<td>0,2380</td>
@@ -346,7 +356,7 @@
 											<td>До 20%</td>
 										</tr>
 										<tr>
-											<th>Шпунт Л5-УМ</th>
+											<th scope="row">Шпунт Л5-УМ</th>
 											<td>500</td>
 											<td>3550</td>
 											<td>0,2278</td>
@@ -359,7 +369,7 @@
 											<td>До 20%</td>
 										</tr>
 										<tr>
-											<th>Шпунт VL606A/GU22N/ZU22</th>
+											<th scope="row">Шпунт VL606A/GU22N/ZU22</th>
 											<td>600</td>
 											<td>2200</td>
 											<td>0,1436</td>
@@ -372,7 +382,7 @@
 											<td>До 20%</td>
 										</tr>
 										<tr>
-											<th>Трубошпунт собственного производства: Модель АВМ 720.9</th>
+											<th scope="row">Трубошпунт собственного производства: Модель АВМ 720.9</th>
 											<td>710</td>
 											<td>2485</td>
 											<td>0,1494</td>
@@ -385,7 +395,7 @@
 											<td>до 40%</td>
 										</tr>
 										<tr>
-											<th>Трубошпунт собственного производства: Модель АВМ 720.10</th>
+											<th scope="row">Трубошпунт собственного производства: Модель АВМ 720.10</th>
 											<td>710</td>
 											<td>2750</td>
 											<td>0,1621</td>
@@ -399,6 +409,14 @@
 										</tr>
 									</tbody>
 								</table>
+							</div>
+							<div class="sCalculator__footer">
+								<p>Свяжитесь с&nbsp;нами, чтобы получить коммерческое предложение</p>
+								<a class="sCalculator__btn btn btn-primary" href="#" data-src="modal-call" data-fancybox="modal">
+									<svg class="icon icon-phone-call ">
+										<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+									</svg>Связаться с нами
+								</a>
 							</div>
 						</div>
 					</div>

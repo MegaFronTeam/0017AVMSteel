@@ -1,38 +1,53 @@
-mixin sCalculator(data)
+mixin sCalculator(h)
 	// start sCalculator
 	+b.SECTION.sCalculator.section#sCalculator&attributes(attributes)
-		.container
+		+e.container.container
 			+b.section-title.text-center
-				h2 Сравнительный калькулятор 
-					span стоимости шпунта
+				if h
+					h2!= h
 				p Заполните один из&nbsp;параметров: тонны, м&sup2;, м.п.&nbsp;и&nbsp;получите сравнительный расчет стоимости шпунта Ларсена и&nbsp;трубошпунта
 			+e.content
-				+e.head
-					.row
+				+form-wrap
+					+e.row.row
 						.col
-							+input(`Введите тонны`, `number`, ``)
+							.form-wrap__input-wrap.form-group
+								label
+									input.form-wrap__input.form-control(name='number' type='number' placeholder='Введите тонны' step='any')
+									div.form-wrap__input-title
+										span Введите 
+										| тонны
 						.col
-							+input(`Введите м²`, `number`, ``)
+							.form-wrap__input-wrap.form-group
+								label
+									input.form-wrap__input.form-control(name='number' type='number' placeholder='Введите м²' step='any')
+									div.form-wrap__input-title
+										span Введите 
+										| м²
 						.col
-							+input(`Введите м.п.`, `number`, ``)
+							.form-wrap__input-wrap.form-group
+								label
+									input.form-wrap__input.form-control(name='number' type='number' placeholder='Введите м.п.' step='any')
+									div.form-wrap__input-title
+										span Введите 
+										| м.п.
 				+e.table-wrap
 					table
 						thead
 							tr
-								th Наименование профиля
-								th Ширина профиля, мм
-								th Упругий момент сопротивиления см³/м
-								th Вес м² шпунтовой стены, тн
-								th Вес 1 м.п. шпунта, тн
-								th м²
-								th м.п.
-								th тн
-								th Цена за тонну, руб
-								th Стоимость  м² шпунтовой стены, руб
-								th Экономия на погружении в м.п.
+								th(scope="col") Наименование профиля
+								th(scope="col") Ширина профиля, мм
+								th(scope="col") Упругий момент сопротивиления см³/м
+								th(scope="col") Вес м² шпунтовой стены, тн
+								th(scope="col") Вес 1 м.п. шпунта, тн
+								th(scope="col") м²
+								th(scope="col") м.п.
+								th(scope="col") тн
+								th(scope="col") Цена за тонну, руб
+								th(scope="col") Стоимость  м² шпунтовой стены, руб
+								th(scope="col") Экономия на погружении в м.п.
 						tbody
 							tr
-								th Шпунт AZ 13-770
+								th(scope="row") Шпунт AZ 13-770
 								td 770
 								td 1300
 								td 0,0988
@@ -44,7 +59,7 @@ mixin sCalculator(data)
 								td 13 634,40
 								td до 40%
 							tr
-								th Шпунт AZ 24-700
+								th(scope="row") Шпунт AZ 24-700
 								td 700
 								td 2400
 								td 0,1367
@@ -56,7 +71,7 @@ mixin sCalculator(data)
 								td 8 864,60
 								td до 40%
 							tr
-								th Шпунт GU18N
+								th(scope="row") Шпунт GU18N
 								td 600
 								td 1800
 								td 0,1282
@@ -68,7 +83,7 @@ mixin sCalculator(data)
 								td 17 691,60
 								td до 20%
 							tr
-								th Шпунт Л4
+								th(scope="row") Шпунт Л4
 								td 400
 								td 2200
 								td 0,1850
@@ -80,7 +95,7 @@ mixin sCalculator(data)
 								td 17 945,00
 								td Нет
 							tr
-								th Шпунт Л5
+								th(scope="row") Шпунт Л5
 								td 420
 								td 2962
 								td 0,2380
@@ -92,7 +107,7 @@ mixin sCalculator(data)
 								td 23 086,00
 								td До 20%
 							tr
-								th Шпунт Л5-УМ
+								th(scope="row") Шпунт Л5-УМ
 								td 500
 								td 3550
 								td 0,2278
@@ -104,7 +119,7 @@ mixin sCalculator(data)
 								td   23 919,00
 								td До 20%
 							tr
-								th Шпунт VL606A/GU22N/ZU22
+								th(scope="row") Шпунт VL606A/GU22N/ZU22
 								td 600
 								td 2200
 								td 0,1436
@@ -116,7 +131,7 @@ mixin sCalculator(data)
 								td   19 816,80
 								td До 20%
 							tr
-								th Трубошпунт собственного производства: Модель АВМ 720.9
+								th(scope="row") Трубошпунт собственного производства: Модель АВМ 720.9
 								td 710
 								td 2485
 								td 0,1494
@@ -128,7 +143,7 @@ mixin sCalculator(data)
 								td 17 928,00
 								td до 40%
 							tr
-								th Трубошпунт собственного производства: Модель АВМ 720.10
+								th(scope="row") Трубошпунт собственного производства: Модель АВМ 720.10
 								td 710
 								td 2750
 								td 0,1621
@@ -139,7 +154,11 @@ mixin sCalculator(data)
 								td 120 000,00
 								td 19 452,00
 								td до 40%
-
+				+e.footer
+					p Свяжитесь с&nbsp;нами, чтобы получить коммерческое предложение
+					+e.btn.btn.btn-primary(href="#"  data-src='modal-call' data-fancybox="modal")
+						+icon('phone-call')
+						| Связаться с нами
 
 					
 

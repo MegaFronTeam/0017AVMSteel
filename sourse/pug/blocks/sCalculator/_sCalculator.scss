@@ -3,10 +3,13 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	// &__row {
-	// 	--bs-gutter-x: #{rem()};
-	// 	--bs-gutter-y: #{rem()};
-	// }
+
+	&__container {
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}
+	}
+
 	.section-title {
 		max-width: rem(990);
 		margin-right: auto;
@@ -17,15 +20,75 @@
 				margin-bottom: rem(30);
 			}
 		}
+		p {
+			font-size: rem(20);
+		}
+	}
+	.form-wrap {
+		background: #abacb7;
+		border-radius: 15px 15px 0px 0px;
+		padding: 10px;
+		@include media-breakpoint-up(md) {
+			padding: rem(15);
+		}
+		&__row {
+			--bs-gutter-x: 5px;
+			// --bs-gutter-y: #{rem()};
+			@include media-breakpoint-up(md) {
+				--bs-gutter-x: #{rem(15)};
+			}
+		}
+		&__input-title {
+			left: 50%;
+			transform: translateX(-50%);
+			span {
+				display: none;
+				@include media-breakpoint-up(lg) {
+					display: inline;
+				}
+			}
+		}
+		&__input {
+			text-align: center;
+			&:-webkit-autofill,
+			&:focus,
+			&:not(:placeholder-shown),
+			&.form-select {
+				& ~ .form-wrap__input-title {
+					//  color: #846951;
+					transform: scale(0.75) translateY(var(--up-t, -75%)) translateX(-50%);
+				}
+			}
+		}
 	}
 	// &__col {
 	// }
 	// &__item {
 	// }
+
 	&__table-wrap {
+		@include media-breakpoint-down(xl) {
+			& [scope="row"] {
+				width: 100%;
+				border: none;
+				text-align: center;
+				text-decoration: underline;
+			}
+		}
 		table {
 			width: 100%;
 			text-align: center;
+			@include media-breakpoint-down(xl) {
+				display: block;
+			}
+			tr {
+				@include media-breakpoint-down(xl) {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+				}
+			}
+
 			th,
 			td {
 				font-size: rem(14);
@@ -35,26 +98,49 @@
 					line-height: 1.3;
 					padding: 20px 10px;
 				}
+				@include media-breakpoint-down(xl) {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				&:nth-child(9) {
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+				}
+				&:nth-child(2),
+				&:nth-child(4),
+				&:nth-child(11),
+				&:nth-child(5) {
+					@include media-breakpoint-down(lg) {
+						display: none;
+					}
+				}
+				&:nth-child(3) {
+					@include media-breakpoint-down(xl) {
+						display: none;
+					}
+				}
 			}
+
 			thead {
-				// position: relative;
-				// &::before {
-				// 	content: "";
-				// 	position: absolute;
-				// 	width: 100%;
-				// 	height: 100%;
-				// 	left: 0;
-				// 	top: 0;
-				// 	background-color: $secondary;
-				// 	z-index: -1;
-				// }
 				th {
 					background-color: $secondary;
 					color: $white;
 					border: 1px solid $secondary;
 					border-right-color: #abacb7;
+					@include media-breakpoint-down(xl) {
+						flex: 1 0 0%;
+						width: 100%;
+						max-width: 100%;
+					}
 					&:first-child {
-						width: rem(225);
+						@include media-breakpoint-down(xl) {
+							display: none;
+						}
+						// @include media-breakpoint-up(xl) {
+						// 	width: 225px;
+						// }
 					}
 					&:last-child {
 						border-right-color: $secondary;
@@ -74,16 +160,66 @@
 						background-color: rgba(#dcaf3c, 0.05);
 						color: #dcaf3c;
 					}
-				}
-				td {
 					&:nth-child(9),
 					&:nth-child(10) {
 						font-weight: bold;
 						background-color: rgba($primary, 0.05);
 						color: $primary;
 					}
+					@include media-breakpoint-down(xl) {
+						flex: 1 0 0%;
+						width: 100%;
+						max-width: 100%;
+						border-right: none;
+					}
+					@include media-breakpoint-down(xl) {
+						&:nth-child(11) {
+							border-right: 1px solid $border-color;
+						}
+					}
+					@include media-breakpoint-down(lg) {
+						&:nth-child(10) {
+							border-right: 1px solid $border-color;
+						}
+					}
 				}
 			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: rem(20);
+		border: 1px solid $border-color;
+		border-radius: 0px 0px 15px 15px;
+		border-top: none;
+		@include media-breakpoint-up(md) {
+			padding: rem(30);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(45);
+		}
+		p {
+			font-weight: bold;
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 16px;
+			@include media-breakpoint-up(md) {
+				font-size: rem(20);
+				margin-bottom: rem(25);
+			}
+			@include media-breakpoint-up(xxl) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	&__btn {
+		width: 100%;
+		@include media-breakpoint-up(sm) {
+			max-width: 290px;
 		}
 	}
 

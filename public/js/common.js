@@ -686,6 +686,20 @@ function eventHandler() {
 			}
 		}
 	});
+	var StickyCalc = new hcSticky('.sCalculator table thead', {
+		mobileFirst: true,
+		stickTo: '.sCalculator table',
+		top: 61,
+		responsive: {
+			991.98: {
+				stickTo: '.sCalculator table',
+				top: 51,
+			},
+			1199.98: {
+				disable: true
+			}
+		}
+	});
 
 	document.querySelector('.footer__scroll-up').addEventListener('click', () => window.scrollTo(0, 0));
 
