@@ -36,11 +36,11 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		&:hover {
-			img {
-				transform: scale(1.05);
-			}
-		}
+		// &:hover {
+		// 	img {
+		// 		transform: scale(1.05);
+		// 	}
+		// }
 		h5 {
 			text-align: center;
 			line-height: calc(30 / 20);

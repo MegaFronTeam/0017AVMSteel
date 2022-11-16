@@ -3,6 +3,7 @@
 	// --sPT: #{rem()};
 	--sPB: 0;
 	// --sTPB: #{rem()};
+	padding-top: calc(var(--sPT) / 2);
 	& * {
 		--bs-gutter-y: 20px;
 		@include media-breakpoint-up(md) {
@@ -69,7 +70,7 @@
 			font-size: $h3-font-size;
 		}
 	}
-	
+
 	&__btn {
 		width: 100%;
 	}
@@ -128,7 +129,7 @@
 			.swiper-slide {
 				@include mt;
 				cursor: pointer;
-				border: 1px solid transparent;
+				border: 2px solid transparent;
 				&-thumb-active {
 					border-color: $primary;
 				}
