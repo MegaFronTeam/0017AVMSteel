@@ -43,7 +43,7 @@
 			position: relative;
 			color: $white;
 			&::before {
-				@include mt;
+				@include mt(0.5s);
 				content: "";
 				position: absolute;
 				width: 100%;
@@ -57,7 +57,7 @@
 				overflow: hidden;
 			}
 			&::after {
-				@include mt;
+				@include mt(0.5s);
 				content: "";
 				position: absolute;
 				width: 100%;
@@ -84,10 +84,13 @@
 					margin-top: rem(30);
 					transform: translateY(0);
 				}
+				img {
+					transform: scale(1.1);
+				}
 			}
 		}
 		.sObjects__btn {
-			@include mt;
+			@include mt(0.3s);
 			pointer-events: none;
 			width: 290px;
 			@include media-breakpoint-down(lg) {
@@ -152,6 +155,7 @@
 			--ratio: 329/450;
 		}
 		img {
+			@include mt;
 			position: absolute;
 			left: 0;
 			top: 0;
