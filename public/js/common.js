@@ -352,11 +352,14 @@ function eventHandler() {
 
 
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+		let header = document.querySelector('.header');
+		if (!header) return;
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		// console.log(scrollTop);
+
+		scrollTop > 160 ? header.classList.add('fixed') : header.classList.remove('fixed');
+		scrollTop > 250 ? header.classList.add('fixed-animate') : header.classList.remove('fixed-animate');
+		scrollTop > 400 ? header.classList.add('fixed-show') : header.classList.remove('fixed-show');
 	}
 
 	function whenResize() {
@@ -667,25 +670,25 @@ function eventHandler() {
 			}
 		}
 	});
-	var StickyNav = new hcSticky('.top-nav', {
-		mobileFirst: true,
-		responsive: {
-			992: {
-				stickTo: 'body',
-				top: 0,
-			}
-		}
-	});
+	// var StickyNav = new hcSticky('.top-nav', {
+	// 	mobileFirst: true,
+	// 	responsive: {
+	// 		992: {
+	// 			stickTo: 'body',
+	// 			top: 0,
+	// 		}
+	// 	}
+	// });
 
-	var StickyNavMob = new hcSticky('.topLine', {
-		// mobileFirst: true,
-		responsive: {
-			991.98: {
-				stickTo: 'body',
-				top: 0,
-			}
-		}
-	});
+	// var StickyNavMob = new hcSticky('.topLine', {
+	// 	// mobileFirst: true,
+	// 	responsive: {
+	// 		991.98: {
+	// 			stickTo: 'body',
+	// 			top: 0,
+	// 		}
+	// 	}
+	// });
 	// var StickyCalc = new hcSticky('.sCalculator table thead', {
 	// 	mobileFirst: true,
 	// 	stickTo: '.sCalculator table',

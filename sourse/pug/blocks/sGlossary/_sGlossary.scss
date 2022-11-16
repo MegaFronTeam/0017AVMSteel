@@ -36,8 +36,11 @@
 			&:last-of-type {
 				margin-bottom: 0;
 			}
-			span {
+			a {
 				color: $primary;
+				&:hover {
+					color: #018d88;
+				}
 			}
 		}
 	}

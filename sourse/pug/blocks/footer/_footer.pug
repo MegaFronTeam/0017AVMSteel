@@ -52,9 +52,9 @@ mixin footer()
 						//- +item-sos('whatsapp').--whatsapp
 						//- +item-sos('viber').--viber
 					+e.inner-row.row
-						.col-auto.d-flex.align-items-center
+						.col-sm-auto.d-flex.align-items-center
 							+dowload-link('Реквизиты организации')
-						.col-auto
+						.col-sm-auto
 							+e.scroll-up
 								| Наверх
 								+e.icon-wrap
@@ -68,6 +68,6 @@ mixin footer()
 					.col-md-6
 						+e.row-sm.row
 							.col-xxl-auto
-								+e.policy.secondary-link(href="#") Политика конфиденцильности
+								+e.policy.secondary-link(href="#") Политика конфиденциальности
 							.col
 								+e.developer Разработка сайта – #[a(href="#" target="_blank").strong Artsman] 
