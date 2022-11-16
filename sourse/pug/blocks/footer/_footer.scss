@@ -254,6 +254,10 @@
 		font-weight: 700;
 		color: #fff;
 		cursor: pointer;
+		@include media-breakpoint-down(sm) {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
 		&:hover {
 			.footer__icon-wrap {
 				background-color: $primary;
@@ -272,6 +276,10 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
+		@include media-breakpoint-down(sm) {
+			margin-left: 0;
+			margin-right: rem(10);
+		}
 		svg {
 			font-size: rem(20);
 		}

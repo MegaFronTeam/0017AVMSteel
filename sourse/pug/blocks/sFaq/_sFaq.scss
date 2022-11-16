@@ -99,8 +99,11 @@
 				&:last-child {
 					margin-bottom: 0;
 				}
-				span {
+				a {
 					color: $teal;
+					&:hover {
+						color: #018d88;
+					}
 				}
 			}
 		}

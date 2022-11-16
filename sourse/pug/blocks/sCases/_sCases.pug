@@ -5,11 +5,11 @@ mixin sCases(data)
 			+e.row.row
 				mixin card(i, title, ...items)
 					+e.wrap
-						+e.img-wrap
+						+e.img-wrap(href="#")
 							.img-wrap-center.bg-wrap
 								+img(`img/sCases-img-${i}.jpg`, 'bg').picture-bg
 						+e.content
-							h4!= title
+							a.h4(href="#")!= title
 							ul
 								each item in items
 									li!= item
@@ -32,20 +32,20 @@ mixin sCases(data)
 						+e.horizontal-card-row.row
 							.col-lg.order-2.order-lg-1
 								+e.left
-									h4 Строительно-монтажные работы со&nbsp;шпунтом
+									a.h4(href="#") Строительно-монтажные работы со&nbsp;шпунтом
 									+e.list-wrap
 										ul
-											li: h5 Погружение
-											li Вибропогружение
-											li Статическое вдавливание
-											li Бурение
+											li: a.h5(href="#") Погружение
+											li: a(href="#") Вибропогружение
+											li: a(href="#") Статическое вдавливание
+											li: a(href="#") Бурение
 										ul
-											li: h5 Укрепление
-											li Распорная система
-											li Анкерное крепление
-											li Обвязочные (распределительные)&nbsp;пояса
+											li: a.h5(href="#") Укрепление
+											li: a(href="#") Распорная система
+											li: a(href="#") Анкерное крепление
+											li: a(href="#") Обвязочные (распределительные)&nbsp;пояса
 							.col-lg.order-1.order-lg-2
-								+e.right.bg-wrap
+								+e.right.bg-wrap(href="#")
 									+img('img/sCases-img-6.jpg', 'bg').picture-bg
 				.col-md-6.col-xl-4
 					+card(4, 'Выкуп шпунта', 'Гарантированный обратный выкуп шпунта с&nbsp;демонтажем', 'Вы&nbsp;получите деньги в&nbsp;день выемки')
