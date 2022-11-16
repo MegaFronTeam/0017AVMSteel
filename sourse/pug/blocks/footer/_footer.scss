@@ -36,8 +36,8 @@
 			--bs-gutter-x: #{rem(180)};
 		}
 	}
-	.section-title {
-	}
+	// .section-title {
+	// }
 
 	&__slide {
 		height: auto;
@@ -140,13 +140,13 @@
 	ul {
 		list-style: none;
 		padding-left: 0;
-		li {
-			// a {
-			// 	&:not(:hover) {
-			// 		color: $white;
-			// 	}
-			// }
-		}
+		// li {
+		// 	a {
+		// 		&:not(:hover) {
+		// 			color: $white;
+		// 		}
+		// 	}
+		// }
 	}
 	&__tel {
 		@extend .h3;
