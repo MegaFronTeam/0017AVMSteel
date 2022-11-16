@@ -68,12 +68,16 @@
 	// }
 
 	&__table-wrap {
-		@include media-breakpoint-down(xl) {
-			& [scope="row"] {
+		& [scope="row"] {
+			text-decoration: underline;
+			@include mt;
+			&:hover {
+				color: $primary;
+			}
+			@include media-breakpoint-down(xl) {
 				width: 100%;
 				border: none;
 				text-align: center;
-				text-decoration: underline;
 			}
 		}
 		table {
