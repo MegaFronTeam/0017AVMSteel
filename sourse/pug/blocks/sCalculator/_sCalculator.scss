@@ -14,6 +14,7 @@
 		max-width: rem(990);
 		margin-right: auto;
 		margin-left: auto;
+		padding: 0 calc(var(--bs-gutter-x) / 2);
 		h2 {
 			margin-bottom: 20px;
 			@include media-breakpoint-up(md) {
@@ -67,12 +68,16 @@
 	// }
 
 	&__table-wrap {
-		@include media-breakpoint-down(xl) {
-			& [scope="row"] {
+		& [scope="row"] {
+			text-decoration: underline;
+			@include mt;
+			&:hover {
+				color: $primary;
+			}
+			@include media-breakpoint-down(xl) {
 				width: 100%;
 				border: none;
 				text-align: center;
-				text-decoration: underline;
 			}
 		}
 		table {
