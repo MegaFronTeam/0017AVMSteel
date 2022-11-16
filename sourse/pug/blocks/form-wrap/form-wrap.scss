@@ -7,7 +7,6 @@
 		--sp-y: #{$input-padding-y};
 		--fz: #{$input-font-size};
 
-		
 		// + span {
 		// 	display: block;
 		// 	background-color: #fff;
@@ -32,16 +31,24 @@
 			// 		color: rgba(#05141F, .5);
 			opacity: 0 !important	;
 		}
-		&.is-invalid, &.is-valid {
+		&.is-invalid,
+		&.is-valid {
 			background-image: none;
 			padding-right: rem(20);
 		}
 		&.is-invalid {
-			box-shadow: 0 0 0 1px #DB4545!important;
+			box-shadow: 0 0 0 1px #db4545 !important;
+			border-color: #db4545;
+			&:focus {
+				box-shadow: 0 0 0 1px #db4545 !important;
+			}
 		}
 		&.is-valid {
-			box-shadow: 0 0 0 1px $primary!important;
+			box-shadow: 0 0 0 1px $primary !important;
 			border-color: $primary;
+			&:focus {
+				box-shadow: 0 0 0 1px $primary !important;
+			}
 		}
 	}
 	&__btn {
@@ -52,10 +59,11 @@
 		display: block;
 	}
 	&__input-title {
+		@include a-cent1(y);
 		position: absolute;
 		// padding-left: $input-padding-x;
 		left: #{$input-padding-x};
-		top: var(--sp-y);
+
 		font-size: var(--fz);
 		color: #{$input-placeholder-color};
 		transform-origin: left;
@@ -80,6 +88,7 @@
 		&.form-select {
 			& ~ .form-wrap__input-title {
 				//  color: #846951;
+				top: var(--sp-y);
 				transform: scale(0.75) translateY(var(--up-t, -75%));
 			}
 		}
@@ -364,7 +373,7 @@ input:-webkit-autofill:focus {
 	display: none;
 }
 
-.form-check-input:checked[type=radio] {
+.form-check-input:checked[type="radio"] {
 	background-color: $primary;
 	border-color: $primary;
 }

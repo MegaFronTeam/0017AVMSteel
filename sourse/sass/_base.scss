@@ -504,16 +504,21 @@ iframe {
 	// @include row-sw(10px, sm, 100px);
 }
 
+.swiper-slide {
+	cursor: grab;
+}
+
 // .btn-outline-light,
 // .btn-outline-primary{
 // 	--bs-btn-color: #{$body-color};
 // }
 
-.btn,
-.form-control,
-.form-select {
+.btn {
 	box-shadow: none !important;
 }
+// .form-control,
+// .form-select {
+// }
 
 .fancybox__content :focus:not(.carousel__button.is-close) {
 	outline: none !important;
