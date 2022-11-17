@@ -69,10 +69,11 @@
 
 	&__table-wrap {
 		& [scope="row"] {
-			text-decoration: underline;
 			@include mt;
+			text-decoration: underline;
 			&:hover {
 				color: $primary;
+				cursor: pointer;
 			}
 			@include media-breakpoint-down(xl) {
 				width: 100%;
