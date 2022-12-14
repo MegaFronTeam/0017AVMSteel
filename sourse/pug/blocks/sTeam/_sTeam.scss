@@ -8,6 +8,9 @@
 		// --bs-gutter-y: #{rem()};
 		
 	}
+	&__row--custom{
+		
+	}
 	&__sliders {
 		--bs-gutter-y: 30px;
 		@include media-breakpoint-up(lg) {

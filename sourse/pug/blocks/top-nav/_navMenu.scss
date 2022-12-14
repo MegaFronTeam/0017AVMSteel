@@ -172,6 +172,10 @@
 								}
 							}
 						}
+						.sub-menu{
+							padding-left: rem(20);
+							padding-top: 10px;
+						}
 					}
 				}
 			}
@@ -216,6 +220,13 @@
 		a {
 			font-size: rem(16);
 			padding: 0;
+		}
+	}
+}
+.footer{
+	.current-menu-item{
+		&::after{
+			display: none;
 		}
 	}
 }

@@ -235,14 +235,17 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+		const h = $(".header ").innerHeight();
+		$(document).on('click', "  .scroll-link, .sGlossary__slide a", function (e) {
+
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", '/' + elementClick)
 			}
 			else {
+				e.preventDefault();
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
+				$('html, body').animate({ scrollTop: destination - h }, 700);
 				return false;
 			}
 		});
@@ -340,7 +343,7 @@ function eventHandler() {
 
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;

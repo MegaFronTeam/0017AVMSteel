@@ -120,3 +120,8 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sAbout
+
+
+.sStages  + .sAbout{
+	padding-top: 0;
+}
