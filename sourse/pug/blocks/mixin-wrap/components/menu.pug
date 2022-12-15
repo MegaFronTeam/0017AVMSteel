@@ -18,6 +18,10 @@ mixin mnu()
 									if sublink.lastsubnav
 										ul.sub-menu
 											each lastsublink in sublink.lastsubnav
-												li.menu-item(itemprop="item" ): a(href= lastsublink.url itemprop="url")= lastsublink.name
-
+												li.menu-item(itemprop="item" )
+													a(href= lastsublink.url itemprop="url")= lastsublink.name
+													if lastsublink.subnav2
+														ul.sub-menu
+															each subnav2 in lastsublink.subnav2
+																li.menu-item(itemprop="item" ): a(href= subnav2.url itemprop="url")= subnav2.name
 //- menu

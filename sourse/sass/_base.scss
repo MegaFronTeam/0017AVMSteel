@@ -811,3 +811,11 @@ h6 {
 // 		}
 // 	}
 // }
+
+.main-page {
+	.sAbout {
+		&__row {
+			flex-direction: row-reverse;
+		}
+	}
+}
