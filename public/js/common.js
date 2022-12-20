@@ -463,16 +463,16 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		breakpoints: {
 			768: {
-				slidesPerView: 4,
+				slidesPerView: 3,
 			},
 			993: {
-				slidesPerView: 5,
+				slidesPerView: 4,
 			},
 			1200: {
-				slidesPerView: 6,
+				slidesPerView: 5,
 			},
 			1400: {
-				slidesPerView: 6,
+				slidesPerView: 5,
 				spaceBetween: 15,
 			},
 		},
