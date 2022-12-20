@@ -491,6 +491,7 @@ function eventHandler() {
 		// loopFillGroupWithBlank: true,
 		touchRatio: 0.4,
 		slideToClickedSlide: true,
+		autoHeight: true,
 		thumbs: {
 			swiper: sProjectsSliderThumbs,
 		},
