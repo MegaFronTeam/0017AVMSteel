@@ -17,9 +17,9 @@
 		// --bs-gutter-x: #{rem()};
 		// @include media-breakpoint-up(lg) {
 		// }
-		@include media-breakpoint-up(lg) {
-			height: 100%;
-		}
+		// @include media-breakpoint-up(lg) {
+		// 	height: 100%;
+		// }
 	}
 	.section-title {
 		margin-bottom: var(--bs-gutter-y);
