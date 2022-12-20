@@ -77,13 +77,15 @@
 		&__callBack-row {
 			--bs-gutter-x: 0;
 
-			align-items: center;
+			// align-items: center;
+			align-items: stretch;
 		}
 		&__send {
 			display: flex;
 			align-items: center;
 			flex-direction: column;
 			border-radius: 0 0 15px 15px;
+			height: 100%;
 			@include media-breakpoint-up(lg) {
 				border-radius: 0;
 				flex-direction: row;
@@ -129,8 +131,12 @@
 		&__input-wrap {
 			// --sp-y: #{rem(39)};
 			position: relative;
+			height: 100%;
 			@include media-breakpoint-up(lg) {
 				--sp-y: #{rem(39)};
+			}
+			label {
+				height: 100%;
 			}
 			img {
 				position: absolute;
@@ -158,6 +164,7 @@
 			background-repeat: no-repeat;
 			background-position: 97% center;
 			background-size: auto;
+			height: 100%;
 			@include media-breakpoint-up(md) {
 				padding-right: rem(70);
 			} 
