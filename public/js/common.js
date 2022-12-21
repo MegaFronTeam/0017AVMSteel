@@ -796,7 +796,7 @@ if (document.querySelector("#map")) {
 
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
-			center: [55.751300430341765, 37.624486136718716],
+			center: [55.821396, 37.728002],
 			zoom: 9,
 			controls: ['zoomControl']
 		}, {
@@ -815,7 +815,7 @@ if (document.querySelector("#map")) {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: 'img/svg/map-mark.svg',
+				iconImageHref: '/wp-content/themes/avm/assets/img/svg/map-mark.svg',
 				// Размеры метки.
 				iconImageSize: [38, 48],
 				// Смещение левого верхнего угла иконки относительно
