@@ -39,6 +39,7 @@
 		// flex-direction: column;
 		// align-items: center;
 		height: 100%;
+		display: block;
 		@include media-breakpoint-up(lg) {
 			position: relative;
 			color: $white;
@@ -84,9 +85,9 @@
 					margin-top: rem(30);
 					transform: translateY(0);
 				}
-				img {
-					transform: scale(1.1);
-				}
+				// img {
+				// 	transform: scale(1.1);
+				// }
 			}
 		}
 		.sObjects__btn {

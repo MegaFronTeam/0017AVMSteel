@@ -661,7 +661,7 @@ function eventHandler() {
 		responsive: {
 			992: {
 				stickTo: '.need-help-wrap',
-				top: 90,
+				top: 171,
 			}
 		}
 	});
