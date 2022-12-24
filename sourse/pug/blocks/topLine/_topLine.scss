@@ -1,6 +1,6 @@
 // start .topLine
 .topLine {
-	--sPT: 15px;
+	padding-top:  15px;
 	--sPB: 15px;
 	// --sTPB: #{rem()};
 	position: relative;
@@ -13,7 +13,7 @@
 	}
 	@include media-breakpoint-up(lg) {
 		// box-shadow: none;
-		--sPT: #{rem(20)};
+		padding-top:  #{rem(20)};
 		--sPB: #{rem(20)};
 	}
 	&__row {

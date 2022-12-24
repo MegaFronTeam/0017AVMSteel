@@ -1,11 +1,11 @@
 // start .sMap
 .sMap {
-	--sPT: #{rem(40)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(40)};
 	// --sTPB: #{rem()};
 	background-color: $gray-100;
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(83.2)};
+		// --sPT: #{rem(83.2)};
 		--sPB: #{rem(91.2)};
 	}
 	&__row {

@@ -134,6 +134,31 @@ main {
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
 }
+.page-head.bg-wrap + .section .portfolio-item:first-child{
+	padding-top: 0 !important;
+}
+.main-page .section,
+.page-head.bg-wrap + .section,
+.page-head + .sAbout,
+.page-head + .sStages,
+.page-head.bg-wrap + .section,
+	{
+
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(90)};
+		}	
+		--sPT: #{rem(90 * 0.444)};
+	} 
+.main-page {
+ 
+	.sCertificates,
+	.sMap,
+	.sStages,
+	.sAbout,
+	.sCatalog{
+		background-color: $gray-100;
+	}
+} 
 
 .section-title {
 	margin-bottom: var(--sTPB);

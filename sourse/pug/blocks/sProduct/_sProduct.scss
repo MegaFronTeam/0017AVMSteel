@@ -1,7 +1,7 @@
 // start .sProduct
 .sProduct {
-	// --sPT: #{rem()};
-	--sPB: 0;
+	// --sPT: #{rem(0)};
+	// --sPB: 0;
 	// --sTPB: #{rem()};
 	padding-top: calc(var(--sPT) / 2);
 	& * {

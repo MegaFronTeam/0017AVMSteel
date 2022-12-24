@@ -1,5 +1,6 @@
 // start .sContent
 .sContent {
+	--sPT: #{rem(0)};
 	&__wrapper {
 		max-width: 690px;
 		margin-left: auto;

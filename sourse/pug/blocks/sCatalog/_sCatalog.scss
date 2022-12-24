@@ -1,9 +1,9 @@
 // start .sCatalog
-.sCatalog {
-	// --sPT: #{rem(40)};
+
+.sCatalog { 
+	--sPT: #{rem(0)};
 	// --sPB: #{rem(40)};
 	// --sTPB: #{rem()};
-	background-color: $gray-100;
 	// @include media-breakpoint-up(lg) {
 	// 	--sPT: #{rem(83.6)};
 	// 	--sPB: #{rem(90)};

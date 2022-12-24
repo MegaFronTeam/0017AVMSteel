@@ -1,9 +1,9 @@
 // start .sStages
 .sStages {
-	// --sPT: #{rem()};
+	--sPT: #{rem(0)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	background-color: $light;
+	// background-color: $light;
 	&__row {
 		counter-reset: num;
 

@@ -1,10 +1,10 @@
 // start .sContactInfo
 .sContactInfo {
-	--sPT: #{rem(40)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(40)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(85.200)};
+		// --sPT: #{rem(85.200)};
 		--sPB: #{rem(90)};
 	}
 	&__row{

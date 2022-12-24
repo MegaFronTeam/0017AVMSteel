@@ -1,6 +1,6 @@
 // start .sAbout
 .sAbout {
-	// --sPT: #{rem()};
+	--sPT: #{rem(0)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row {
@@ -121,7 +121,9 @@
 	}
 } // end.sAbout
 
-
-.sStages  + .sAbout{
-	padding-top: 0;
+.sAbout,
+.sStages  {
+	& + .sAbout{
+		padding-top: 0;
+	}
 }

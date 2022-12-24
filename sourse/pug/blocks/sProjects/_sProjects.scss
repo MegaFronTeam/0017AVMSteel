@@ -1,6 +1,6 @@
 // start .sProjects
 .sProjects {
-	// --sPT: 0;
+	--sPT: 0;
 	// --sPB: 0;
 	// --sTPB: #{rem()};
 
@@ -121,6 +121,7 @@
 		@include media-breakpoint-up(xxl) {
 			padding: rem(60) rem(60) rem(60) rem(60);
 		}
+	
 		&__col {
 			& > * {
 				@include media-breakpoint-up(xxl) {
