@@ -107,6 +107,14 @@ mixin portfolio-item(l, t, s, img)
 											+img(`img/sPortfolio-${img}.jpg`, 'bg')
 						.swiper-pagination
 						+arrow()
+						
+					+e.slider--thumbs.--thumbs-js.swiper
+						.swiper-wrapper
+							- for (let i = 0; i < 5; i++) 
+								+e.slide.swiper-slide
+									+e.img-wrap()
+										.img-wrap-center
+											+img(`img/sPortfolio-${img}.jpg`, 'bg')
 					//- +e.caption
 					//- 	.icon-wrap
 					//- 		+icon('calendar')

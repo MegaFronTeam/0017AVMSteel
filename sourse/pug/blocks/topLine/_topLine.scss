@@ -1,5 +1,8 @@
 // start .topLine
 .topLine {
+	a:not(:hover){
+		--bs-link-color-rgb: var(--bs-body-color-rgb);
+	}
 	padding-top:  15px;
 	--sPB: 15px;
 	// --sTPB: #{rem()};

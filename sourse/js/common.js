@@ -419,35 +419,59 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	const portfolioItemSlider = new Swiper('.portfolio-item__slider--js', {
-		// slidesPerView: 5,
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		// loop: true,
-		slidesPerView: 'auto',
-		// freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.4,
-		slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
 
-	});
+	const projectSlides = document.querySelectorAll(".portfolio-item");
+	for (const projectSlide of projectSlides) {
+
+
+		const portfolioItemSliderThumbs = new Swiper(projectSlide.querySelector('.portfolio-item__slider--thumbs-js'), {
+			// slidesPerView: 5,
+			spaceBetween: 10,
+			slidesPerView: 5,
+			lazy: {
+				loadPrevNext: true,
+			},
+			watchOverflow: true,
+			loopFillGroupWithBlank: true,
+			touchRatio: 0.4,
+			slideToClickedSlide: true,
+		});
+
+		const portfolioItemSlider = new Swiper(projectSlide.querySelector('.portfolio-item__slider--js'), {
+			// slidesPerView: 5,
+			spaceBetween: 0,
+			lazy: {
+				loadPrevNext: true,
+			},
+			watchOverflow: true,
+			spaceBetween: 0,
+			// loop: true,
+			slidesPerView: 'auto',
+			// freeMode: true,
+			loopFillGroupWithBlank: true,
+			touchRatio: 0.4,
+			slideToClickedSlide: true,
+			// freeModeMomentum: true,
+			navigation: {
+				nextEl: projectSlide.querySelector('.swiper-button-next'),
+				prevEl: projectSlide.querySelector('.swiper-button-prev'),
+			},
+			pagination: {
+				el: projectSlide.querySelector(' .swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+				// }
+			},
+			thumbs: {
+				swiper: portfolioItemSliderThumbs,
+			},
+
+		});
+
+	}
+	
 	const sProjectsSliderThumbs = new Swiper('.sProjects__slider-thumbs--js', {
 		// slidesPerView: 5,
 		spaceBetween: 10,
@@ -741,7 +765,7 @@ function eventHandler() {
 			// dropdownActive.removeClass('active');
 			parent.removeClass('shown');
 		};
-		let toggle = event.target.closest('.menu-item-has-children > a');
+		let toggle = event.target.closest('.menu-mobile--js.active .menu-item-has-children > a');
 		if (toggle) {
 			event.preventDefault();
 			// let dropdown = toggle.nextElementSibling();

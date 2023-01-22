@@ -93,6 +93,9 @@
 			text-transform: uppercase;
 			line-height: 1.25;
 		}
+		a:not(:hover){
+		--bs-link-color-rgb: var(--bs-body-color-rgb);
+	}
 	}
 	.need-help-wrap {
 		@include media-breakpoint-up(lg) {

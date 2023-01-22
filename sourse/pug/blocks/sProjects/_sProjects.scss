@@ -136,6 +136,8 @@
 		}
 	}
 
+	
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -151,3 +153,46 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sProjects
+
+.portfolio-item__slider--thumbs{
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	// max-width: 480px;
+	.portfolio-item__img-wrap {
+				@include mt;
+				@include block(80, 59);
+				border: 2px solid #fff;
+				border-radius: 0;
+				overflow: hidden;
+				img {
+					position: absolute;
+					left: 0;
+					top: 0;
+					margin: -2px;
+					width: calc(100% + 4px);
+					height: calc(100% + 4px);
+					max-height: calc(100% + 4px);
+					max-width: calc(100% + 4px);
+				}
+			}
+	.portfolio-item__img-wrap {
+	--s: 0.2s;
+	--ratio: 59/80; 
+	border-radius: 0;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	transition: all var(--s) ease-in-out;
+}
+		.portfolio-item__slide {
+				cursor: pointer; 
+				&.swiper-slide-thumb-active,
+				&:hover {
+					.portfolio-item__img-wrap {
+						border-color: $primary;
+					}
+				}
+			}
+			
+	}
