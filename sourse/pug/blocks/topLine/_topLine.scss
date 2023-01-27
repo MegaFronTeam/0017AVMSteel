@@ -4,7 +4,22 @@
 		--bs-link-color-rgb: var(--bs-body-color-rgb);
 	}
 	padding-top:  15px;
+	@include media-breakpoint-down(sm) {
+		&__mobile-contact{
+			margin-top: 15px;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			border-top: 1px solid #E4E4E4;
+			background: #F8F8F8;
+			.row{
+				align-items: center;
+			}
+		}
+	}
+	@include media-breakpoint-up(sm) {
 	--sPB: 15px;
+}
+--sPB: 0;
 	// --sTPB: #{rem()};
 	position: relative;
 	z-index: 1000;

@@ -29,4 +29,11 @@ mixin topLine()
 						| Связаться с нами
 				.col-auto.d-lg-none
 					+menu-toggle()
+		+e.mobile-contact.d-sm-none
+			.container
+				.row 
+					.col
+						a.text-primary(href="mailtoi:info@avmsteel.ru") info@avmsteel.ru
+					.col-auto
+						a.text-body(href="tel:8 (495) 885-60-53").strong 8 (495) 885-60-53
 	// end topLine

@@ -106,7 +106,10 @@ body {
 	// width: 100%;
 	// height: 100vh;
 	// height: calc(var(--vh, 1vh) * 100);
+	padding-top: 98px;
+	@include media-breakpoint-up(sm) {
 	padding-top: 61px;
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: 127.188px;
 	}
@@ -849,4 +852,8 @@ h6 {
 	.sStages {
 		background-color: #fff;
 	}
+}
+
+.grecaptcha-badge{
+	z-index: 2;
 }
