@@ -26,6 +26,15 @@
 			&:not(:last-child) {
 				margin-bottom: rem(36.400);
 			}
+			ul {
+				list-style-type: circle;
+				li {
+					margin-left: rem(20);
+					&:not(:last-child) {
+						margin-bottom: 0;
+					}
+				}
+			}
 		}
 		.h5 {
 			margin-bottom: rem(15);
