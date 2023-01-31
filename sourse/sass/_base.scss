@@ -144,7 +144,7 @@ main {
 .page-head.bg-wrap + .section,
 .page-head + .sAbout,
 .page-head + .sStages,
-.page-head.bg-wrap + .section,
+.page-head.bg-wrap + .section
 	{
 
 		@include media-breakpoint-up(md) {
