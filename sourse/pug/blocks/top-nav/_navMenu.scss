@@ -365,7 +365,8 @@
 		}
 		&__inner {
 			// padding: calc(env(safe-area-inset-top, 0px) + #{rem(40)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(40)});
-			padding: calc(env(safe-area-inset-top, 0px) + 60px) 0 calc(env(safe-area-inset-bottom, 0px) + 60px);
+
+			padding: calc(env(safe-area-inset-top, 0px) + var(--sp-mob-top, 60px)) 0 calc(env(safe-area-inset-bottom, 0px) + 60px);
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
