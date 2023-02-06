@@ -10,7 +10,7 @@ mixin sContactInfo(data)
 				mixin person(name, tel, href, text)
 					.col-sm-6.col-lg-4.col-xl-3
 						+e.item
-							+e.name!=name
+							//- +e.name!=name
 							a.h4(href=`${href}`)!= tel
 							p!= text
 				+person('Дмитрий', '8 (495) 885-60-53', 'tel:84958856053', 'Расчет строительно-монтажных работ')

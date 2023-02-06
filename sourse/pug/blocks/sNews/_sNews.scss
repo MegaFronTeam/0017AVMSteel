@@ -37,6 +37,7 @@
 		.sNews__btn {
 			position: relative;
 			padding-bottom: 4px;
+			color: $gray-900;
 			&::before {
 				content: "";
 				@include mt;
@@ -50,7 +51,7 @@
 			}
 			// @include media-breakpoint-up(md) {
 			// }
-			&.active {
+			&.active, &:hover {
 				color: $link-hover-color;
 				&::before {
 					max-width: 100%;

@@ -242,7 +242,9 @@
 	@include roww(10px, m);
 	display: inline-flex;
 	align-items: center;
-
+	&:not(:hover) {
+		color: $gray-900;
+	}
 	.icon {
 		color: $primary;
 		&-download {

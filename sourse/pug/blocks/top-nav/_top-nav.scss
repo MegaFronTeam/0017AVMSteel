@@ -64,6 +64,9 @@
 		line-height: 28px;
 		font-weight: bold;
 		margin-bottom: 10px;
+		&:not(:hover) {
+			color: $gray-900;
+		}
 	}
 	&__email {
 		@extend .primary-link;

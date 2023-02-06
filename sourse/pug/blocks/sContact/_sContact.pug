@@ -66,17 +66,17 @@ mixin sContact()
 				.row
 					.col-md-6.col-lg-4
 						+e.A.card-item(href="tel:+84958856053")
-							span Дмитрий
+							//- span Дмитрий
 							span 8 (495) 885-60-53
 							span Расчет строительно-монтажных работ
 					.col-md-6.col-lg-4
 						+e.A.card-item(href="tel:+84958856053")
-							span Алексей
+							//- span Алексей
 							span 8 (495) 885-60-53
 							span Продажа и&nbsp;аренда шпунта, работа под ключ
 					.col-md-6.col-lg-4
 						+e.A.card-item(href="tel:+84958856053")
-							span Николай
+							//- span Николай
 							span 8 (495) 885-60-53
 							span Выкуп шпунта по&nbsp;максимальной рыночной цене
 		+e.map-wrap
@@ -90,7 +90,7 @@ mixin sContact()
 						+e.img-wrap
 							+img(`img/svg/yandex-icon.svg`)
 						span Яндекс.Карты
-					+e.map-btn(href="#")
+					+e.map-btn(href="#").d-md-none
 						+e.img-wrap
 							+img(`img/svg/nav-icon.svg`)
 						span Навигатор
