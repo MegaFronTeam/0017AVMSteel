@@ -53,6 +53,9 @@
 		font-size: $h3-font-size;
 		margin-bottom: rem(10);
 		font-weight: bold;
+		&:not(:hover) {
+			color: $gray-900;
+		}
 	}
 	&__email {
 		@extend .primary-link;
